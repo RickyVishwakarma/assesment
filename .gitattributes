@@ -1,0 +1,12 @@
+# Default: let Git normalise line endings in source files.
+* text=auto
+
+# Generated artefacts that must stay byte-exact. Without these, Git's autocrlf
+# rewrites LF to CRLF on checkout and every PDF in the corpus arrives corrupted.
+*.pdf binary
+*.pkl binary
+*.traineddata binary
+*.safetensors binary
+
+# The trained model is ~500 MB across two files, both over GitHub's 100 MB limit.
+models/small/**/*.safetensors filter=lfs diff=lfs merge=lfs -text

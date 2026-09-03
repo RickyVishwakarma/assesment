@@ -1,0 +1,21 @@
+# Scratch space. Everything here is regenerable, and it holds the torch wheels (5 GB).
+.tmp/
+.pytest_cache/
+__pycache__/
+*.pyc
+
+# Learning-curve checkpoints: 2 GB of intermediate models kept only to re-score the
+# curve. The results they produced are committed in reports/learning_curve.json, and
+# scripts/learning_curve.py rebuilds them.
+models/curve/
+
+# Tesseract language data, installed by the system package, not by this project.
+models/tessdata/
+
+# Secrets never belong in the repo.
+.env
+credentials.json
+token.json
+
+# Agent instructions for my own tooling, not part of the submission.
+Claude.MD
