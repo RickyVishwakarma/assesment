@@ -1,0 +1,96 @@
+{
+  "model": "qwen2.5:3b-instruct",
+  "n_documents": 1200,
+  "teacher_field_accuracy": {
+    "amount_paid": {
+      "accuracy": 0.8291,
+      "n": 199
+    },
+    "date_of_service": {
+      "accuracy": 0.8325,
+      "n": 800
+    },
+    "diagnosis_code": {
+      "accuracy": 0.8741,
+      "n": 802
+    },
+    "document_date": {
+      "accuracy": 0.6267,
+      "n": 1200
+    },
+    "document_reference": {
+      "accuracy": 0.8561,
+      "n": 1001
+    },
+    "member_id": {
+      "accuracy": 0.846,
+      "n": 1000
+    },
+    "patient_dob": {
+      "accuracy": 0.9421,
+      "n": 1001
+    },
+    "patient_name": {
+      "accuracy": 0.9358,
+      "n": 1200
+    },
+    "patient_responsibility": {
+      "accuracy": 0.9497,
+      "n": 199
+    },
+    "payer_name": {
+      "accuracy": 0.963,
+      "n": 1000
+    },
+    "procedure_code": {
+      "accuracy": 0.7875,
+      "n": 800
+    },
+    "referring_provider_name": {
+      "accuracy": 0.8741,
+      "n": 1001
+    },
+    "referring_provider_npi": {
+      "accuracy": 0.9314,
+      "n": 802
+    },
+    "servicing_facility": {
+      "accuracy": 0.8162,
+      "n": 1001
+    },
+    "total_charge": {
+      "accuracy": 0.955,
+      "n": 600
+    }
+  },
+  "teacher_overall_accuracy": 0.8605,
+  "teacher_doctype_accuracy": 0.8083,
+  "alignment_rate": 0.9662,
+  "alignment_by_method": {
+    "exact": 11914,
+    "overlap": 277,
+    "whitespace": 625,
+    "fuzzy": 20,
+    "none": 165,
+    "compact": 66
+  },
+  "alignment_by_field": {
+    "amount_paid": 0.9471,
+    "date_of_service": 0.9714,
+    "diagnosis_code": 0.9855,
+    "document_date": 0.8917,
+    "document_reference": 0.9938,
+    "member_id": 0.996,
+    "patient_dob": 0.9885,
+    "patient_name": 0.9949,
+    "patient_responsibility": 0.932,
+    "payer_name": 0.9786,
+    "procedure_code": 0.8826,
+    "referring_provider_name": 0.991,
+    "referring_provider_npi": 0.9789,
+    "servicing_facility": 0.9236,
+    "total_charge": 0.9919
+  },
+  "ambiguous_values": 1108,
+  "mean_latency_ms": 8404.9
+}
