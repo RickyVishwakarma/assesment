@@ -354,9 +354,9 @@ curl.exe -F "file=@data/corpus/pdfs/demo-0000-referral_letter-t11.pdf" \
     <div class="col">
       <p>On a machine with under about 8 GB of RAM, request a subset rather than
       <span class="mono">approach=all</span>: the API loads every approach at startup, and once
-      Ollama pulls the 3B model in as well the total exceeds available memory — the small model
-      drops out of the results and the worker can be killed. Measured here with 0.7 GB free of
-      7.4 GB. The same ceiling described in the footer, applied to serving rather than training.</p>
+      Ollama pulls the 3B model in as well the total can exceed available memory and the worker
+      is killed. Observed here with 0.7 GB free of 7.4 GB. The same ceiling described in the
+      footer, applied to serving rather than training.</p>
       <p><code>GET /health</code> lists which approaches loaded. On Windows use
       <span class="mono">curl.exe</span>, not <span class="mono">curl</span> — PowerShell aliases the
       latter to <span class="mono">Invoke-WebRequest</span>, which has no
