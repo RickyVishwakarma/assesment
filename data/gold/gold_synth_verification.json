@@ -1,0 +1,12 @@
+{
+  "split": "gold_synth",
+  "n_documents": 90,
+  "fields_total": 945,
+  "auto_verified": 865,
+  "flagged_for_human": 80,
+  "corrected": 0,
+  "kept": 37,
+  "unreadable": 43,
+  "human_correction_rate": 0.0,
+  "interactive": true
+}
