@@ -1,0 +1,101 @@
+{
+  "split": "gold_synth",
+  "total_errors": 768,
+  "by_approach_cause": {
+    "nlp": {
+      "MISSED_ENTIRELY": 77,
+      "FORMAT_NORMALISATION": 41,
+      "OVER_CAPTURE": 19,
+      "LABEL_CONFUSION": 16,
+      "WRONG_VALUE": 47,
+      "OCR_CORRUPTION": 51,
+      "SPURIOUS_EXTRACTION": 12,
+      "TRUNCATION": 7
+    },
+    "small_model": {
+      "WRONG_VALUE": 66,
+      "TRUNCATION": 18,
+      "MISSED_ENTIRELY": 88,
+      "LABEL_CONFUSION": 18,
+      "FORMAT_NORMALISATION": 78,
+      "OVER_CAPTURE": 5,
+      "OCR_CORRUPTION": 51,
+      "SPURIOUS_EXTRACTION": 8
+    },
+    "llm_frontier": {
+      "OCR_CORRUPTION": 51,
+      "FORMAT_NORMALISATION": 90,
+      "SPURIOUS_EXTRACTION": 18,
+      "WRONG_VALUE": 6,
+      "MISSED_ENTIRELY": 1
+    }
+  },
+  "by_cause_layout": {
+    "MISSED_ENTIRELY": {
+      "prose": 79,
+      "grid": 48,
+      "below": 39
+    },
+    "FORMAT_NORMALISATION": {
+      "prose": 23,
+      "grid": 168,
+      "below": 18
+    },
+    "OVER_CAPTURE": {
+      "prose": 15,
+      "grid": 6,
+      "below": 3
+    },
+    "LABEL_CONFUSION": {
+      "prose": 9,
+      "below": 13,
+      "grid": 12
+    },
+    "WRONG_VALUE": {
+      "grid": 53,
+      "prose": 25,
+      "below": 41
+    },
+    "OCR_CORRUPTION": {
+      "below": 33,
+      "grid": 99,
+      "prose": 21
+    },
+    "SPURIOUS_EXTRACTION": {
+      "grid": 28,
+      "below": 9,
+      "prose": 1
+    },
+    "TRUNCATION": {
+      "grid": 17,
+      "below": 6,
+      "prose": 2
+    }
+  },
+  "worst_fields": {
+    "nlp": {
+      "servicing_facility": 41,
+      "payer_name": 36,
+      "patient_name": 34,
+      "referring_provider_name": 31,
+      "member_id": 30,
+      "date_of_service": 27
+    },
+    "small_model": {
+      "document_date": 60,
+      "servicing_facility": 43,
+      "referring_provider_name": 40,
+      "date_of_service": 36,
+      "patient_name": 32,
+      "payer_name": 23
+    },
+    "llm_frontier": {
+      "patient_name": 31,
+      "referring_provider_name": 28,
+      "servicing_facility": 26,
+      "document_date": 19,
+      "payer_name": 17,
+      "patient_dob": 13
+    }
+  }
+}

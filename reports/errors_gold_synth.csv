@@ -1,0 +1,1005 @@
+approach,doc_id,field,gold,pred,cause,layout,template_id,condition,lang,doc_type
+nlp,gold_synth-0001-prior_auth_request-t12,patient_name,William Davis,,MISSED_ENTIRELY,prose,12,clean,en,prior_auth_request
+nlp,gold_synth-0001-prior_auth_request-t12,referring_provider_name,"Dr. Mark Perez, PA-C",,MISSED_ENTIRELY,prose,12,clean,en,prior_auth_request
+nlp,gold_synth-0001-prior_auth_request-t12,servicing_facility,Oakhurst Imaging Center,,MISSED_ENTIRELY,prose,12,clean,en,prior_auth_request
+nlp,gold_synth-0001-prior_auth_request-t12,payer_name,Humana,,MISSED_ENTIRELY,prose,12,clean,en,prior_auth_request
+nlp,gold_synth-0001-prior_auth_request-t12,member_id,NST595159366,NST595159366.,FORMAT_NORMALISATION,prose,12,clean,en,prior_auth_request
+nlp,gold_synth-0001-prior_auth_request-t12,document_reference,AUTH-0274973,AUTH-0274973 was,OVER_CAPTURE,prose,12,clean,en,prior_auth_request
+nlp,gold_synth-0001-prior_auth_request-t12,date_of_service,"January 29, 2026","March 14, 2026",LABEL_CONFUSION,prose,12,clean,en,prior_auth_request
+nlp,gold_synth-0002-lab_order-t13,date_of_service,03.12.2025,04.03.2025,LABEL_CONFUSION,below,13,scanned,en,lab_order
+nlp,gold_synth-0004-remittance_advice-t11,patient_responsibility,$79.25,2,WRONG_VALUE,grid,11,clean,en,remittance_advice
+nlp,gold_synth-0005-patient_intake_form-t12,patient_name,Steven Martin,INTAKE FORM,WRONG_VALUE,prose,12,clean,en,patient_intake_form
+nlp,gold_synth-0005-patient_intake_form-t12,referring_provider_name,"Dr. Mary Lewis, MD",,MISSED_ENTIRELY,prose,12,clean,en,patient_intake_form
+nlp,gold_synth-0005-patient_intake_form-t12,payer_name,Oscar Health Plan,"is Migraine, unspecified, not intractable",WRONG_VALUE,prose,12,clean,en,patient_intake_form
+nlp,gold_synth-0005-patient_intake_form-t12,member_id,ZEJ072362291,ZEJ072362291.,FORMAT_NORMALISATION,prose,12,clean,en,patient_intake_form
+nlp,gold_synth-0006-referral_letter-t13,member_id,YCF591565308,Y.CF59 1565308,OCR_CORRUPTION,below,13,scanned,en,referral_letter
+nlp,gold_synth-0008-lab_order-t11,patient_dob,"December 6, 1983","December 6, 1983",OCR_CORRUPTION,grid,11,scanned,en,lab_order
+nlp,gold_synth-0008-lab_order-t11,document_date,"May 31, 2025","May 31, 2025",OCR_CORRUPTION,grid,11,scanned,en,lab_order
+nlp,gold_synth-0008-lab_order-t11,date_of_service,"April 17, 2025","April 17, 2025",OCR_CORRUPTION,grid,11,scanned,en,lab_order
+nlp,gold_synth-0009-insurance_claim-t12,patient_name,David Thomas,,MISSED_ENTIRELY,prose,12,clean,en,insurance_claim
+nlp,gold_synth-0009-insurance_claim-t12,referring_provider_name,"James Jones, PA-C",,MISSED_ENTIRELY,prose,12,clean,en,insurance_claim
+nlp,gold_synth-0009-insurance_claim-t12,servicing_facility,Summit Sports Medicine Clinic,,MISSED_ENTIRELY,prose,12,clean,en,insurance_claim
+nlp,gold_synth-0009-insurance_claim-t12,payer_name,Highmark Blue Shield,CLAIM FORM,WRONG_VALUE,prose,12,clean,en,insurance_claim
+nlp,gold_synth-0009-insurance_claim-t12,member_id,WXS019019173,WXS019019173.,FORMAT_NORMALISATION,prose,12,clean,en,insurance_claim
+nlp,gold_synth-0009-insurance_claim-t12,document_reference,CLM-446057,CLM-446057 was,OVER_CAPTURE,prose,12,clean,en,insurance_claim
+nlp,gold_synth-0009-insurance_claim-t12,date_of_service,"December 23, 2024","January 13, 2025",LABEL_CONFUSION,prose,12,clean,en,insurance_claim
+nlp,gold_synth-0010-remittance_advice-t13,patient_responsibility,$11.38,1,WRONG_VALUE,below,13,clean,en,remittance_advice
+nlp,gold_synth-0012-referral_letter-t11,servicing_facility,"Stone Creek Neurology Specialists, P.A.","Stone Creek Neurology Speciali 4,0 PA, AN26",OCR_CORRUPTION,grid,11,scanned,en,referral_letter
+nlp,gold_synth-0012-referral_letter-t11,document_date,,05/08/2026,SPURIOUS_EXTRACTION,grid,11,scanned,en,referral_letter
+nlp,gold_synth-0013-prior_auth_request-t12,patient_name,Daniel Moore,,MISSED_ENTIRELY,prose,12,clean,en,prior_auth_request
+nlp,gold_synth-0013-prior_auth_request-t12,referring_provider_name,"Dr. Kevin Clark, NP",,MISSED_ENTIRELY,prose,12,clean,en,prior_auth_request
+nlp,gold_synth-0013-prior_auth_request-t12,servicing_facility,Ashford Surgical Center,,MISSED_ENTIRELY,prose,12,clean,en,prior_auth_request
+nlp,gold_synth-0013-prior_auth_request-t12,payer_name,Medicare Part B,,MISSED_ENTIRELY,prose,12,clean,en,prior_auth_request
+nlp,gold_synth-0013-prior_auth_request-t12,member_id,BJD804481628,BJD804481628.,FORMAT_NORMALISATION,prose,12,clean,en,prior_auth_request
+nlp,gold_synth-0013-prior_auth_request-t12,document_reference,PA-14530933,PA-14530933 was,OVER_CAPTURE,prose,12,clean,en,prior_auth_request
+nlp,gold_synth-0013-prior_auth_request-t12,date_of_service,02.05.2025,03.13.2025,LABEL_CONFUSION,prose,12,clean,en,prior_auth_request
+nlp,gold_synth-0014-lab_order-t13,date_of_service,2026-01-18,2026-01-20,LABEL_CONFUSION,below,13,scanned,en,lab_order
+nlp,gold_synth-0015-insurance_claim-t14,referring_provider_name,"Dr. David Martinez, NP",,MISSED_ENTIRELY,grid,14,scanned,en,insurance_claim
+nlp,gold_synth-0015-insurance_claim-t14,servicing_facility,Riverbend Diagnostic Laboratory,Riverbend. Diagnostic Laboratory,FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+nlp,gold_synth-0015-insurance_claim-t14,payer_name,Aetna,CLAIM FORM,WRONG_VALUE,grid,14,scanned,en,insurance_claim
+nlp,gold_synth-0015-insurance_claim-t14,member_id,26085333629,1995898677,LABEL_CONFUSION,grid,14,scanned,en,insurance_claim
+nlp,gold_synth-0015-insurance_claim-t14,document_date,"April 30, 2026","April 30, 2026",OCR_CORRUPTION,grid,14,scanned,en,insurance_claim
+nlp,gold_synth-0015-insurance_claim-t14,date_of_service,"April 17, 2026","April 17, 2026",OCR_CORRUPTION,grid,14,scanned,en,insurance_claim
+nlp,gold_synth-0016-remittance_advice-t11,servicing_facility,"Cedar Park Neurology Specialists, P.A.",Cedar Park Neurology Specialists,FORMAT_NORMALISATION,grid,11,clean,en,remittance_advice
+nlp,gold_synth-0016-remittance_advice-t11,patient_responsibility,$122.54,1,WRONG_VALUE,grid,11,clean,en,remittance_advice
+nlp,gold_synth-0017-patient_intake_form-t12,patient_name,Anthony Torres,,MISSED_ENTIRELY,prose,12,clean,en,patient_intake_form
+nlp,gold_synth-0017-patient_intake_form-t12,referring_provider_name,"Dr. Steven Thompson, NP",,MISSED_ENTIRELY,prose,12,clean,en,patient_intake_form
+nlp,gold_synth-0017-patient_intake_form-t12,payer_name,Humana,,MISSED_ENTIRELY,prose,12,clean,en,patient_intake_form
+nlp,gold_synth-0017-patient_intake_form-t12,member_id,ZEX932833956,ZEX932833956.,FORMAT_NORMALISATION,prose,12,clean,en,patient_intake_form
+nlp,gold_synth-0019-prior_auth_request-t14,servicing_facility,Kingsport Regional Medical Center,Kingsport Regional Medical,TRUNCATION,grid,14,clean,en,prior_auth_request
+nlp,gold_synth-0020-lab_order-t11,patient_dob,"January 16, 1970","January 16, 1970",OCR_CORRUPTION,grid,11,scanned,en,lab_order
+nlp,gold_synth-0020-lab_order-t11,document_date,"January 27, 2025","January. 27, 2025",OCR_CORRUPTION,grid,11,scanned,en,lab_order
+nlp,gold_synth-0020-lab_order-t11,date_of_service,"January 15, 2025","January 15, 2025",OCR_CORRUPTION,grid,11,scanned,en,lab_order
+nlp,gold_synth-0021-insurance_claim-t12,patient_name,Jessica Nelson,,MISSED_ENTIRELY,prose,12,clean,en,insurance_claim
+nlp,gold_synth-0021-insurance_claim-t12,referring_provider_name,"Matthew Gonzalez, D.O.",,MISSED_ENTIRELY,prose,12,clean,en,insurance_claim
+nlp,gold_synth-0021-insurance_claim-t12,servicing_facility,Stone Creek Diagnostic Laboratory,,MISSED_ENTIRELY,prose,12,clean,en,insurance_claim
+nlp,gold_synth-0021-insurance_claim-t12,payer_name,Ambetter Health,CLAIM FORM,WRONG_VALUE,prose,12,clean,en,insurance_claim
+nlp,gold_synth-0021-insurance_claim-t12,member_id,62878397294,62878397294.,FORMAT_NORMALISATION,prose,12,clean,en,insurance_claim
+nlp,gold_synth-0021-insurance_claim-t12,document_reference,CLM-926066,CLM-926066 was,OVER_CAPTURE,prose,12,clean,en,insurance_claim
+nlp,gold_synth-0021-insurance_claim-t12,date_of_service,09/17/2025,09/16/2025,WRONG_VALUE,prose,12,clean,en,insurance_claim
+nlp,gold_synth-0022-remittance_advice-t13,payer_name,Oscar Health Plan,"April 1, 2026 $1,461.70",WRONG_VALUE,below,13,scanned,en,remittance_advice
+nlp,gold_synth-0022-remittance_advice-t13,date_of_service,"April 1, 2026","March 30, 2026",WRONG_VALUE,below,13,scanned,en,remittance_advice
+nlp,gold_synth-0022-remittance_advice-t13,amount_paid,"$2,892.95","$1,202.27",WRONG_VALUE,below,13,scanned,en,remittance_advice
+nlp,gold_synth-0022-remittance_advice-t13,patient_responsibility,"$1,461.70",1,WRONG_VALUE,below,13,scanned,en,remittance_advice
+nlp,gold_synth-0025-prior_auth_request-t12,patient_name,Daniel Rivera,,MISSED_ENTIRELY,prose,12,scanned,en,prior_auth_request
+nlp,gold_synth-0025-prior_auth_request-t12,referring_provider_name,"Elizabeth Sanchez, NP",,MISSED_ENTIRELY,prose,12,scanned,en,prior_auth_request
+nlp,gold_synth-0025-prior_auth_request-t12,servicing_facility,Oakhurst Imaging Center,,MISSED_ENTIRELY,prose,12,scanned,en,prior_auth_request
+nlp,gold_synth-0025-prior_auth_request-t12,payer_name,Ambetter Health,,MISSED_ENTIRELY,prose,12,scanned,en,prior_auth_request
+nlp,gold_synth-0025-prior_auth_request-t12,member_id,CMY929930559,CMY.929930559.,OCR_CORRUPTION,prose,12,scanned,en,prior_auth_request
+nlp,gold_synth-0025-prior_auth_request-t12,document_reference,AUTH7998132,AUTH7998132 was,OVER_CAPTURE,prose,12,scanned,en,prior_auth_request
+nlp,gold_synth-0025-prior_auth_request-t12,date_of_service,24-Dec-2024,20-Jan-2025,LABEL_CONFUSION,prose,12,scanned,en,prior_auth_request
+nlp,gold_synth-0027-insurance_claim-t14,servicing_facility,Granite Bay Cardiology Institute,Granite Bay Cardiology,TRUNCATION,grid,14,clean,en,insurance_claim
+nlp,gold_synth-0028-remittance_advice-t11,servicing_facility,Highland Sports Medicine Clinic,Highland Sports Medicine Clini¢l6-Apr-2025,OCR_CORRUPTION,grid,11,scanned,en,remittance_advice
+nlp,gold_synth-0028-remittance_advice-t11,document_date,16-Apr-2025,18-Apr-2025,OCR_CORRUPTION,grid,11,scanned,en,remittance_advice
+nlp,gold_synth-0028-remittance_advice-t11,patient_responsibility,$125.76,02,WRONG_VALUE,grid,11,scanned,en,remittance_advice
+nlp,gold_synth-0029-patient_intake_form-t12,patient_name,Charles Adams,,MISSED_ENTIRELY,prose,12,scanned,en,patient_intake_form
+nlp,gold_synth-0029-patient_intake_form-t12,referring_provider_name,"Dr. Joseph Martinez, D.O.",,MISSED_ENTIRELY,prose,12,scanned,en,patient_intake_form
+nlp,gold_synth-0029-patient_intake_form-t12,payer_name,UnitedHealthcare,,MISSED_ENTIRELY,prose,12,scanned,en,patient_intake_form
+nlp,gold_synth-0029-patient_intake_form-t12,member_id,86649690011,86649690011.,FORMAT_NORMALISATION,prose,12,scanned,en,patient_intake_form
+nlp,gold_synth-0031-prior_auth_request-t14,patient_dob,"December 21, 1945","December 21, 1945",OCR_CORRUPTION,grid,14,scanned,en,prior_auth_request
+nlp,gold_synth-0031-prior_auth_request-t14,servicing_facility,Cedar Park Diagnostic Laboratory,Cedar Park Diagnostic,TRUNCATION,grid,14,scanned,en,prior_auth_request
+nlp,gold_synth-0031-prior_auth_request-t14,document_date,"March 2, 2026","March 2, 2026",OCR_CORRUPTION,grid,14,scanned,en,prior_auth_request
+nlp,gold_synth-0031-prior_auth_request-t14,date_of_service,"January 23, 2026","January 23, 2026",OCR_CORRUPTION,grid,14,scanned,en,prior_auth_request
+nlp,gold_synth-0032-lab_order-t11,servicing_facility,"Pinehurst Neurology Specialists, P.A.",Pinehurst Neurology Specialists,FORMAT_NORMALISATION,grid,11,clean,en,lab_order
+nlp,gold_synth-0033-insurance_claim-t12,patient_name,John Smith,,MISSED_ENTIRELY,prose,12,clean,en,insurance_claim
+nlp,gold_synth-0033-insurance_claim-t12,referring_provider_name,"Joshua Young, PA-C",,MISSED_ENTIRELY,prose,12,clean,en,insurance_claim
+nlp,gold_synth-0033-insurance_claim-t12,servicing_facility,Summit Surgical Center,,MISSED_ENTIRELY,prose,12,clean,en,insurance_claim
+nlp,gold_synth-0033-insurance_claim-t12,payer_name,Cigna Healthcare,CLAIM FORM,WRONG_VALUE,prose,12,clean,en,insurance_claim
+nlp,gold_synth-0033-insurance_claim-t12,member_id,JBN673399980,JBN673399980.,FORMAT_NORMALISATION,prose,12,clean,en,insurance_claim
+nlp,gold_synth-0033-insurance_claim-t12,document_reference,CLM-8743054,CLM-8743054 was,OVER_CAPTURE,prose,12,clean,en,insurance_claim
+nlp,gold_synth-0034-remittance_advice-t13,date_of_service,08/13/2025,08/14/2025,LABEL_CONFUSION,below,13,scanned,en,remittance_advice
+nlp,gold_synth-0034-remittance_advice-t13,patient_responsibility,$32.46,1,WRONG_VALUE,below,13,scanned,en,remittance_advice
+nlp,gold_synth-0035-patient_intake_form-t14,payer_name,Oscar Health Plan,Oscar,TRUNCATION,grid,14,clean,en,patient_intake_form
+nlp,gold_synth-0036-referral_letter-t11,patient_name,María Torres,Riverbend Diagnostic,WRONG_VALUE,grid,11,scanned,es,referral_letter
+nlp,gold_synth-0036-referral_letter-t11,patient_dob,"October 4, 2005","October 4, 2005",OCR_CORRUPTION,grid,11,scanned,es,referral_letter
+nlp,gold_synth-0036-referral_letter-t11,referring_provider_name,"Joshua Lopez, NP",N.* DE MIEMBRO,WRONG_VALUE,grid,11,scanned,es,referral_letter
+nlp,gold_synth-0036-referral_letter-t11,servicing_facility,Riverbend Diagnostic Laboratory,Riverbend Diagnostic,TRUNCATION,grid,11,scanned,es,referral_letter
+nlp,gold_synth-0036-referral_letter-t11,payer_name,Medicaid Managed Care,Medicaid Managed. Care,FORMAT_NORMALISATION,grid,11,scanned,es,referral_letter
+nlp,gold_synth-0036-referral_letter-t11,document_date,2025-08-02,"October 4, 2005",LABEL_CONFUSION,grid,11,scanned,es,referral_letter
+nlp,gold_synth-0037-prior_auth_request-t12,patient_name,Sandra White,,MISSED_ENTIRELY,prose,12,clean,en,prior_auth_request
+nlp,gold_synth-0037-prior_auth_request-t12,referring_provider_name,"Donna Nguyen, NP",,MISSED_ENTIRELY,prose,12,clean,en,prior_auth_request
+nlp,gold_synth-0037-prior_auth_request-t12,servicing_facility,Pinehurst Sports Medicine Clinic,,MISSED_ENTIRELY,prose,12,clean,en,prior_auth_request
+nlp,gold_synth-0037-prior_auth_request-t12,payer_name,Blue Cross Blue Shield of Texas,,MISSED_ENTIRELY,prose,12,clean,en,prior_auth_request
+nlp,gold_synth-0037-prior_auth_request-t12,member_id,631-64-9553,631-64-9553.,FORMAT_NORMALISATION,prose,12,clean,en,prior_auth_request
+nlp,gold_synth-0037-prior_auth_request-t12,document_reference,AUTH-264885,AUTH-264885 was,OVER_CAPTURE,prose,12,clean,en,prior_auth_request
+nlp,gold_synth-0037-prior_auth_request-t12,date_of_service,01.31.2026,03.02.2026,LABEL_CONFUSION,prose,12,clean,en,prior_auth_request
+nlp,gold_synth-0039-insurance_claim-t14,patient_name,Donald Martin,Donald Martin CLM+748180,OVER_CAPTURE,grid,14,scanned,en,insurance_claim
+nlp,gold_synth-0039-insurance_claim-t14,payer_name,Bright HealthCare,CLAIM FORM,WRONG_VALUE,grid,14,scanned,en,insurance_claim
+nlp,gold_synth-0039-insurance_claim-t14,document_reference,CLM-748180,CLM+748180,OCR_CORRUPTION,grid,14,scanned,en,insurance_claim
+nlp,gold_synth-0040-remittance_advice-t11,payer_name,Oscar Health Plan,"River Rd, Lakeside, WA 28268",WRONG_VALUE,grid,11,clean,en,remittance_advice
+nlp,gold_synth-0040-remittance_advice-t11,patient_responsibility,$211.56,1,WRONG_VALUE,grid,11,clean,en,remittance_advice
+nlp,gold_synth-0041-patient_intake_form-t12,patient_name,Michael Gonzalez,,MISSED_ENTIRELY,prose,12,clean,en,patient_intake_form
+nlp,gold_synth-0041-patient_intake_form-t12,referring_provider_name,"Michael Thomas, MD",,MISSED_ENTIRELY,prose,12,clean,en,patient_intake_form
+nlp,gold_synth-0041-patient_intake_form-t12,payer_name,Kaiser Permanente,,MISSED_ENTIRELY,prose,12,clean,en,patient_intake_form
+nlp,gold_synth-0041-patient_intake_form-t12,member_id,T98903130W,T98903130W.,FORMAT_NORMALISATION,prose,12,clean,en,patient_intake_form
+nlp,gold_synth-0042-referral_letter-t13,referring_provider_name,"Dr. Patricia Miller, MD, FACP","Dr. Patricia Miller, MD, FACP.",FORMAT_NORMALISATION,below,13,scanned,en,referral_letter
+nlp,gold_synth-0042-referral_letter-t13,payer_name,TRICARE East,,MISSED_ENTIRELY,below,13,scanned,en,referral_letter
+nlp,gold_synth-0042-referral_letter-t13,member_id,YAA364859014,YAA3648590 14,OCR_CORRUPTION,below,13,scanned,en,referral_letter
+nlp,gold_synth-0042-referral_letter-t13,document_reference,RF194851,RF19485],OCR_CORRUPTION,below,13,scanned,en,referral_letter
+nlp,gold_synth-0045-insurance_claim-t12,patient_name,Barbara Martin,,OCR_CORRUPTION,prose,12,scanned,en,insurance_claim
+nlp,gold_synth-0045-insurance_claim-t12,patient_dob,09.11.2014,"February 26, 2025",OCR_CORRUPTION,prose,12,scanned,en,insurance_claim
+nlp,gold_synth-0045-insurance_claim-t12,referring_provider_name,"Dr. Carol Gonzalez, MD, FACP",,MISSED_ENTIRELY,prose,12,scanned,en,insurance_claim
+nlp,gold_synth-0045-insurance_claim-t12,servicing_facility,Maple Grove Imaging Center,,MISSED_ENTIRELY,prose,12,scanned,en,insurance_claim
+nlp,gold_synth-0045-insurance_claim-t12,payer_name,Kaiser Permanente,,MISSED_ENTIRELY,prose,12,scanned,en,insurance_claim
+nlp,gold_synth-0045-insurance_claim-t12,member_id,F27711898L,F27711898L.,FORMAT_NORMALISATION,prose,12,scanned,en,insurance_claim
+nlp,gold_synth-0045-insurance_claim-t12,document_reference,CLM4639493,CLM4639493 was,OVER_CAPTURE,prose,12,scanned,en,insurance_claim
+nlp,gold_synth-0045-insurance_claim-t12,document_date,"April 10, 2025","April 10,2025",OCR_CORRUPTION,prose,12,scanned,en,insurance_claim
+nlp,gold_synth-0045-insurance_claim-t12,date_of_service,"February 26, 2025","April 13, 2025",WRONG_VALUE,prose,12,scanned,en,insurance_claim
+nlp,gold_synth-0046-remittance_advice-t13,payer_name,WellCare,Sve,WRONG_VALUE,below,13,scanned,en,remittance_advice
+nlp,gold_synth-0046-remittance_advice-t13,date_of_service,10/06/2025,10/04/2025,WRONG_VALUE,below,13,scanned,en,remittance_advice
+nlp,gold_synth-0046-remittance_advice-t13,amount_paid,USD 463.80,USD 193.24,WRONG_VALUE,below,13,scanned,en,remittance_advice
+nlp,gold_synth-0046-remittance_advice-t13,patient_responsibility,USD 103.70,1,WRONG_VALUE,below,13,scanned,en,remittance_advice
+nlp,gold_synth-0047-patient_intake_form-t14,patient_name,Karen Robinson,Karen. Robinson,FORMAT_NORMALISATION,grid,14,scanned,en,patient_intake_form
+nlp,gold_synth-0047-patient_intake_form-t14,member_id,EGF957874402,EGF 957874402,OCR_CORRUPTION,grid,14,scanned,en,patient_intake_form
+nlp,gold_synth-0048-referral_letter-t11,servicing_facility,"Maple Grove Radiology, P.C.","Maple -Grove Radiology, P.c.",WRONG_VALUE,grid,11,scanned,en,referral_letter
+nlp,gold_synth-0048-referral_letter-t11,payer_name,Molina Healthcare,Molina. Healthcare,FORMAT_NORMALISATION,grid,11,scanned,en,referral_letter
+nlp,gold_synth-0049-prior_auth_request-t12,patient_name,Emily Martin,,MISSED_ENTIRELY,prose,12,clean,en,prior_auth_request
+nlp,gold_synth-0049-prior_auth_request-t12,referring_provider_name,"Nancy Thomas, NP",,MISSED_ENTIRELY,prose,12,clean,en,prior_auth_request
+nlp,gold_synth-0049-prior_auth_request-t12,servicing_facility,Highland Sports Medicine Clinic,,MISSED_ENTIRELY,prose,12,clean,en,prior_auth_request
+nlp,gold_synth-0049-prior_auth_request-t12,payer_name,Oscar Health Plan,"is Migraine, unspecified, not intractable",WRONG_VALUE,prose,12,clean,en,prior_auth_request
+nlp,gold_synth-0049-prior_auth_request-t12,member_id,158-60-8263,158-60-8263.,FORMAT_NORMALISATION,prose,12,clean,en,prior_auth_request
+nlp,gold_synth-0049-prior_auth_request-t12,document_reference,PA2642419,PA2642419 was,OVER_CAPTURE,prose,12,clean,en,prior_auth_request
+nlp,gold_synth-0049-prior_auth_request-t12,date_of_service,07.03.2025,07.16.2025,LABEL_CONFUSION,prose,12,clean,en,prior_auth_request
+nlp,gold_synth-0050-lab_order-t13,patient_name,Elizabeth Miller,Elizabeth Muller,OCR_CORRUPTION,below,13,scanned,en,lab_order
+nlp,gold_synth-0050-lab_order-t13,patient_dob,,"December 27, 2024",SPURIOUS_EXTRACTION,below,13,scanned,en,lab_order
+nlp,gold_synth-0050-lab_order-t13,referring_provider_name,"Dr. Margaret Wright, NP",Dr. Margaret Wright. NP,FORMAT_NORMALISATION,below,13,scanned,en,lab_order
+nlp,gold_synth-0050-lab_order-t13,servicing_facility,"Brookfield Orthopedic Associates, LLC","Brooktield Orthopedic Associates, LLC",OCR_CORRUPTION,below,13,scanned,en,lab_order
+nlp,gold_synth-0050-lab_order-t13,document_date,"January 1, 2025",January 1. 2025,OCR_CORRUPTION,below,13,scanned,en,lab_order
+nlp,gold_synth-0050-lab_order-t13,diagnosis_code,M17.11,M1711,OCR_CORRUPTION,below,13,scanned,en,lab_order
+nlp,gold_synth-0051-insurance_claim-t14,servicing_facility,Lakeside Regional Medical Center,Lakeside Regional Medical,TRUNCATION,grid,14,scanned,en,insurance_claim
+nlp,gold_synth-0051-insurance_claim-t14,payer_name,Premera Blue Cross,CLAIM FORM,WRONG_VALUE,grid,14,scanned,en,insurance_claim
+nlp,gold_synth-0052-remittance_advice-t11,servicing_facility,"Pinehurst Neurology Specialists, P.A.",Pinehurst Neurology Specialists,FORMAT_NORMALISATION,grid,11,clean,en,remittance_advice
+nlp,gold_synth-0052-remittance_advice-t11,patient_responsibility,$153.54,1,WRONG_VALUE,grid,11,clean,en,remittance_advice
+nlp,gold_synth-0053-patient_intake_form-t12,patient_name,Joshua Hill,INTAKE FORM,WRONG_VALUE,prose,12,scanned,en,patient_intake_form
+nlp,gold_synth-0053-patient_intake_form-t12,referring_provider_name,"Dr. Emily Rodriguez, MD",,MISSED_ENTIRELY,prose,12,scanned,en,patient_intake_form
+nlp,gold_synth-0053-patient_intake_form-t12,payer_name,Cigna Healthcare,,MISSED_ENTIRELY,prose,12,scanned,en,patient_intake_form
+nlp,gold_synth-0053-patient_intake_form-t12,member_id,FYR007788056,FYRO07788056.,OCR_CORRUPTION,prose,12,scanned,en,patient_intake_form
+nlp,gold_synth-0055-prior_auth_request-t14,patient_name,Kenneth Allen,Ss*s*~—~—stsSSSC“‘CCSCOWOOOOXREFERENCE NAME BOUT,WRONG_VALUE,grid,14,scanned,en,prior_auth_request
+nlp,gold_synth-0055-prior_auth_request-t14,servicing_facility,"Brookfield Orthopedic Associates, LLC",Brookfield Orthopedic,FORMAT_NORMALISATION,grid,14,scanned,en,prior_auth_request
+nlp,gold_synth-0055-prior_auth_request-t14,document_date,,9/9/25,SPURIOUS_EXTRACTION,grid,14,scanned,en,prior_auth_request
+nlp,gold_synth-0056-lab_order-t11,patient_dob,,02.20.2025,SPURIOUS_EXTRACTION,grid,11,scanned,en,lab_order
+nlp,gold_synth-0056-lab_order-t11,servicing_facility,"Pinehurst Neurology Specialists, P.A.",Pinehurst Neurology Specialist,OCR_CORRUPTION,grid,11,scanned,en,lab_order
+nlp,gold_synth-0056-lab_order-t11,date_of_service,,02.20.2025,SPURIOUS_EXTRACTION,grid,11,scanned,en,lab_order
+nlp,gold_synth-0057-insurance_claim-t12,patient_name,Nancy Lopez,,MISSED_ENTIRELY,prose,12,clean,en,insurance_claim
+nlp,gold_synth-0057-insurance_claim-t12,referring_provider_name,"Dr. Mark Martin, MD",,MISSED_ENTIRELY,prose,12,clean,en,insurance_claim
+nlp,gold_synth-0057-insurance_claim-t12,servicing_facility,"Pinehurst Neurology Specialists, P.A.",,MISSED_ENTIRELY,prose,12,clean,en,insurance_claim
+nlp,gold_synth-0057-insurance_claim-t12,payer_name,Premera Blue Cross,CLAIM FORM,WRONG_VALUE,prose,12,clean,en,insurance_claim
+nlp,gold_synth-0057-insurance_claim-t12,member_id,H35436056B,H35436056B.,FORMAT_NORMALISATION,prose,12,clean,en,insurance_claim
+nlp,gold_synth-0057-insurance_claim-t12,document_reference,CLM-960927,CLM-960927 was,OVER_CAPTURE,prose,12,clean,en,insurance_claim
+nlp,gold_synth-0057-insurance_claim-t12,date_of_service,16-Sep-2025,14-Sep-2025,WRONG_VALUE,prose,12,clean,en,insurance_claim
+nlp,gold_synth-0058-remittance_advice-t13,amount_paid,334.16,31.03,WRONG_VALUE,below,13,clean,en,remittance_advice
+nlp,gold_synth-0058-remittance_advice-t13,patient_responsibility,75.00,1,WRONG_VALUE,below,13,clean,en,remittance_advice
+nlp,gold_synth-0059-patient_intake_form-t14,patient_dob,"April 8, 1953","March 28, 2025",OCR_CORRUPTION,grid,14,scanned,en,patient_intake_form
+nlp,gold_synth-0059-patient_intake_form-t14,document_date,"March 28, 2025","March 28, 2025",OCR_CORRUPTION,grid,14,scanned,en,patient_intake_form
+nlp,gold_synth-0060-referral_letter-t11,patient_dob,,09-Jul-2025,SPURIOUS_EXTRACTION,grid,11,scanned,en,referral_letter
+nlp,gold_synth-0060-referral_letter-t11,referring_provider_name,"Dr. Kimberly Hernandez, D.O.",,MISSED_ENTIRELY,grid,11,scanned,en,referral_letter
+nlp,gold_synth-0060-referral_letter-t11,member_id,FJN926031125,FIN926031125,OCR_CORRUPTION,grid,11,scanned,en,referral_letter
+nlp,gold_synth-0060-referral_letter-t11,document_reference,,RE-790230,SPURIOUS_EXTRACTION,grid,11,scanned,en,referral_letter
+nlp,gold_synth-0061-prior_auth_request-t12,patient_name,Kevin Green,,MISSED_ENTIRELY,prose,12,scanned,en,prior_auth_request
+nlp,gold_synth-0061-prior_auth_request-t12,patient_dob,,12/17/25,SPURIOUS_EXTRACTION,prose,12,scanned,en,prior_auth_request
+nlp,gold_synth-0061-prior_auth_request-t12,referring_provider_name,"Dr. Sandra Moore, NP",,MISSED_ENTIRELY,prose,12,scanned,en,prior_auth_request
+nlp,gold_synth-0061-prior_auth_request-t12,servicing_facility,"Pinehurst Radiology, P.C.",,MISSED_ENTIRELY,prose,12,scanned,en,prior_auth_request
+nlp,gold_synth-0061-prior_auth_request-t12,payer_name,Blue Cross Blue Shield of Texas,,MISSED_ENTIRELY,prose,12,scanned,en,prior_auth_request
+nlp,gold_synth-0061-prior_auth_request-t12,member_id,58274357263,58274357263.,FORMAT_NORMALISATION,prose,12,scanned,en,prior_auth_request
+nlp,gold_synth-0061-prior_auth_request-t12,document_reference,PA-31973962,PA-31973962 was,OVER_CAPTURE,prose,12,scanned,en,prior_auth_request
+nlp,gold_synth-0061-prior_auth_request-t12,date_of_service,12/17/25,12/23/25,LABEL_CONFUSION,prose,12,scanned,en,prior_auth_request
+nlp,gold_synth-0063-insurance_claim-t14,payer_name,Premera Blue Cross,CLAIM FORM,WRONG_VALUE,grid,14,scanned,en,insurance_claim
+nlp,gold_synth-0064-remittance_advice-t11,servicing_facility,,Brookfield Orthopedic Associlat,SPURIOUS_EXTRACTION,grid,11,scanned,en,remittance_advice
+nlp,gold_synth-0064-remittance_advice-t11,document_date,,2025-04-20,SPURIOUS_EXTRACTION,grid,11,scanned,en,remittance_advice
+nlp,gold_synth-0064-remittance_advice-t11,patient_responsibility,,1,SPURIOUS_EXTRACTION,grid,11,scanned,en,remittance_advice
+nlp,gold_synth-0065-patient_intake_form-t12,patient_name,Kevin Jones,,MISSED_ENTIRELY,prose,12,scanned,en,patient_intake_form
+nlp,gold_synth-0065-patient_intake_form-t12,referring_provider_name,"Sarah Nelson, M.D.",,MISSED_ENTIRELY,prose,12,scanned,en,patient_intake_form
+nlp,gold_synth-0065-patient_intake_form-t12,payer_name,Molina Healthcare,,MISSED_ENTIRELY,prose,12,scanned,en,patient_intake_form
+nlp,gold_synth-0065-patient_intake_form-t12,member_id,J26387253G,J26387253G.,FORMAT_NORMALISATION,prose,12,scanned,en,patient_intake_form
+nlp,gold_synth-0066-referral_letter-t13,referring_provider_name,"Joseph King, PA-C",Joseph King. PA-C,FORMAT_NORMALISATION,below,13,scanned,en,referral_letter
+nlp,gold_synth-0066-referral_letter-t13,servicing_facility,Westgate Sports Medicine Clinic,Westwate Sporty Medivine Clinic,OCR_CORRUPTION,below,13,scanned,en,referral_letter
+nlp,gold_synth-0067-prior_auth_request-t14,servicing_facility,"Westgate Orthopedic Associates, LLC",Westgate Orthopedic Associates,FORMAT_NORMALISATION,grid,14,clean,en,prior_auth_request
+nlp,gold_synth-0068-lab_order-t11,servicing_facility,"Riverbend Orthopedic Associates, LLC",Riverbend Orthopedic Associates,FORMAT_NORMALISATION,grid,11,clean,en,lab_order
+nlp,gold_synth-0069-insurance_claim-t12,patient_name,Karen Clark,,MISSED_ENTIRELY,prose,12,scanned,en,insurance_claim
+nlp,gold_synth-0069-insurance_claim-t12,referring_provider_name,"Linda Green, MD",,MISSED_ENTIRELY,prose,12,scanned,en,insurance_claim
+nlp,gold_synth-0069-insurance_claim-t12,servicing_facility,"Highland Radiology, P.C.",,MISSED_ENTIRELY,prose,12,scanned,en,insurance_claim
+nlp,gold_synth-0069-insurance_claim-t12,payer_name,Molina Healthcare,,MISSED_ENTIRELY,prose,12,scanned,en,insurance_claim
+nlp,gold_synth-0069-insurance_claim-t12,member_id,LDE377116550,LDE377116550.,FORMAT_NORMALISATION,prose,12,scanned,en,insurance_claim
+nlp,gold_synth-0069-insurance_claim-t12,document_reference,CLM9170648,CLM9170648 was,OVER_CAPTURE,prose,12,scanned,en,insurance_claim
+nlp,gold_synth-0069-insurance_claim-t12,document_date,10.21.2025,10.21 2025,OCR_CORRUPTION,prose,12,scanned,en,insurance_claim
+nlp,gold_synth-0070-remittance_advice-t13,patient_name,Nancy Allen,Naney Allen,OCR_CORRUPTION,below,13,scanned,en,remittance_advice
+nlp,gold_synth-0070-remittance_advice-t13,member_id,J48655049J,J48655049),OCR_CORRUPTION,below,13,scanned,en,remittance_advice
+nlp,gold_synth-0070-remittance_advice-t13,total_charge,203.73,46104070300,WRONG_VALUE,below,13,scanned,en,remittance_advice
+nlp,gold_synth-0070-remittance_advice-t13,patient_responsibility,78.20,02,WRONG_VALUE,below,13,scanned,en,remittance_advice
+nlp,gold_synth-0071-patient_intake_form-t14,patient_name,María Hill,María Hill,OCR_CORRUPTION,grid,14,scanned,es,patient_intake_form
+nlp,gold_synth-0071-patient_intake_form-t14,patient_dob,12 de diciembre de 2001,12 de diciembre de 2001,OCR_CORRUPTION,grid,14,scanned,es,patient_intake_form
+nlp,gold_synth-0071-patient_intake_form-t14,document_date,29 de agosto de 2025,29 de agosto de 2025,OCR_CORRUPTION,grid,14,scanned,es,patient_intake_form
+nlp,gold_synth-0072-referral_letter-t11,patient_name,Donald Adams,Donald Adams ean,OVER_CAPTURE,grid,11,scanned,en,referral_letter
+nlp,gold_synth-0072-referral_letter-t11,servicing_facility,"Cedar Park Orthopedic Associates, LLC",Cedar Park Orthopedic Associates/25125,OVER_CAPTURE,grid,11,scanned,en,referral_letter
+nlp,gold_synth-0072-referral_letter-t11,member_id,20366874143,20366874143 |,FORMAT_NORMALISATION,grid,11,scanned,en,referral_letter
+nlp,gold_synth-0072-referral_letter-t11,document_date,,7/28/25,SPURIOUS_EXTRACTION,grid,11,scanned,en,referral_letter
+nlp,gold_synth-0073-prior_auth_request-t12,patient_name,Donna Martinez,,MISSED_ENTIRELY,prose,12,clean,en,prior_auth_request
+nlp,gold_synth-0073-prior_auth_request-t12,referring_provider_name,"Emily Martinez, DO",,MISSED_ENTIRELY,prose,12,clean,en,prior_auth_request
+nlp,gold_synth-0073-prior_auth_request-t12,servicing_facility,"Northside Radiology, P.C.",,MISSED_ENTIRELY,prose,12,clean,en,prior_auth_request
+nlp,gold_synth-0073-prior_auth_request-t12,payer_name,Bright HealthCare,,MISSED_ENTIRELY,prose,12,clean,en,prior_auth_request
+nlp,gold_synth-0073-prior_auth_request-t12,member_id,GLG815287655,GLG815287655.,FORMAT_NORMALISATION,prose,12,clean,en,prior_auth_request
+nlp,gold_synth-0073-prior_auth_request-t12,document_reference,AUTH-916901,AUTH-916901 was,OVER_CAPTURE,prose,12,clean,en,prior_auth_request
+nlp,gold_synth-0073-prior_auth_request-t12,date_of_service,12/13/2024,01/22/2025,LABEL_CONFUSION,prose,12,clean,en,prior_auth_request
+nlp,gold_synth-0074-lab_order-t13,referring_provider_name,"Dr. Matthew Nelson, PA-C",Dr. Matthew Nelson; PA-C,FORMAT_NORMALISATION,below,13,scanned,en,lab_order
+nlp,gold_synth-0074-lab_order-t13,date_of_service,07-Jan-2026,24-Jan-2026,LABEL_CONFUSION,below,13,scanned,en,lab_order
+nlp,gold_synth-0075-insurance_claim-t14,patient_dob,"July 9, 1945","July 9, 1945",OCR_CORRUPTION,grid,14,scanned,en,insurance_claim
+nlp,gold_synth-0075-insurance_claim-t14,servicing_facility,Kingsport Sports Medicine Clinic,Kingsport Sports Medicine,TRUNCATION,grid,14,scanned,en,insurance_claim
+nlp,gold_synth-0075-insurance_claim-t14,payer_name,TRICARE East,"TRICARE, East $294.89",OVER_CAPTURE,grid,14,scanned,en,insurance_claim
+nlp,gold_synth-0075-insurance_claim-t14,document_date,"March 8, 2025","March 8, 2025",OCR_CORRUPTION,grid,14,scanned,en,insurance_claim
+nlp,gold_synth-0075-insurance_claim-t14,date_of_service,"February 7, 2025","February 7, 2025",OCR_CORRUPTION,grid,14,scanned,en,insurance_claim
+nlp,gold_synth-0076-remittance_advice-t11,document_date,"February 23, 2026","February 23, 2026",OCR_CORRUPTION,grid,11,scanned,en,remittance_advice
+nlp,gold_synth-0076-remittance_advice-t11,date_of_service,"January 10, 2026","January 10, 2026",OCR_CORRUPTION,grid,11,scanned,en,remittance_advice
+nlp,gold_synth-0076-remittance_advice-t11,patient_responsibility,$76.88,5,WRONG_VALUE,grid,11,scanned,en,remittance_advice
+nlp,gold_synth-0077-patient_intake_form-t12,patient_name,Karen Garcia,INTAKE FORM,WRONG_VALUE,prose,12,scanned,en,patient_intake_form
+nlp,gold_synth-0077-patient_intake_form-t12,referring_provider_name,"Michelle Lopez, DO",,MISSED_ENTIRELY,prose,12,scanned,en,patient_intake_form
+nlp,gold_synth-0077-patient_intake_form-t12,payer_name,Molina Healthcare,,MISSED_ENTIRELY,prose,12,scanned,en,patient_intake_form
+nlp,gold_synth-0077-patient_intake_form-t12,member_id,JTD698427446,JTD698427446.,FORMAT_NORMALISATION,prose,12,scanned,en,patient_intake_form
+nlp,gold_synth-0078-referral_letter-t13,referring_provider_name,"Linda Smith, MD, FACP",Linda Smith. MD. FACP,FORMAT_NORMALISATION,below,13,scanned,en,referral_letter
+nlp,gold_synth-0078-referral_letter-t13,document_reference,RF-7105103,RE-7 105103,OCR_CORRUPTION,below,13,scanned,en,referral_letter
+nlp,gold_synth-0079-prior_auth_request-t14,patient_name,Mary Martinez,Mary. Martinez,FORMAT_NORMALISATION,grid,14,scanned,en,prior_auth_request
+nlp,gold_synth-0079-prior_auth_request-t14,servicing_facility,Ashford Diagnostic Laboratory,Ashford Diagnostic: Laboratory,FORMAT_NORMALISATION,grid,14,scanned,en,prior_auth_request
+nlp,gold_synth-0080-lab_order-t11,patient_name,Charles Lewis,,MISSED_ENTIRELY,grid,11,scanned,en,lab_order
+nlp,gold_synth-0080-lab_order-t11,servicing_facility,Lakeside Regional Medical Center,Lakeside Regional Medical Cent##11.9,OCR_CORRUPTION,grid,11,scanned,en,lab_order
+nlp,gold_synth-0081-insurance_claim-t12,patient_name,Barbara Hall,,MISSED_ENTIRELY,prose,12,scanned,en,insurance_claim
+nlp,gold_synth-0081-insurance_claim-t12,patient_dob,12/19/47,11/19/25,OCR_CORRUPTION,prose,12,scanned,en,insurance_claim
+nlp,gold_synth-0081-insurance_claim-t12,referring_provider_name,"Robert Scott, PA-C",,MISSED_ENTIRELY,prose,12,scanned,en,insurance_claim
+nlp,gold_synth-0081-insurance_claim-t12,servicing_facility,"Oakhurst Neurology Specialists, P.A.",,MISSED_ENTIRELY,prose,12,scanned,en,insurance_claim
+nlp,gold_synth-0081-insurance_claim-t12,payer_name,Medicare Part B,,MISSED_ENTIRELY,prose,12,scanned,en,insurance_claim
+nlp,gold_synth-0081-insurance_claim-t12,member_id,686-23-0408,686-23-0408.,FORMAT_NORMALISATION,prose,12,scanned,en,insurance_claim
+nlp,gold_synth-0081-insurance_claim-t12,document_reference,CLM-55072111,CLM-55072111 was,OVER_CAPTURE,prose,12,scanned,en,insurance_claim
+nlp,gold_synth-0081-insurance_claim-t12,date_of_service,11/20/25,11/19/25,WRONG_VALUE,prose,12,scanned,en,insurance_claim
+nlp,gold_synth-0082-remittance_advice-t13,patient_responsibility,$76.42,1,WRONG_VALUE,below,13,clean,es,remittance_advice
+nlp,gold_synth-0083-patient_intake_form-t14,patient_name,Andrew Young,INTAKE FORM,WRONG_VALUE,grid,14,scanned,en,patient_intake_form
+nlp,gold_synth-0083-patient_intake_form-t14,patient_dob,"September 1, 1952","September 1, 1952",OCR_CORRUPTION,grid,14,scanned,en,patient_intake_form
+nlp,gold_synth-0083-patient_intake_form-t14,document_date,"December 24, 2025","September 1, 1952",OCR_CORRUPTION,grid,14,scanned,en,patient_intake_form
+nlp,gold_synth-0084-referral_letter-t11,servicing_facility,Kingsport Regional Medical Center,Kingsport Regional Medical .Cent@&/26/2025,OCR_CORRUPTION,grid,11,scanned,en,referral_letter
+nlp,gold_synth-0085-prior_auth_request-t12,patient_name,Mark Johnson,,MISSED_ENTIRELY,prose,12,clean,en,prior_auth_request
+nlp,gold_synth-0085-prior_auth_request-t12,referring_provider_name,"Dr. Daniel Hernandez, DO",,MISSED_ENTIRELY,prose,12,clean,en,prior_auth_request
+nlp,gold_synth-0085-prior_auth_request-t12,servicing_facility,"Granite Bay Radiology, P.C.",,MISSED_ENTIRELY,prose,12,clean,en,prior_auth_request
+nlp,gold_synth-0085-prior_auth_request-t12,payer_name,UnitedHealthcare,,MISSED_ENTIRELY,prose,12,clean,en,prior_auth_request
+nlp,gold_synth-0085-prior_auth_request-t12,member_id,J51307134W,J51307134W.,FORMAT_NORMALISATION,prose,12,clean,en,prior_auth_request
+nlp,gold_synth-0085-prior_auth_request-t12,document_reference,PA-9522809,PA-9522809 was,OVER_CAPTURE,prose,12,clean,en,prior_auth_request
+nlp,gold_synth-0085-prior_auth_request-t12,date_of_service,10.01.2025,10.10.2025,LABEL_CONFUSION,prose,12,clean,en,prior_auth_request
+nlp,gold_synth-0086-lab_order-t13,date_of_service,5/8/25,5/9/25,LABEL_CONFUSION,below,13,scanned,en,lab_order
+nlp,gold_synth-0087-insurance_claim-t14,servicing_facility,"Westgate Neurology Specialists, P.A.",Westgate Neurology Specialists,FORMAT_NORMALISATION,grid,14,clean,en,insurance_claim
+nlp,gold_synth-0087-insurance_claim-t14,payer_name,Molina Healthcare,CLAIM FORM,WRONG_VALUE,grid,14,clean,en,insurance_claim
+nlp,gold_synth-0088-remittance_advice-t11,servicing_facility,"Oakhurst Orthopedic Associates, LLC",Oakhurst Orthopedic Associates,FORMAT_NORMALISATION,grid,11,clean,en,remittance_advice
+nlp,gold_synth-0088-remittance_advice-t11,patient_responsibility,USD 27.16,1,WRONG_VALUE,grid,11,clean,en,remittance_advice
+nlp,gold_synth-0089-patient_intake_form-t12,patient_name,Kimberly Hernandez,INTAKE FORM,WRONG_VALUE,prose,12,scanned,en,patient_intake_form
+nlp,gold_synth-0089-patient_intake_form-t12,referring_provider_name,"Dr. Joshua Harris, PA-C",,MISSED_ENTIRELY,prose,12,scanned,en,patient_intake_form
+nlp,gold_synth-0089-patient_intake_form-t12,payer_name,Blue Shield of California,,MISSED_ENTIRELY,prose,12,scanned,en,patient_intake_form
+nlp,gold_synth-0089-patient_intake_form-t12,member_id,384-94-7241,384-94-7241.,FORMAT_NORMALISATION,prose,12,scanned,en,patient_intake_form
+small_model,gold_synth-0000-referral_letter-t11,patient_dob,6/10/52,/10,WRONG_VALUE,grid,11,clean,en,referral_letter
+small_model,gold_synth-0000-referral_letter-t11,referring_provider_name,"Richard Jones, MD",d Cardiology Institute,WRONG_VALUE,grid,11,clean,en,referral_letter
+small_model,gold_synth-0000-referral_letter-t11,servicing_facility,Riverbend Cardiology Institute,Riverben,TRUNCATION,grid,11,clean,en,referral_letter
+small_model,gold_synth-0000-referral_letter-t11,document_date,5/9/25,5,WRONG_VALUE,grid,11,clean,en,referral_letter
+small_model,gold_synth-0001-prior_auth_request-t12,document_date,"March 14, 2026","14, 2026",WRONG_VALUE,prose,12,clean,en,prior_auth_request
+small_model,gold_synth-0002-lab_order-t13,document_reference,LAB6478780,,MISSED_ENTIRELY,below,13,scanned,en,lab_order
+small_model,gold_synth-0002-lab_order-t13,document_date,04.03.2025,,MISSED_ENTIRELY,below,13,scanned,en,lab_order
+small_model,gold_synth-0002-lab_order-t13,date_of_service,03.12.2025,04.03.2025,LABEL_CONFUSION,below,13,scanned,en,lab_order
+small_model,gold_synth-0002-lab_order-t13,procedure_code,84443,84,TRUNCATION,below,13,scanned,en,lab_order
+small_model,gold_synth-0003-insurance_claim-t14,document_date,05/29/2025,05/03/2025,LABEL_CONFUSION,grid,14,clean,en,insurance_claim
+small_model,gold_synth-0003-insurance_claim-t14,date_of_service,05/03/2025,,MISSED_ENTIRELY,grid,14,clean,en,insurance_claim
+small_model,gold_synth-0004-remittance_advice-t11,servicing_facility,Brookfield Imaging Center,,MISSED_ENTIRELY,grid,11,clean,en,remittance_advice
+small_model,gold_synth-0004-remittance_advice-t11,payer_name,Ambetter Health,Ambetter  Health,FORMAT_NORMALISATION,grid,11,clean,en,remittance_advice
+small_model,gold_synth-0004-remittance_advice-t11,date_of_service,10/11/2025,10/11/202,WRONG_VALUE,grid,11,clean,en,remittance_advice
+small_model,gold_synth-0006-referral_letter-t13,referring_provider_name,"Dr. Nancy Scott, D.O.","Dr. Nancy Scott, D.O.          Y.",OVER_CAPTURE,below,13,scanned,en,referral_letter
+small_model,gold_synth-0006-referral_letter-t13,referring_provider_npi,7770346428,,MISSED_ENTIRELY,below,13,scanned,en,referral_letter
+small_model,gold_synth-0006-referral_letter-t13,member_id,YCF591565308,7770346428,OCR_CORRUPTION,below,13,scanned,en,referral_letter
+small_model,gold_synth-0006-referral_letter-t13,document_date,23-Feb-2025,25-Feb-2025,WRONG_VALUE,below,13,scanned,en,referral_letter
+small_model,gold_synth-0007-prior_auth_request-t14,document_date,08/21/2025,08,WRONG_VALUE,grid,14,clean,en,prior_auth_request
+small_model,gold_synth-0008-lab_order-t11,patient_name,James Nguyen,James   Nguyen,FORMAT_NORMALISATION,grid,11,scanned,en,lab_order
+small_model,gold_synth-0008-lab_order-t11,patient_dob,"December 6, 1983","December    6,     1983",OCR_CORRUPTION,grid,11,scanned,en,lab_order
+small_model,gold_synth-0008-lab_order-t11,referring_provider_name,"Dr. William Ramirez, D.O.","Dr.    William   Ramirez,    D.O.",FORMAT_NORMALISATION,grid,11,scanned,en,lab_order
+small_model,gold_synth-0008-lab_order-t11,servicing_facility,Brookfield Surgical Center,Brookfield   Surgical   Center,FORMAT_NORMALISATION,grid,11,scanned,en,lab_order
+small_model,gold_synth-0008-lab_order-t11,document_date,"May 31, 2025","June   3,    2025",OCR_CORRUPTION,grid,11,scanned,en,lab_order
+small_model,gold_synth-0008-lab_order-t11,date_of_service,"April 17, 2025","May    31,    2025",OCR_CORRUPTION,grid,11,scanned,en,lab_order
+small_model,gold_synth-0009-insurance_claim-t12,document_date,"January 13, 2025",2025,WRONG_VALUE,prose,12,clean,en,insurance_claim
+small_model,gold_synth-0010-remittance_advice-t13,document_date,4/11/26,/,WRONG_VALUE,below,13,clean,en,remittance_advice
+small_model,gold_synth-0010-remittance_advice-t13,date_of_service,3/28/26,4,WRONG_VALUE,below,13,clean,en,remittance_advice
+small_model,gold_synth-0010-remittance_advice-t13,amount_paid,$32.04,,MISSED_ENTIRELY,below,13,clean,en,remittance_advice
+small_model,gold_synth-0010-remittance_advice-t13,patient_responsibility,$11.38,,MISSED_ENTIRELY,below,13,clean,en,remittance_advice
+small_model,gold_synth-0011-patient_intake_form-t14,document_date,"November 10, 2025","November 13, 2025",WRONG_VALUE,grid,14,clean,en,patient_intake_form
+small_model,gold_synth-0012-referral_letter-t11,patient_name,Patricia Torres,Patricia   Torres,FORMAT_NORMALISATION,grid,11,scanned,en,referral_letter
+small_model,gold_synth-0012-referral_letter-t11,referring_provider_name,"Dr. Kenneth Lewis, MD, FACP","Dr.    Kenneth   Lewis,    MD,    FACP",FORMAT_NORMALISATION,grid,11,scanned,en,referral_letter
+small_model,gold_synth-0012-referral_letter-t11,referring_provider_npi,7858315840,64296328664,LABEL_CONFUSION,grid,11,scanned,en,referral_letter
+small_model,gold_synth-0012-referral_letter-t11,servicing_facility,"Stone Creek Neurology Specialists, P.A.",Neurology    Speciali,OCR_CORRUPTION,grid,11,scanned,en,referral_letter
+small_model,gold_synth-0012-referral_letter-t11,payer_name,Bright HealthCare,Bright   HealthCare,FORMAT_NORMALISATION,grid,11,scanned,en,referral_letter
+small_model,gold_synth-0012-referral_letter-t11,member_id,64296328664,,MISSED_ENTIRELY,grid,11,scanned,en,referral_letter
+small_model,gold_synth-0012-referral_letter-t11,document_date,,05/08/2026,SPURIOUS_EXTRACTION,grid,11,scanned,en,referral_letter
+small_model,gold_synth-0014-lab_order-t13,servicing_facility,Stone Creek General Hospital,Creek General Hospital,TRUNCATION,below,13,scanned,en,lab_order
+small_model,gold_synth-0014-lab_order-t13,document_date,2026-01-20,,MISSED_ENTIRELY,below,13,scanned,en,lab_order
+small_model,gold_synth-0014-lab_order-t13,date_of_service,2026-01-18,2026-01-20,LABEL_CONFUSION,below,13,scanned,en,lab_order
+small_model,gold_synth-0014-lab_order-t13,diagnosis_code,,RS51.9,SPURIOUS_EXTRACTION,below,13,scanned,en,lab_order
+small_model,gold_synth-0015-insurance_claim-t14,patient_name,Nancy Sanchez,Nancy   Sanchez,FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+small_model,gold_synth-0015-insurance_claim-t14,referring_provider_name,"Dr. David Martinez, NP","Dr.    David   Martinez,    ‘NP",FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+small_model,gold_synth-0015-insurance_claim-t14,servicing_facility,Riverbend Diagnostic Laboratory,Riverbend.   Diagnostic   Laboratory,FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+small_model,gold_synth-0015-insurance_claim-t14,document_date,"April 30, 2026",,OCR_CORRUPTION,grid,14,scanned,en,insurance_claim
+small_model,gold_synth-0015-insurance_claim-t14,date_of_service,"April 17, 2026",7,OCR_CORRUPTION,grid,14,scanned,en,insurance_claim
+small_model,gold_synth-0016-remittance_advice-t11,servicing_facility,"Cedar Park Neurology Specialists, P.A.",,MISSED_ENTIRELY,grid,11,clean,en,remittance_advice
+small_model,gold_synth-0016-remittance_advice-t11,total_charge,$499.44,,MISSED_ENTIRELY,grid,11,clean,en,remittance_advice
+small_model,gold_synth-0016-remittance_advice-t11,amount_paid,$376.90,$499.44,LABEL_CONFUSION,grid,11,clean,en,remittance_advice
+small_model,gold_synth-0016-remittance_advice-t11,patient_responsibility,$122.54,376.90,LABEL_CONFUSION,grid,11,clean,en,remittance_advice
+small_model,gold_synth-0018-referral_letter-t13,referring_provider_name,"Nancy Lewis, PA-C","port Neurology Specialists, P.A.",WRONG_VALUE,below,13,clean,en,referral_letter
+small_model,gold_synth-0018-referral_letter-t13,referring_provider_npi,9269603020,,MISSED_ENTIRELY,below,13,clean,en,referral_letter
+small_model,gold_synth-0018-referral_letter-t13,servicing_facility,"Kingsport Neurology Specialists, P.A.",Kings,TRUNCATION,below,13,clean,en,referral_letter
+small_model,gold_synth-0018-referral_letter-t13,document_date,03/15/2026,6,WRONG_VALUE,below,13,clean,en,referral_letter
+small_model,gold_synth-0019-prior_auth_request-t14,document_reference,AUTH-783251,,MISSED_ENTIRELY,grid,14,clean,en,prior_auth_request
+small_model,gold_synth-0019-prior_auth_request-t14,document_date,"April 13, 2026","April 14, 2026",WRONG_VALUE,grid,14,clean,en,prior_auth_request
+small_model,gold_synth-0019-prior_auth_request-t14,procedure_code,11100,,MISSED_ENTIRELY,grid,14,clean,en,prior_auth_request
+small_model,gold_synth-0020-lab_order-t11,patient_name,Joshua Smith,Joshua   Smith,FORMAT_NORMALISATION,grid,11,scanned,en,lab_order
+small_model,gold_synth-0020-lab_order-t11,patient_dob,"January 16, 1970","January    16,     1970",OCR_CORRUPTION,grid,11,scanned,en,lab_order
+small_model,gold_synth-0020-lab_order-t11,referring_provider_name,"Dr. Barbara Torres, MD, FACP","Dr.    Barbara   Torres,    MD,    FACP",FORMAT_NORMALISATION,grid,11,scanned,en,lab_order
+small_model,gold_synth-0020-lab_order-t11,servicing_facility,Westgate Cardiology Institute,Westgate,TRUNCATION,grid,11,scanned,en,lab_order
+small_model,gold_synth-0020-lab_order-t11,document_date,"January 27, 2025",January   28,OCR_CORRUPTION,grid,11,scanned,en,lab_order
+small_model,gold_synth-0020-lab_order-t11,date_of_service,"January 15, 2025",January,OCR_CORRUPTION,grid,11,scanned,en,lab_order
+small_model,gold_synth-0021-insurance_claim-t12,document_date,10/29/2025,10,WRONG_VALUE,prose,12,clean,en,insurance_claim
+small_model,gold_synth-0022-remittance_advice-t13,document_date,"April 7, 2026",April,WRONG_VALUE,below,13,scanned,en,remittance_advice
+small_model,gold_synth-0022-remittance_advice-t13,date_of_service,"April 1, 2026",,MISSED_ENTIRELY,below,13,scanned,en,remittance_advice
+small_model,gold_synth-0022-remittance_advice-t13,amount_paid,"$2,892.95",,MISSED_ENTIRELY,below,13,scanned,en,remittance_advice
+small_model,gold_synth-0022-remittance_advice-t13,patient_responsibility,"$1,461.70",,MISSED_ENTIRELY,below,13,scanned,en,remittance_advice
+small_model,gold_synth-0023-patient_intake_form-t14,document_date,7/20/25,7/22/25,WRONG_VALUE,grid,14,clean,en,patient_intake_form
+small_model,gold_synth-0024-referral_letter-t11,referring_provider_name,"Dr. Mary Clark, MD, FACP","Ashford Radiology, P.C.",WRONG_VALUE,grid,11,clean,en,referral_letter
+small_model,gold_synth-0024-referral_letter-t11,referring_provider_npi,1071541605,61675126256,LABEL_CONFUSION,grid,11,clean,en,referral_letter
+small_model,gold_synth-0024-referral_letter-t11,servicing_facility,"Ashford Radiology, P.C.",,MISSED_ENTIRELY,grid,11,clean,en,referral_letter
+small_model,gold_synth-0024-referral_letter-t11,member_id,61675126256,,MISSED_ENTIRELY,grid,11,clean,en,referral_letter
+small_model,gold_synth-0025-prior_auth_request-t12,member_id,CMY929930559,9930559,OCR_CORRUPTION,prose,12,scanned,en,prior_auth_request
+small_model,gold_synth-0026-lab_order-t13,referring_provider_name,"Dr. Joshua Lee, PA-C","Pinehurst Orthopedic Associates, LLC",WRONG_VALUE,below,13,clean,en,lab_order
+small_model,gold_synth-0026-lab_order-t13,servicing_facility,"Pinehurst Orthopedic Associates, LLC",,MISSED_ENTIRELY,below,13,clean,en,lab_order
+small_model,gold_synth-0026-lab_order-t13,document_date,02.17.2026,6,WRONG_VALUE,below,13,clean,en,lab_order
+small_model,gold_synth-0026-lab_order-t13,date_of_service,02.01.2026,02.17.2026,LABEL_CONFUSION,below,13,clean,en,lab_order
+small_model,gold_synth-0028-remittance_advice-t11,patient_name,Joshua Nguyen,Joshua   Nguyen,FORMAT_NORMALISATION,grid,11,scanned,en,remittance_advice
+small_model,gold_synth-0028-remittance_advice-t11,servicing_facility,Highland Sports Medicine Clinic,,OCR_CORRUPTION,grid,11,scanned,en,remittance_advice
+small_model,gold_synth-0028-remittance_advice-t11,payer_name,Medicaid Managed Care,Medicaid   Managed   Care,FORMAT_NORMALISATION,grid,11,scanned,en,remittance_advice
+small_model,gold_synth-0028-remittance_advice-t11,document_date,16-Apr-2025,-Apr-202,OCR_CORRUPTION,grid,11,scanned,en,remittance_advice
+small_model,gold_synth-0028-remittance_advice-t11,date_of_service,03-Mar-2025,03-Mar-202,WRONG_VALUE,grid,11,scanned,en,remittance_advice
+small_model,gold_synth-0028-remittance_advice-t11,total_charge,$552.91,,MISSED_ENTIRELY,grid,11,scanned,en,remittance_advice
+small_model,gold_synth-0028-remittance_advice-t11,amount_paid,$427.15,$552.91,LABEL_CONFUSION,grid,11,scanned,en,remittance_advice
+small_model,gold_synth-0030-referral_letter-t13,referring_provider_name,"Dr. James White, NP",Brookfield Radiology,LABEL_CONFUSION,below,13,clean,en,referral_letter
+small_model,gold_synth-0030-referral_letter-t13,referring_provider_npi,3413707464,,MISSED_ENTIRELY,below,13,clean,en,referral_letter
+small_model,gold_synth-0030-referral_letter-t13,servicing_facility,"Brookfield Radiology, P.C.",", P.C.",WRONG_VALUE,below,13,clean,en,referral_letter
+small_model,gold_synth-0030-referral_letter-t13,document_date,2025-05-01,,MISSED_ENTIRELY,below,13,clean,en,referral_letter
+small_model,gold_synth-0031-prior_auth_request-t14,patient_name,Michael Gonzalez,Michael   Gonzalez,FORMAT_NORMALISATION,grid,14,scanned,en,prior_auth_request
+small_model,gold_synth-0031-prior_auth_request-t14,patient_dob,"December 21, 1945","December   21,    1945",OCR_CORRUPTION,grid,14,scanned,en,prior_auth_request
+small_model,gold_synth-0031-prior_auth_request-t14,referring_provider_name,"Robert Williams, MD","Robert   Williams,    MD",FORMAT_NORMALISATION,grid,14,scanned,en,prior_auth_request
+small_model,gold_synth-0031-prior_auth_request-t14,referring_provider_npi,0204232645,04232645,TRUNCATION,grid,14,scanned,en,prior_auth_request
+small_model,gold_synth-0031-prior_auth_request-t14,servicing_facility,Cedar Park Diagnostic Laboratory,Cedar   Park   Diagnostic   Laboratory,FORMAT_NORMALISATION,grid,14,scanned,en,prior_auth_request
+small_model,gold_synth-0031-prior_auth_request-t14,payer_name,Bright HealthCare,Bright    HealthCare,FORMAT_NORMALISATION,grid,14,scanned,en,prior_auth_request
+small_model,gold_synth-0031-prior_auth_request-t14,document_reference,PA-93192494,,MISSED_ENTIRELY,grid,14,scanned,en,prior_auth_request
+small_model,gold_synth-0031-prior_auth_request-t14,document_date,"March 2, 2026","March   4,    2026",OCR_CORRUPTION,grid,14,scanned,en,prior_auth_request
+small_model,gold_synth-0031-prior_auth_request-t14,date_of_service,"January 23, 2026","January   23,    2026",OCR_CORRUPTION,grid,14,scanned,en,prior_auth_request
+small_model,gold_synth-0032-lab_order-t11,referring_provider_name,"Dr. Linda Walker, NP","Pinehurst Neurology Specialists,",LABEL_CONFUSION,grid,11,clean,en,lab_order
+small_model,gold_synth-0032-lab_order-t11,servicing_facility,"Pinehurst Neurology Specialists, P.A.",,MISSED_ENTIRELY,grid,11,clean,en,lab_order
+small_model,gold_synth-0032-lab_order-t11,date_of_service,11/22/2025,12/22/2025,LABEL_CONFUSION,grid,11,clean,en,lab_order
+small_model,gold_synth-0034-remittance_advice-t13,servicing_facility,"Highland Neurology Specialists, P.A.",,MISSED_ENTIRELY,below,13,scanned,en,remittance_advice
+small_model,gold_synth-0034-remittance_advice-t13,document_date,08/14/2025,08,WRONG_VALUE,below,13,scanned,en,remittance_advice
+small_model,gold_synth-0034-remittance_advice-t13,amount_paid,$60.13,$,WRONG_VALUE,below,13,scanned,en,remittance_advice
+small_model,gold_synth-0034-remittance_advice-t13,patient_responsibility,$32.46,60.13,LABEL_CONFUSION,below,13,scanned,en,remittance_advice
+small_model,gold_synth-0035-patient_intake_form-t14,document_date,20-Feb-2025,22-Feb-2025,WRONG_VALUE,grid,14,clean,en,patient_intake_form
+small_model,gold_synth-0036-referral_letter-t11,patient_name,María Torres,Maria    Torres,FORMAT_NORMALISATION,grid,11,scanned,es,referral_letter
+small_model,gold_synth-0036-referral_letter-t11,patient_dob,"October 4, 2005",2025-08-02,OCR_CORRUPTION,grid,11,scanned,es,referral_letter
+small_model,gold_synth-0036-referral_letter-t11,referring_provider_name,"Joshua Lopez, NP",,MISSED_ENTIRELY,grid,11,scanned,es,referral_letter
+small_model,gold_synth-0036-referral_letter-t11,servicing_facility,Riverbend Diagnostic Laboratory,Riverbend    Diagnostic    Laboratory,FORMAT_NORMALISATION,grid,11,scanned,es,referral_letter
+small_model,gold_synth-0036-referral_letter-t11,payer_name,Medicaid Managed Care,Medicaid   Managed.   Care,FORMAT_NORMALISATION,grid,11,scanned,es,referral_letter
+small_model,gold_synth-0036-referral_letter-t11,document_date,2025-08-02,,MISSED_ENTIRELY,grid,11,scanned,es,referral_letter
+small_model,gold_synth-0037-prior_auth_request-t12,member_id,631-64-9553,64-9553,TRUNCATION,prose,12,clean,en,prior_auth_request
+small_model,gold_synth-0038-lab_order-t13,document_reference,ORD47468791,OR,TRUNCATION,below,13,scanned,en,lab_order
+small_model,gold_synth-0038-lab_order-t13,document_date,"November 19, 2025",,MISSED_ENTIRELY,below,13,scanned,en,lab_order
+small_model,gold_synth-0039-insurance_claim-t14,patient_name,Donald Martin,Donald   Martin,FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+small_model,gold_synth-0039-insurance_claim-t14,patient_dob,25-Jul-2013,,MISSED_ENTIRELY,grid,14,scanned,en,insurance_claim
+small_model,gold_synth-0039-insurance_claim-t14,referring_provider_name,"Jessica White, NP",,MISSED_ENTIRELY,grid,14,scanned,en,insurance_claim
+small_model,gold_synth-0039-insurance_claim-t14,referring_provider_npi,2287735536,,MISSED_ENTIRELY,grid,14,scanned,en,insurance_claim
+small_model,gold_synth-0039-insurance_claim-t14,servicing_facility,Lakeside Imaging Center,Lakeside    Imaging   Center,FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+small_model,gold_synth-0039-insurance_claim-t14,payer_name,Bright HealthCare,Bright    HealthCare,FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+small_model,gold_synth-0039-insurance_claim-t14,document_reference,CLM-748180,LM,OCR_CORRUPTION,grid,14,scanned,en,insurance_claim
+small_model,gold_synth-0039-insurance_claim-t14,document_date,02-Feb-2025,02-Feb-202,WRONG_VALUE,grid,14,scanned,en,insurance_claim
+small_model,gold_synth-0039-insurance_claim-t14,diagnosis_code,R51.9,,MISSED_ENTIRELY,grid,14,scanned,en,insurance_claim
+small_model,gold_synth-0039-insurance_claim-t14,procedure_code,70450,450,TRUNCATION,grid,14,scanned,en,insurance_claim
+small_model,gold_synth-0040-remittance_advice-t11,servicing_facility,Granite Bay Diagnostic Laboratory,,MISSED_ENTIRELY,grid,11,clean,en,remittance_advice
+small_model,gold_synth-0040-remittance_advice-t11,payer_name,Oscar Health Plan,Oscar  Health,TRUNCATION,grid,11,clean,en,remittance_advice
+small_model,gold_synth-0040-remittance_advice-t11,date_of_service,2025-04-29,5-04-,WRONG_VALUE,grid,11,clean,en,remittance_advice
+small_model,gold_synth-0040-remittance_advice-t11,amount_paid,$461.37,461.37,FORMAT_NORMALISATION,grid,11,clean,en,remittance_advice
+small_model,gold_synth-0040-remittance_advice-t11,patient_responsibility,$211.56,$,WRONG_VALUE,grid,11,clean,en,remittance_advice
+small_model,gold_synth-0042-referral_letter-t13,patient_dob,07-Sep-1982,-,WRONG_VALUE,below,13,scanned,en,referral_letter
+small_model,gold_synth-0042-referral_letter-t13,referring_provider_name,"Dr. Patricia Miller, MD, FACP","Dr. Patricia Miller, MD,",FORMAT_NORMALISATION,below,13,scanned,en,referral_letter
+small_model,gold_synth-0042-referral_letter-t13,referring_provider_npi,2006485165,,MISSED_ENTIRELY,below,13,scanned,en,referral_letter
+small_model,gold_synth-0042-referral_letter-t13,servicing_facility,Lakeside Diagnostic Laboratory,,MISSED_ENTIRELY,below,13,scanned,en,referral_letter
+small_model,gold_synth-0042-referral_letter-t13,member_id,YAA364859014,YAA3648590,OCR_CORRUPTION,below,13,scanned,en,referral_letter
+small_model,gold_synth-0042-referral_letter-t13,document_reference,RF194851,,OCR_CORRUPTION,below,13,scanned,en,referral_letter
+small_model,gold_synth-0042-referral_letter-t13,diagnosis_code,M25.561,,MISSED_ENTIRELY,below,13,scanned,en,referral_letter
+small_model,gold_synth-0043-prior_auth_request-t14,payer_name,WellCare,,MISSED_ENTIRELY,grid,14,clean,es,prior_auth_request
+small_model,gold_synth-0043-prior_auth_request-t14,member_id,01325669376,,MISSED_ENTIRELY,grid,14,clean,es,prior_auth_request
+small_model,gold_synth-0043-prior_auth_request-t14,date_of_service,02/12/2026,02,WRONG_VALUE,grid,14,clean,es,prior_auth_request
+small_model,gold_synth-0043-prior_auth_request-t14,total_charge,33.42,,MISSED_ENTIRELY,grid,14,clean,es,prior_auth_request
+small_model,gold_synth-0044-lab_order-t11,patient_name,David Wilson,David   Wilson,FORMAT_NORMALISATION,grid,11,scanned,en,lab_order
+small_model,gold_synth-0044-lab_order-t11,referring_provider_name,"Daniel Martinez, PA-C","Daniel   Martinez,    PA-C",FORMAT_NORMALISATION,grid,11,scanned,en,lab_order
+small_model,gold_synth-0044-lab_order-t11,servicing_facility,Stone Creek General Hospital,Stone   Creek   General   Hospital,FORMAT_NORMALISATION,grid,11,scanned,en,lab_order
+small_model,gold_synth-0044-lab_order-t11,document_date,2026-05-05,2026-05-07,WRONG_VALUE,grid,11,scanned,en,lab_order
+small_model,gold_synth-0044-lab_order-t11,date_of_service,2026-04-01,2026-05-05,LABEL_CONFUSION,grid,11,scanned,en,lab_order
+small_model,gold_synth-0045-insurance_claim-t12,patient_name,Barbara Martin,Barbara Marin,OCR_CORRUPTION,prose,12,scanned,en,insurance_claim
+small_model,gold_synth-0045-insurance_claim-t12,patient_dob,09.11.2014,,OCR_CORRUPTION,prose,12,scanned,en,insurance_claim
+small_model,gold_synth-0045-insurance_claim-t12,document_date,"April 10, 2025","April 10,2025",OCR_CORRUPTION,prose,12,scanned,en,insurance_claim
+small_model,gold_synth-0046-remittance_advice-t13,document_date,10/29/2025,10,WRONG_VALUE,below,13,scanned,en,remittance_advice
+small_model,gold_synth-0046-remittance_advice-t13,date_of_service,10/06/2025,,MISSED_ENTIRELY,below,13,scanned,en,remittance_advice
+small_model,gold_synth-0047-patient_intake_form-t14,patient_name,Karen Robinson,Karen.   Robinson,FORMAT_NORMALISATION,grid,14,scanned,en,patient_intake_form
+small_model,gold_synth-0047-patient_intake_form-t14,referring_provider_name,"Dr. Kenneth Anderson, PA-C","Dr.    Kenneth   Anderson,    PA-C",FORMAT_NORMALISATION,grid,14,scanned,en,patient_intake_form
+small_model,gold_synth-0047-patient_intake_form-t14,payer_name,Medicaid Managed Care,Medicaid   Managed   Care,FORMAT_NORMALISATION,grid,14,scanned,en,patient_intake_form
+small_model,gold_synth-0047-patient_intake_form-t14,member_id,EGF957874402,7,OCR_CORRUPTION,grid,14,scanned,en,patient_intake_form
+small_model,gold_synth-0047-patient_intake_form-t14,document_date,17-Oct-2025,19-Oct-2025,WRONG_VALUE,grid,14,scanned,en,patient_intake_form
+small_model,gold_synth-0048-referral_letter-t11,patient_name,Andrew Hall,Andrew   Hall,FORMAT_NORMALISATION,grid,11,scanned,en,referral_letter
+small_model,gold_synth-0048-referral_letter-t11,referring_provider_name,"Michael Thompson, DO","Maple    -Grove    Radiology,    P.c.",WRONG_VALUE,grid,11,scanned,en,referral_letter
+small_model,gold_synth-0048-referral_letter-t11,servicing_facility,"Maple Grove Radiology, P.C.",,MISSED_ENTIRELY,grid,11,scanned,en,referral_letter
+small_model,gold_synth-0048-referral_letter-t11,payer_name,Molina Healthcare,Molina.    Healthcare,FORMAT_NORMALISATION,grid,11,scanned,en,referral_letter
+small_model,gold_synth-0048-referral_letter-t11,document_date,13-Mar-2026,,MISSED_ENTIRELY,grid,11,scanned,en,referral_letter
+small_model,gold_synth-0050-lab_order-t13,patient_name,Elizabeth Miller,Elizabeth Muller,OCR_CORRUPTION,below,13,scanned,en,lab_order
+small_model,gold_synth-0050-lab_order-t13,referring_provider_name,"Dr. Margaret Wright, NP","Brooktield Orthopedic Associates, LLC",WRONG_VALUE,below,13,scanned,en,lab_order
+small_model,gold_synth-0050-lab_order-t13,servicing_facility,"Brookfield Orthopedic Associates, LLC",,OCR_CORRUPTION,below,13,scanned,en,lab_order
+small_model,gold_synth-0050-lab_order-t13,document_date,"January 1, 2025",,OCR_CORRUPTION,below,13,scanned,en,lab_order
+small_model,gold_synth-0050-lab_order-t13,date_of_service,"December 27, 2024",,MISSED_ENTIRELY,below,13,scanned,en,lab_order
+small_model,gold_synth-0050-lab_order-t13,diagnosis_code,M17.11,M1,OCR_CORRUPTION,below,13,scanned,en,lab_order
+small_model,gold_synth-0051-insurance_claim-t14,patient_name,Nancy Torres,Nancy   Torres,FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+small_model,gold_synth-0051-insurance_claim-t14,referring_provider_name,"Elizabeth Scott, PA-C","Elizabeth   Scott,    PA-C",FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+small_model,gold_synth-0051-insurance_claim-t14,servicing_facility,Lakeside Regional Medical Center,Lakeside   Regional   Medical   Center,FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+small_model,gold_synth-0051-insurance_claim-t14,payer_name,Premera Blue Cross,Premera   Blue   Cross,FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+small_model,gold_synth-0051-insurance_claim-t14,date_of_service,12.10.2025,2025,WRONG_VALUE,grid,14,scanned,en,insurance_claim
+small_model,gold_synth-0052-remittance_advice-t11,servicing_facility,"Pinehurst Neurology Specialists, P.A.",,MISSED_ENTIRELY,grid,11,clean,en,remittance_advice
+small_model,gold_synth-0052-remittance_advice-t11,date_of_service,3/24/25,3/,WRONG_VALUE,grid,11,clean,en,remittance_advice
+small_model,gold_synth-0052-remittance_advice-t11,amount_paid,$341.23,$,WRONG_VALUE,grid,11,clean,en,remittance_advice
+small_model,gold_synth-0052-remittance_advice-t11,patient_responsibility,$153.54,34,WRONG_VALUE,grid,11,clean,en,remittance_advice
+small_model,gold_synth-0053-patient_intake_form-t12,member_id,FYR007788056,FYRO07788056,OCR_CORRUPTION,prose,12,scanned,en,patient_intake_form
+small_model,gold_synth-0054-referral_letter-t13,referring_provider_name,"Dr. Emily Walker, NP","Dr. Emily Walker, N",OVER_CAPTURE,below,13,clean,en,referral_letter
+small_model,gold_synth-0054-referral_letter-t13,referring_provider_npi,2047034022,,MISSED_ENTIRELY,below,13,clean,en,referral_letter
+small_model,gold_synth-0054-referral_letter-t13,servicing_facility,Westgate Surgical Center,,MISSED_ENTIRELY,below,13,clean,en,referral_letter
+small_model,gold_synth-0054-referral_letter-t13,document_reference,RF-4158860,,MISSED_ENTIRELY,below,13,clean,en,referral_letter
+small_model,gold_synth-0054-referral_letter-t13,document_date,2025-04-29,,MISSED_ENTIRELY,below,13,clean,en,referral_letter
+small_model,gold_synth-0054-referral_letter-t13,diagnosis_code,E78.5,,MISSED_ENTIRELY,below,13,clean,en,referral_letter
+small_model,gold_synth-0055-prior_auth_request-t14,patient_name,Kenneth Allen,Kenneth   Allen,FORMAT_NORMALISATION,grid,14,scanned,en,prior_auth_request
+small_model,gold_synth-0055-prior_auth_request-t14,referring_provider_name,"Dr. Sarah Thompson, MD, FACP","Dr.    Sarah    Thompson,    MD,     FACP",FORMAT_NORMALISATION,grid,14,scanned,en,prior_auth_request
+small_model,gold_synth-0055-prior_auth_request-t14,servicing_facility,"Brookfield Orthopedic Associates, LLC","Brookfield   Orthopedic   Associates,     LLC",FORMAT_NORMALISATION,grid,14,scanned,en,prior_auth_request
+small_model,gold_synth-0055-prior_auth_request-t14,payer_name,Bright HealthCare,Bright    HealthCare,FORMAT_NORMALISATION,grid,14,scanned,en,prior_auth_request
+small_model,gold_synth-0055-prior_auth_request-t14,document_date,,/25,SPURIOUS_EXTRACTION,grid,14,scanned,en,prior_auth_request
+small_model,gold_synth-0055-prior_auth_request-t14,date_of_service,9/9/25,9,WRONG_VALUE,grid,14,scanned,en,prior_auth_request
+small_model,gold_synth-0055-prior_auth_request-t14,procedure_code,73721,10719,WRONG_VALUE,grid,14,scanned,en,prior_auth_request
+small_model,gold_synth-0056-lab_order-t11,patient_name,Carol Hernandez,Carol    Hernandez,FORMAT_NORMALISATION,grid,11,scanned,en,lab_order
+small_model,gold_synth-0056-lab_order-t11,patient_dob,,"09,  1962",SPURIOUS_EXTRACTION,grid,11,scanned,en,lab_order
+small_model,gold_synth-0056-lab_order-t11,referring_provider_name,"Michelle Williams, NP",Pinehurst    Neurology    Specialist,WRONG_VALUE,grid,11,scanned,en,lab_order
+small_model,gold_synth-0056-lab_order-t11,referring_provider_npi,4174529949,,MISSED_ENTIRELY,grid,11,scanned,en,lab_order
+small_model,gold_synth-0056-lab_order-t11,servicing_facility,"Pinehurst Neurology Specialists, P.A.",,OCR_CORRUPTION,grid,11,scanned,en,lab_order
+small_model,gold_synth-0056-lab_order-t11,document_date,02.20.2025,,MISSED_ENTIRELY,grid,11,scanned,en,lab_order
+small_model,gold_synth-0056-lab_order-t11,date_of_service,,02.20.2025,SPURIOUS_EXTRACTION,grid,11,scanned,en,lab_order
+small_model,gold_synth-0057-insurance_claim-t12,referring_provider_name,"Dr. Mark Martin, MD","Pinehurst Neurology Specialists, P.A.",WRONG_VALUE,prose,12,clean,en,insurance_claim
+small_model,gold_synth-0057-insurance_claim-t12,servicing_facility,"Pinehurst Neurology Specialists, P.A.",,MISSED_ENTIRELY,prose,12,clean,en,insurance_claim
+small_model,gold_synth-0057-insurance_claim-t12,date_of_service,16-Sep-2025,Sep,WRONG_VALUE,prose,12,clean,en,insurance_claim
+small_model,gold_synth-0058-remittance_advice-t13,document_date,5/8/26,5/8/,WRONG_VALUE,below,13,clean,en,remittance_advice
+small_model,gold_synth-0058-remittance_advice-t13,date_of_service,5/6/26,5,WRONG_VALUE,below,13,clean,en,remittance_advice
+small_model,gold_synth-0058-remittance_advice-t13,amount_paid,334.16,,MISSED_ENTIRELY,below,13,clean,en,remittance_advice
+small_model,gold_synth-0058-remittance_advice-t13,patient_responsibility,75.00,,MISSED_ENTIRELY,below,13,clean,en,remittance_advice
+small_model,gold_synth-0059-patient_intake_form-t14,patient_name,Linda Harris,Linda    Harris,FORMAT_NORMALISATION,grid,14,scanned,en,patient_intake_form
+small_model,gold_synth-0059-patient_intake_form-t14,patient_dob,"April 8, 1953",April,OCR_CORRUPTION,grid,14,scanned,en,patient_intake_form
+small_model,gold_synth-0059-patient_intake_form-t14,referring_provider_name,"Dr. John Rivera, NP","Dr.    John    Rivera,    NP",FORMAT_NORMALISATION,grid,14,scanned,en,patient_intake_form
+small_model,gold_synth-0059-patient_intake_form-t14,payer_name,Premera Blue Cross,Premera    Blue   Cross,FORMAT_NORMALISATION,grid,14,scanned,en,patient_intake_form
+small_model,gold_synth-0059-patient_intake_form-t14,document_date,"March 28, 2025",,OCR_CORRUPTION,grid,14,scanned,en,patient_intake_form
+small_model,gold_synth-0060-referral_letter-t11,patient_name,Ashley Ramirez,Ashley   Ramirez,FORMAT_NORMALISATION,grid,11,scanned,en,referral_letter
+small_model,gold_synth-0060-referral_letter-t11,referring_provider_name,"Dr. Kimberly Hernandez, D.O.","Dr.    Kimberly    Hernandez,    .D.O",FORMAT_NORMALISATION,grid,11,scanned,en,referral_letter
+small_model,gold_synth-0060-referral_letter-t11,servicing_facility,Brookfield Surgical Center,Brookfield    Surgical    Center,FORMAT_NORMALISATION,grid,11,scanned,en,referral_letter
+small_model,gold_synth-0060-referral_letter-t11,member_id,FJN926031125,FIN926031125,OCR_CORRUPTION,grid,11,scanned,en,referral_letter
+small_model,gold_synth-0060-referral_letter-t11,document_reference,,RE-790230,SPURIOUS_EXTRACTION,grid,11,scanned,en,referral_letter
+small_model,gold_synth-0060-referral_letter-t11,document_date,09-Jul-2025,,MISSED_ENTIRELY,grid,11,scanned,en,referral_letter
+small_model,gold_synth-0060-referral_letter-t11,diagnosis_code,G43.909,.  25.   L951,WRONG_VALUE,grid,11,scanned,en,referral_letter
+small_model,gold_synth-0061-prior_auth_request-t12,patient_name,Kevin Green,,MISSED_ENTIRELY,prose,12,scanned,en,prior_auth_request
+small_model,gold_synth-0062-lab_order-t13,document_date,5/19/25,5/22/25,WRONG_VALUE,below,13,clean,en,lab_order
+small_model,gold_synth-0062-lab_order-t13,date_of_service,5/6/25,5/19/25,LABEL_CONFUSION,below,13,clean,en,lab_order
+small_model,gold_synth-0062-lab_order-t13,procedure_code,71046,71,TRUNCATION,below,13,clean,en,lab_order
+small_model,gold_synth-0063-insurance_claim-t14,patient_name,Ashley Williams,Ashley   Williams,FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+small_model,gold_synth-0063-insurance_claim-t14,referring_provider_name,"Daniel White, D.O.","Daniel   White,    D.O.",FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+small_model,gold_synth-0063-insurance_claim-t14,servicing_facility,Pinehurst Diagnostic Laboratory,Pinehurst    Diagnostic   Laboratory,FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+small_model,gold_synth-0063-insurance_claim-t14,payer_name,Premera Blue Cross,Premera   Blue   Cross,FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+small_model,gold_synth-0063-insurance_claim-t14,date_of_service,07/30/2025,,MISSED_ENTIRELY,grid,14,scanned,en,insurance_claim
+small_model,gold_synth-0064-remittance_advice-t11,patient_name,Barbara Nelson,Barbara    Nelson,FORMAT_NORMALISATION,grid,11,scanned,en,remittance_advice
+small_model,gold_synth-0064-remittance_advice-t11,payer_name,UnitedHealthcare,UnitedHealth,TRUNCATION,grid,11,scanned,en,remittance_advice
+small_model,gold_synth-0064-remittance_advice-t11,amount_paid,$276.50,,MISSED_ENTIRELY,grid,11,scanned,en,remittance_advice
+small_model,gold_synth-0066-referral_letter-t13,referring_provider_name,"Joseph King, PA-C",. PA-C,WRONG_VALUE,below,13,scanned,en,referral_letter
+small_model,gold_synth-0066-referral_letter-t13,servicing_facility,Westgate Sports Medicine Clinic,Westwate Sporty Medivine Clinic,OCR_CORRUPTION,below,13,scanned,en,referral_letter
+small_model,gold_synth-0066-referral_letter-t13,payer_name,Humana,Humana          ELL,OVER_CAPTURE,below,13,scanned,en,referral_letter
+small_model,gold_synth-0066-referral_letter-t13,document_date,05.05.2026,,MISSED_ENTIRELY,below,13,scanned,en,referral_letter
+small_model,gold_synth-0067-prior_auth_request-t14,document_reference,AUTH-3432443,TH-3432443,TRUNCATION,grid,14,clean,en,prior_auth_request
+small_model,gold_synth-0068-lab_order-t11,referring_provider_name,"Dr. Thomas Nelson, D.O.","Riverbend Orthopedic Associates,",WRONG_VALUE,grid,11,clean,en,lab_order
+small_model,gold_synth-0068-lab_order-t11,servicing_facility,"Riverbend Orthopedic Associates, LLC",,MISSED_ENTIRELY,grid,11,clean,en,lab_order
+small_model,gold_synth-0068-lab_order-t11,document_date,02/15/2025,02/18/2025,WRONG_VALUE,grid,11,clean,en,lab_order
+small_model,gold_synth-0068-lab_order-t11,date_of_service,01/16/2025,02,WRONG_VALUE,grid,11,clean,en,lab_order
+small_model,gold_synth-0069-insurance_claim-t12,servicing_facility,"Highland Radiology, P.C.",Highland Radiology. P.C.,FORMAT_NORMALISATION,prose,12,scanned,en,insurance_claim
+small_model,gold_synth-0069-insurance_claim-t12,document_date,10.21.2025,10,OCR_CORRUPTION,prose,12,scanned,en,insurance_claim
+small_model,gold_synth-0070-remittance_advice-t13,patient_name,Nancy Allen,,OCR_CORRUPTION,below,13,scanned,en,remittance_advice
+small_model,gold_synth-0070-remittance_advice-t13,member_id,J48655049J,J48655049,OCR_CORRUPTION,below,13,scanned,en,remittance_advice
+small_model,gold_synth-0070-remittance_advice-t13,document_date,02-Mar-2026,-202,WRONG_VALUE,below,13,scanned,en,remittance_advice
+small_model,gold_synth-0070-remittance_advice-t13,date_of_service,19-Feb-2026,02,WRONG_VALUE,below,13,scanned,en,remittance_advice
+small_model,gold_synth-0070-remittance_advice-t13,procedure_code,90834,90,TRUNCATION,below,13,scanned,en,remittance_advice
+small_model,gold_synth-0070-remittance_advice-t13,total_charge,203.73,",",WRONG_VALUE,below,13,scanned,en,remittance_advice
+small_model,gold_synth-0070-remittance_advice-t13,amount_paid,125.53,,MISSED_ENTIRELY,below,13,scanned,en,remittance_advice
+small_model,gold_synth-0070-remittance_advice-t13,patient_responsibility,78.20,,MISSED_ENTIRELY,below,13,scanned,en,remittance_advice
+small_model,gold_synth-0071-patient_intake_form-t14,patient_name,María Hill,María   Hill,OCR_CORRUPTION,grid,14,scanned,es,patient_intake_form
+small_model,gold_synth-0071-patient_intake_form-t14,patient_dob,12 de diciembre de 2001,12    de   diciembre   de   2001,OCR_CORRUPTION,grid,14,scanned,es,patient_intake_form
+small_model,gold_synth-0071-patient_intake_form-t14,referring_provider_name,"Donald Williams, DO","Donald   Williams,    DO",FORMAT_NORMALISATION,grid,14,scanned,es,patient_intake_form
+small_model,gold_synth-0071-patient_intake_form-t14,payer_name,Blue Shield of California,Blue   Shield   of   California,FORMAT_NORMALISATION,grid,14,scanned,es,patient_intake_form
+small_model,gold_synth-0071-patient_intake_form-t14,document_date,29 de agosto de 2025,30   de   agosto   de   2025,OCR_CORRUPTION,grid,14,scanned,es,patient_intake_form
+small_model,gold_synth-0072-referral_letter-t11,patient_name,Donald Adams,Donald   Adams,FORMAT_NORMALISATION,grid,11,scanned,en,referral_letter
+small_model,gold_synth-0072-referral_letter-t11,referring_provider_name,"Dr. Steven Adams, M.D.","Dr.    Steven   Adams,    M.",OVER_CAPTURE,grid,11,scanned,en,referral_letter
+small_model,gold_synth-0072-referral_letter-t11,referring_provider_npi,2117133050,66874143,WRONG_VALUE,grid,11,scanned,en,referral_letter
+small_model,gold_synth-0072-referral_letter-t11,servicing_facility,"Cedar Park Orthopedic Associates, LLC",Cedar   Park   Orthopedic   Associates/25125,OVER_CAPTURE,grid,11,scanned,en,referral_letter
+small_model,gold_synth-0072-referral_letter-t11,member_id,20366874143,203,TRUNCATION,grid,11,scanned,en,referral_letter
+small_model,gold_synth-0072-referral_letter-t11,document_date,,7/28/25,SPURIOUS_EXTRACTION,grid,11,scanned,en,referral_letter
+small_model,gold_synth-0073-prior_auth_request-t12,document_date,01/22/2025,2025,WRONG_VALUE,prose,12,clean,en,prior_auth_request
+small_model,gold_synth-0074-lab_order-t13,referring_provider_name,"Dr. Matthew Nelson, PA-C",Dr. Matthew Nelson; PA-C,FORMAT_NORMALISATION,below,13,scanned,en,lab_order
+small_model,gold_synth-0074-lab_order-t13,document_date,24-Jan-2026,,MISSED_ENTIRELY,below,13,scanned,en,lab_order
+small_model,gold_synth-0074-lab_order-t13,date_of_service,07-Jan-2026,24-Jan-2026,LABEL_CONFUSION,below,13,scanned,en,lab_order
+small_model,gold_synth-0075-insurance_claim-t14,patient_name,Anthony Harris,Anthony   Harris,FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+small_model,gold_synth-0075-insurance_claim-t14,patient_dob,"July 9, 1945","July    9,    1945",OCR_CORRUPTION,grid,14,scanned,en,insurance_claim
+small_model,gold_synth-0075-insurance_claim-t14,referring_provider_name,"Dr. Michael Wright, M.D.","Dr.    Michael   Wright,    M.D.",FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+small_model,gold_synth-0075-insurance_claim-t14,servicing_facility,Kingsport Sports Medicine Clinic,Kingsport    Sports   Medicine   Clinic,FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+small_model,gold_synth-0075-insurance_claim-t14,payer_name,TRICARE East,,MISSED_ENTIRELY,grid,14,scanned,en,insurance_claim
+small_model,gold_synth-0075-insurance_claim-t14,document_date,"March 8, 2025",,OCR_CORRUPTION,grid,14,scanned,en,insurance_claim
+small_model,gold_synth-0075-insurance_claim-t14,date_of_service,"February 7, 2025","February    7,    2025",OCR_CORRUPTION,grid,14,scanned,en,insurance_claim
+small_model,gold_synth-0076-remittance_advice-t11,patient_name,Susan Adams,Susan   Adams,FORMAT_NORMALISATION,grid,11,scanned,en,remittance_advice
+small_model,gold_synth-0076-remittance_advice-t11,servicing_facility,Brookfield Surgical Center,,MISSED_ENTIRELY,grid,11,scanned,en,remittance_advice
+small_model,gold_synth-0076-remittance_advice-t11,payer_name,Blue Shield of California,Blue    Shield   of   California,FORMAT_NORMALISATION,grid,11,scanned,en,remittance_advice
+small_model,gold_synth-0076-remittance_advice-t11,document_date,"February 23, 2026",February,OCR_CORRUPTION,grid,11,scanned,en,remittance_advice
+small_model,gold_synth-0076-remittance_advice-t11,date_of_service,"January 10, 2026",",    202",OCR_CORRUPTION,grid,11,scanned,en,remittance_advice
+small_model,gold_synth-0078-referral_letter-t13,patient_name,Kevin Thompson,,MISSED_ENTIRELY,below,13,scanned,en,referral_letter
+small_model,gold_synth-0078-referral_letter-t13,referring_provider_name,"Linda Smith, MD, FACP",Linda Smith. MD. FACP,FORMAT_NORMALISATION,below,13,scanned,en,referral_letter
+small_model,gold_synth-0078-referral_letter-t13,referring_provider_npi,2748344506,,MISSED_ENTIRELY,below,13,scanned,en,referral_letter
+small_model,gold_synth-0078-referral_letter-t13,servicing_facility,Granite Bay General Hospital,Granite Bay  General Hospital,FORMAT_NORMALISATION,below,13,scanned,en,referral_letter
+small_model,gold_synth-0078-referral_letter-t13,document_reference,RF-7105103,RE,OCR_CORRUPTION,below,13,scanned,en,referral_letter
+small_model,gold_synth-0078-referral_letter-t13,document_date,07.01.2025,07,WRONG_VALUE,below,13,scanned,en,referral_letter
+small_model,gold_synth-0079-prior_auth_request-t14,patient_name,Mary Martinez,Mary,TRUNCATION,grid,14,scanned,en,prior_auth_request
+small_model,gold_synth-0079-prior_auth_request-t14,referring_provider_name,"Dr. Andrew Lewis, D.O.","Dr.    Andrew   Lewis,    D.O.",FORMAT_NORMALISATION,grid,14,scanned,en,prior_auth_request
+small_model,gold_synth-0079-prior_auth_request-t14,servicing_facility,Ashford Diagnostic Laboratory,Ashford   Diagnostic:   Laboratory,FORMAT_NORMALISATION,grid,14,scanned,en,prior_auth_request
+small_model,gold_synth-0079-prior_auth_request-t14,payer_name,Kaiser Permanente,Kaiser   Permanente,FORMAT_NORMALISATION,grid,14,scanned,en,prior_auth_request
+small_model,gold_synth-0080-lab_order-t11,patient_name,Charles Lewis,Charles   Lewis,FORMAT_NORMALISATION,grid,11,scanned,en,lab_order
+small_model,gold_synth-0080-lab_order-t11,referring_provider_name,"Dr. Carol Moore, NP","Dr.    Carol   Moore,    NP",FORMAT_NORMALISATION,grid,11,scanned,en,lab_order
+small_model,gold_synth-0080-lab_order-t11,referring_provider_npi,0856913674,,MISSED_ENTIRELY,grid,11,scanned,en,lab_order
+small_model,gold_synth-0080-lab_order-t11,servicing_facility,Lakeside Regional Medical Center,Lakeside   Regional   Medical    Cent,OCR_CORRUPTION,grid,11,scanned,en,lab_order
+small_model,gold_synth-0080-lab_order-t11,document_date,04.27.2025,04.29.2025,WRONG_VALUE,grid,11,scanned,en,lab_order
+small_model,gold_synth-0080-lab_order-t11,date_of_service,03.24.2025,04.27.2025,LABEL_CONFUSION,grid,11,scanned,en,lab_order
+small_model,gold_synth-0080-lab_order-t11,diagnosis_code,,.9,SPURIOUS_EXTRACTION,grid,11,scanned,en,lab_order
+small_model,gold_synth-0081-insurance_claim-t12,patient_name,Barbara Hall,Barbara,TRUNCATION,prose,12,scanned,en,insurance_claim
+small_model,gold_synth-0081-insurance_claim-t12,patient_dob,12/19/47,12/1947,OCR_CORRUPTION,prose,12,scanned,en,insurance_claim
+small_model,gold_synth-0081-insurance_claim-t12,referring_provider_name,"Robert Scott, PA-C","Oakhurst Neurology Specialists, P.A.",WRONG_VALUE,prose,12,scanned,en,insurance_claim
+small_model,gold_synth-0081-insurance_claim-t12,servicing_facility,"Oakhurst Neurology Specialists, P.A.",,MISSED_ENTIRELY,prose,12,scanned,en,insurance_claim
+small_model,gold_synth-0081-insurance_claim-t12,document_date,11/23/25,/23/25,WRONG_VALUE,prose,12,scanned,en,insurance_claim
+small_model,gold_synth-0082-remittance_advice-t13,document_date,7 de agosto de 2025,,MISSED_ENTIRELY,below,13,clean,es,remittance_advice
+small_model,gold_synth-0082-remittance_advice-t13,total_charge,$212.80,$,WRONG_VALUE,below,13,clean,es,remittance_advice
+small_model,gold_synth-0082-remittance_advice-t13,amount_paid,$136.38,,MISSED_ENTIRELY,below,13,clean,es,remittance_advice
+small_model,gold_synth-0082-remittance_advice-t13,patient_responsibility,$76.42,,MISSED_ENTIRELY,below,13,clean,es,remittance_advice
+small_model,gold_synth-0083-patient_intake_form-t14,patient_name,Andrew Young,Andrew    Young,FORMAT_NORMALISATION,grid,14,scanned,en,patient_intake_form
+small_model,gold_synth-0083-patient_intake_form-t14,patient_dob,"September 1, 1952","September    1,     1952",OCR_CORRUPTION,grid,14,scanned,en,patient_intake_form
+small_model,gold_synth-0083-patient_intake_form-t14,referring_provider_name,"Donna Jackson, MD","Donna    Jackson,    MD",FORMAT_NORMALISATION,grid,14,scanned,en,patient_intake_form
+small_model,gold_synth-0083-patient_intake_form-t14,payer_name,Premera Blue Cross,Premera    Blue   Cross,FORMAT_NORMALISATION,grid,14,scanned,en,patient_intake_form
+small_model,gold_synth-0083-patient_intake_form-t14,document_date,"December 24, 2025",,OCR_CORRUPTION,grid,14,scanned,en,patient_intake_form
+small_model,gold_synth-0084-referral_letter-t11,patient_name,Joshua Taylor,Joshua   Taylor,FORMAT_NORMALISATION,grid,11,scanned,en,referral_letter
+small_model,gold_synth-0084-referral_letter-t11,referring_provider_name,"Dr. Kenneth Adams, MD, FACP","Dr.    Kenneth   Adams,    MD,    FACP",FORMAT_NORMALISATION,grid,11,scanned,en,referral_letter
+small_model,gold_synth-0084-referral_letter-t11,referring_provider_npi,6843416226,,MISSED_ENTIRELY,grid,11,scanned,en,referral_letter
+small_model,gold_synth-0084-referral_letter-t11,servicing_facility,Kingsport Regional Medical Center,,OCR_CORRUPTION,grid,11,scanned,en,referral_letter
+small_model,gold_synth-0084-referral_letter-t11,payer_name,Cigna Healthcare,Cigna   Healthcare,FORMAT_NORMALISATION,grid,11,scanned,en,referral_letter
+small_model,gold_synth-0084-referral_letter-t11,document_reference,RF08141982,,MISSED_ENTIRELY,grid,11,scanned,en,referral_letter
+small_model,gold_synth-0084-referral_letter-t11,document_date,08/26/2025,,MISSED_ENTIRELY,grid,11,scanned,en,referral_letter
+small_model,gold_synth-0084-referral_letter-t11,diagnosis_code,R10.9,,MISSED_ENTIRELY,grid,11,scanned,en,referral_letter
+small_model,gold_synth-0085-prior_auth_request-t12,document_date,10.10.2025,10,WRONG_VALUE,prose,12,clean,en,prior_auth_request
+small_model,gold_synth-0085-prior_auth_request-t12,date_of_service,10.01.2025,,MISSED_ENTIRELY,prose,12,clean,en,prior_auth_request
+small_model,gold_synth-0085-prior_auth_request-t12,procedure_code,71046,,MISSED_ENTIRELY,prose,12,clean,en,prior_auth_request
+small_model,gold_synth-0085-prior_auth_request-t12,total_charge,$190.36,,MISSED_ENTIRELY,prose,12,clean,en,prior_auth_request
+small_model,gold_synth-0086-lab_order-t13,referring_provider_npi,1968111595,,MISSED_ENTIRELY,below,13,scanned,en,lab_order
+small_model,gold_synth-0086-lab_order-t13,document_date,5/9/25,,MISSED_ENTIRELY,below,13,scanned,en,lab_order
+small_model,gold_synth-0086-lab_order-t13,date_of_service,5/8/25,5/9/25,LABEL_CONFUSION,below,13,scanned,en,lab_order
+small_model,gold_synth-0087-insurance_claim-t14,patient_dob,10/12/1939,,MISSED_ENTIRELY,grid,14,clean,en,insurance_claim
+small_model,gold_synth-0087-insurance_claim-t14,referring_provider_name,"Dr. Robert White, M.D.",,MISSED_ENTIRELY,grid,14,clean,en,insurance_claim
+small_model,gold_synth-0087-insurance_claim-t14,referring_provider_npi,7392082393,,MISSED_ENTIRELY,grid,14,clean,en,insurance_claim
+small_model,gold_synth-0087-insurance_claim-t14,document_date,03/10/2026,01/28/,WRONG_VALUE,grid,14,clean,en,insurance_claim
+small_model,gold_synth-0087-insurance_claim-t14,date_of_service,01/28/2026,202,WRONG_VALUE,grid,14,clean,en,insurance_claim
+small_model,gold_synth-0087-insurance_claim-t14,diagnosis_code,R10.9,,MISSED_ENTIRELY,grid,14,clean,en,insurance_claim
+small_model,gold_synth-0088-remittance_advice-t11,servicing_facility,"Oakhurst Orthopedic Associates, LLC",,MISSED_ENTIRELY,grid,11,clean,en,remittance_advice
+small_model,gold_synth-0088-remittance_advice-t11,payer_name,Molina Healthcare,Molina  Healthcare,FORMAT_NORMALISATION,grid,11,clean,en,remittance_advice
+small_model,gold_synth-0088-remittance_advice-t11,date_of_service,3/15/26,3,WRONG_VALUE,grid,11,clean,en,remittance_advice
+small_model,gold_synth-0088-remittance_advice-t11,procedure_code,87880,87,TRUNCATION,grid,11,clean,en,remittance_advice
+small_model,gold_synth-0088-remittance_advice-t11,amount_paid,USD 118.01,,MISSED_ENTIRELY,grid,11,clean,en,remittance_advice
+llm_frontier,gold_synth-0006-referral_letter-t13,member_id,YCF591565308,Y.CF59 1565308,OCR_CORRUPTION,below,13,scanned,en,referral_letter
+llm_frontier,gold_synth-0006-referral_letter-t13,diagnosis_code,E03.9,E03.9.,FORMAT_NORMALISATION,below,13,scanned,en,referral_letter
+llm_frontier,gold_synth-0008-lab_order-t11,patient_name,James Nguyen,James   Nguyen,FORMAT_NORMALISATION,grid,11,scanned,en,lab_order
+llm_frontier,gold_synth-0008-lab_order-t11,patient_dob,"December 6, 1983","December    6,     1983",OCR_CORRUPTION,grid,11,scanned,en,lab_order
+llm_frontier,gold_synth-0008-lab_order-t11,referring_provider_name,"Dr. William Ramirez, D.O.","Dr.    William   Ramirez,    D.O.",FORMAT_NORMALISATION,grid,11,scanned,en,lab_order
+llm_frontier,gold_synth-0008-lab_order-t11,servicing_facility,Brookfield Surgical Center,Brookfield   Surgical   Center,FORMAT_NORMALISATION,grid,11,scanned,en,lab_order
+llm_frontier,gold_synth-0008-lab_order-t11,document_date,"May 31, 2025","May    31,    2025",OCR_CORRUPTION,grid,11,scanned,en,lab_order
+llm_frontier,gold_synth-0008-lab_order-t11,date_of_service,"April 17, 2025","April    17,    2025",OCR_CORRUPTION,grid,11,scanned,en,lab_order
+llm_frontier,gold_synth-0012-referral_letter-t11,patient_name,Patricia Torres,Patricia   Torres,FORMAT_NORMALISATION,grid,11,scanned,en,referral_letter
+llm_frontier,gold_synth-0012-referral_letter-t11,referring_provider_name,"Dr. Kenneth Lewis, MD, FACP","Dr.    Kenneth   Lewis,    MD,    FACP",FORMAT_NORMALISATION,grid,11,scanned,en,referral_letter
+llm_frontier,gold_synth-0012-referral_letter-t11,servicing_facility,"Stone Creek Neurology Specialists, P.A.",Stone   Creek   Neurology    Speciali,OCR_CORRUPTION,grid,11,scanned,en,referral_letter
+llm_frontier,gold_synth-0012-referral_letter-t11,payer_name,Bright HealthCare,Bright   HealthCare,FORMAT_NORMALISATION,grid,11,scanned,en,referral_letter
+llm_frontier,gold_synth-0012-referral_letter-t11,document_date,,"4,0 PA, AN26",SPURIOUS_EXTRACTION,grid,11,scanned,en,referral_letter
+llm_frontier,gold_synth-0014-lab_order-t13,diagnosis_code,,RS51.9,SPURIOUS_EXTRACTION,below,13,scanned,en,lab_order
+llm_frontier,gold_synth-0015-insurance_claim-t14,patient_name,Nancy Sanchez,Nancy   Sanchez,FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+llm_frontier,gold_synth-0015-insurance_claim-t14,referring_provider_name,"Dr. David Martinez, NP","Dr.    David   Martinez,    ‘NP",FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+llm_frontier,gold_synth-0015-insurance_claim-t14,servicing_facility,Riverbend Diagnostic Laboratory,Riverbend.   Diagnostic   Laboratory,FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+llm_frontier,gold_synth-0015-insurance_claim-t14,document_date,"April 30, 2026","April    30,    2026",OCR_CORRUPTION,grid,14,scanned,en,insurance_claim
+llm_frontier,gold_synth-0015-insurance_claim-t14,date_of_service,"April 17, 2026","April    17,    2026",OCR_CORRUPTION,grid,14,scanned,en,insurance_claim
+llm_frontier,gold_synth-0020-lab_order-t11,patient_name,Joshua Smith,Joshua   Smith,FORMAT_NORMALISATION,grid,11,scanned,en,lab_order
+llm_frontier,gold_synth-0020-lab_order-t11,patient_dob,"January 16, 1970","January    16,     1970",OCR_CORRUPTION,grid,11,scanned,en,lab_order
+llm_frontier,gold_synth-0020-lab_order-t11,referring_provider_name,"Dr. Barbara Torres, MD, FACP","Dr.    Barbara   Torres,    MD,    FACP",FORMAT_NORMALISATION,grid,11,scanned,en,lab_order
+llm_frontier,gold_synth-0020-lab_order-t11,servicing_facility,Westgate Cardiology Institute,Westgate   Cardiology    Institute,FORMAT_NORMALISATION,grid,11,scanned,en,lab_order
+llm_frontier,gold_synth-0020-lab_order-t11,document_date,"January 27, 2025","January.   27,    2025",OCR_CORRUPTION,grid,11,scanned,en,lab_order
+llm_frontier,gold_synth-0020-lab_order-t11,date_of_service,"January 15, 2025","January    15,    2025",OCR_CORRUPTION,grid,11,scanned,en,lab_order
+llm_frontier,gold_synth-0025-prior_auth_request-t12,member_id,CMY929930559,CMY.929930559,OCR_CORRUPTION,prose,12,scanned,en,prior_auth_request
+llm_frontier,gold_synth-0028-remittance_advice-t11,patient_name,Joshua Nguyen,Joshua   Nguyen,FORMAT_NORMALISATION,grid,11,scanned,en,remittance_advice
+llm_frontier,gold_synth-0028-remittance_advice-t11,servicing_facility,Highland Sports Medicine Clinic,Highland   Sports   Medicine   Clini,OCR_CORRUPTION,grid,11,scanned,en,remittance_advice
+llm_frontier,gold_synth-0028-remittance_advice-t11,payer_name,Medicaid Managed Care,Medicaid   Managed   Care,FORMAT_NORMALISATION,grid,11,scanned,en,remittance_advice
+llm_frontier,gold_synth-0028-remittance_advice-t11,document_date,16-Apr-2025,l6-Apr-2025,OCR_CORRUPTION,grid,11,scanned,en,remittance_advice
+llm_frontier,gold_synth-0031-prior_auth_request-t14,patient_name,Michael Gonzalez,Michael   Gonzalez,FORMAT_NORMALISATION,grid,14,scanned,en,prior_auth_request
+llm_frontier,gold_synth-0031-prior_auth_request-t14,patient_dob,"December 21, 1945","December   21,    1945",OCR_CORRUPTION,grid,14,scanned,en,prior_auth_request
+llm_frontier,gold_synth-0031-prior_auth_request-t14,referring_provider_name,"Robert Williams, MD","Robert   Williams,    MD",FORMAT_NORMALISATION,grid,14,scanned,en,prior_auth_request
+llm_frontier,gold_synth-0031-prior_auth_request-t14,servicing_facility,Cedar Park Diagnostic Laboratory,Cedar   Park   Diagnostic   Laboratory,FORMAT_NORMALISATION,grid,14,scanned,en,prior_auth_request
+llm_frontier,gold_synth-0031-prior_auth_request-t14,payer_name,Bright HealthCare,Bright    HealthCare,FORMAT_NORMALISATION,grid,14,scanned,en,prior_auth_request
+llm_frontier,gold_synth-0031-prior_auth_request-t14,document_date,"March 2, 2026","March   2,    2026",OCR_CORRUPTION,grid,14,scanned,en,prior_auth_request
+llm_frontier,gold_synth-0031-prior_auth_request-t14,date_of_service,"January 23, 2026","January   23,    2026",OCR_CORRUPTION,grid,14,scanned,en,prior_auth_request
+llm_frontier,gold_synth-0031-prior_auth_request-t14,diagnosis_code,,110,SPURIOUS_EXTRACTION,grid,14,scanned,en,prior_auth_request
+llm_frontier,gold_synth-0036-referral_letter-t11,patient_name,María Torres,Maria    Torres,FORMAT_NORMALISATION,grid,11,scanned,es,referral_letter
+llm_frontier,gold_synth-0036-referral_letter-t11,patient_dob,"October 4, 2005","October    4,    2005",OCR_CORRUPTION,grid,11,scanned,es,referral_letter
+llm_frontier,gold_synth-0036-referral_letter-t11,referring_provider_name,"Joshua Lopez, NP","Joshua    “Lopez,     NP",FORMAT_NORMALISATION,grid,11,scanned,es,referral_letter
+llm_frontier,gold_synth-0036-referral_letter-t11,servicing_facility,Riverbend Diagnostic Laboratory,Riverbend    Diagnostic    Laboratory,FORMAT_NORMALISATION,grid,11,scanned,es,referral_letter
+llm_frontier,gold_synth-0036-referral_letter-t11,payer_name,Medicaid Managed Care,Medicaid   Managed.   Care,FORMAT_NORMALISATION,grid,11,scanned,es,referral_letter
+llm_frontier,gold_synth-0038-lab_order-t13,diagnosis_code,,10,SPURIOUS_EXTRACTION,below,13,scanned,en,lab_order
+llm_frontier,gold_synth-0039-insurance_claim-t14,patient_name,Donald Martin,Donald   Martin,FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+llm_frontier,gold_synth-0039-insurance_claim-t14,referring_provider_name,"Jessica White, NP","Jessica   White,    NP",FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+llm_frontier,gold_synth-0039-insurance_claim-t14,servicing_facility,Lakeside Imaging Center,Lakeside    Imaging   Center,FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+llm_frontier,gold_synth-0039-insurance_claim-t14,payer_name,Bright HealthCare,Bright    HealthCare,FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+llm_frontier,gold_synth-0039-insurance_claim-t14,document_reference,CLM-748180,CLM+748180,OCR_CORRUPTION,grid,14,scanned,en,insurance_claim
+llm_frontier,gold_synth-0042-referral_letter-t13,referring_provider_name,"Dr. Patricia Miller, MD, FACP","Dr. Patricia Miller, MD, FACP.",FORMAT_NORMALISATION,below,13,scanned,en,referral_letter
+llm_frontier,gold_synth-0042-referral_letter-t13,member_id,YAA364859014,YAA3648590 14,OCR_CORRUPTION,below,13,scanned,en,referral_letter
+llm_frontier,gold_synth-0042-referral_letter-t13,document_reference,RF194851,RF19485],OCR_CORRUPTION,below,13,scanned,en,referral_letter
+llm_frontier,gold_synth-0042-referral_letter-t13,document_date,28-Aug-2025,2k-Aug-2025,WRONG_VALUE,below,13,scanned,en,referral_letter
+llm_frontier,gold_synth-0044-lab_order-t11,patient_name,David Wilson,David   Wilson,FORMAT_NORMALISATION,grid,11,scanned,en,lab_order
+llm_frontier,gold_synth-0044-lab_order-t11,referring_provider_name,"Daniel Martinez, PA-C","Daniel   Martinez,    PA-C",FORMAT_NORMALISATION,grid,11,scanned,en,lab_order
+llm_frontier,gold_synth-0044-lab_order-t11,servicing_facility,Stone Creek General Hospital,Stone   Creek   General   Hospital,FORMAT_NORMALISATION,grid,11,scanned,en,lab_order
+llm_frontier,gold_synth-0045-insurance_claim-t12,patient_name,Barbara Martin,Barbara Marin,OCR_CORRUPTION,prose,12,scanned,en,insurance_claim
+llm_frontier,gold_synth-0045-insurance_claim-t12,patient_dob,09.11.2014,09.11 201&,OCR_CORRUPTION,prose,12,scanned,en,insurance_claim
+llm_frontier,gold_synth-0045-insurance_claim-t12,document_date,"April 10, 2025","April 10,2025",OCR_CORRUPTION,prose,12,scanned,en,insurance_claim
+llm_frontier,gold_synth-0047-patient_intake_form-t14,patient_name,Karen Robinson,Karen.   Robinson,FORMAT_NORMALISATION,grid,14,scanned,en,patient_intake_form
+llm_frontier,gold_synth-0047-patient_intake_form-t14,referring_provider_name,"Dr. Kenneth Anderson, PA-C","Dr.    Kenneth   Anderson,    PA-C",FORMAT_NORMALISATION,grid,14,scanned,en,patient_intake_form
+llm_frontier,gold_synth-0047-patient_intake_form-t14,payer_name,Medicaid Managed Care,Medicaid   Managed   Care,FORMAT_NORMALISATION,grid,14,scanned,en,patient_intake_form
+llm_frontier,gold_synth-0047-patient_intake_form-t14,member_id,EGF957874402,EGF 957874402,OCR_CORRUPTION,grid,14,scanned,en,patient_intake_form
+llm_frontier,gold_synth-0048-referral_letter-t11,patient_name,Andrew Hall,Andrew   Hall,FORMAT_NORMALISATION,grid,11,scanned,en,referral_letter
+llm_frontier,gold_synth-0048-referral_letter-t11,referring_provider_name,"Michael Thompson, DO","Michael    Thompson,    DO",FORMAT_NORMALISATION,grid,11,scanned,en,referral_letter
+llm_frontier,gold_synth-0048-referral_letter-t11,servicing_facility,"Maple Grove Radiology, P.C.","Maple    -Grove    Radiology,    P.c.",WRONG_VALUE,grid,11,scanned,en,referral_letter
+llm_frontier,gold_synth-0048-referral_letter-t11,payer_name,Molina Healthcare,Molina.    Healthcare,FORMAT_NORMALISATION,grid,11,scanned,en,referral_letter
+llm_frontier,gold_synth-0048-referral_letter-t11,diagnosis_code,,RIQ.9,SPURIOUS_EXTRACTION,grid,11,scanned,en,referral_letter
+llm_frontier,gold_synth-0050-lab_order-t13,patient_name,Elizabeth Miller,Elizabeth Muller,OCR_CORRUPTION,below,13,scanned,en,lab_order
+llm_frontier,gold_synth-0050-lab_order-t13,patient_dob,,"Ovtober 16),  1942",SPURIOUS_EXTRACTION,below,13,scanned,en,lab_order
+llm_frontier,gold_synth-0050-lab_order-t13,referring_provider_name,"Dr. Margaret Wright, NP",Dr.   Margaret Wright. NP,FORMAT_NORMALISATION,below,13,scanned,en,lab_order
+llm_frontier,gold_synth-0050-lab_order-t13,referring_provider_npi,,O38 LO87S85S4,SPURIOUS_EXTRACTION,below,13,scanned,en,lab_order
+llm_frontier,gold_synth-0050-lab_order-t13,servicing_facility,"Brookfield Orthopedic Associates, LLC","Brooktield Orthopedic Associates, LLC",OCR_CORRUPTION,below,13,scanned,en,lab_order
+llm_frontier,gold_synth-0050-lab_order-t13,document_date,"January 1, 2025",January   1. 2025,OCR_CORRUPTION,below,13,scanned,en,lab_order
+llm_frontier,gold_synth-0050-lab_order-t13,diagnosis_code,M17.11,M1711,OCR_CORRUPTION,below,13,scanned,en,lab_order
+llm_frontier,gold_synth-0050-lab_order-t13,procedure_code,,7372S,SPURIOUS_EXTRACTION,below,13,scanned,en,lab_order
+llm_frontier,gold_synth-0051-insurance_claim-t14,patient_name,Nancy Torres,Nancy   Torres,FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+llm_frontier,gold_synth-0051-insurance_claim-t14,referring_provider_name,"Elizabeth Scott, PA-C","Elizabeth   Scott,    PA-C",FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+llm_frontier,gold_synth-0051-insurance_claim-t14,servicing_facility,Lakeside Regional Medical Center,Lakeside   Regional   Medical   Center,FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+llm_frontier,gold_synth-0051-insurance_claim-t14,payer_name,Premera Blue Cross,Premera   Blue   Cross,FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+llm_frontier,gold_synth-0053-patient_intake_form-t12,member_id,FYR007788056,FYRO07788056,OCR_CORRUPTION,prose,12,scanned,en,patient_intake_form
+llm_frontier,gold_synth-0055-prior_auth_request-t14,patient_name,Kenneth Allen,Kenneth   Allen,FORMAT_NORMALISATION,grid,14,scanned,en,prior_auth_request
+llm_frontier,gold_synth-0055-prior_auth_request-t14,referring_provider_name,"Dr. Sarah Thompson, MD, FACP","Dr.    Sarah    Thompson,    MD,     FACP",FORMAT_NORMALISATION,grid,14,scanned,en,prior_auth_request
+llm_frontier,gold_synth-0055-prior_auth_request-t14,servicing_facility,"Brookfield Orthopedic Associates, LLC","Brookfield   Orthopedic   Associates,     LLC",FORMAT_NORMALISATION,grid,14,scanned,en,prior_auth_request
+llm_frontier,gold_synth-0055-prior_auth_request-t14,payer_name,Bright HealthCare,Bright    HealthCare,FORMAT_NORMALISATION,grid,14,scanned,en,prior_auth_request
+llm_frontier,gold_synth-0055-prior_auth_request-t14,document_date,,10719/25,SPURIOUS_EXTRACTION,grid,14,scanned,en,prior_auth_request
+llm_frontier,gold_synth-0056-lab_order-t11,patient_name,Carol Hernandez,Carol    Hernandez,FORMAT_NORMALISATION,grid,11,scanned,en,lab_order
+llm_frontier,gold_synth-0056-lab_order-t11,patient_dob,,"OLs,09,  1962",SPURIOUS_EXTRACTION,grid,11,scanned,en,lab_order
+llm_frontier,gold_synth-0056-lab_order-t11,referring_provider_name,"Michelle Williams, NP","Michelle    Williams,     NP",FORMAT_NORMALISATION,grid,11,scanned,en,lab_order
+llm_frontier,gold_synth-0056-lab_order-t11,servicing_facility,"Pinehurst Neurology Specialists, P.A.",Pinehurst    Neurology    Specialist   #41P. nL,OCR_CORRUPTION,grid,11,scanned,en,lab_order
+llm_frontier,gold_synth-0059-patient_intake_form-t14,patient_name,Linda Harris,Linda    Harris,FORMAT_NORMALISATION,grid,14,scanned,en,patient_intake_form
+llm_frontier,gold_synth-0059-patient_intake_form-t14,patient_dob,"April 8, 1953","April    °8,     1953",OCR_CORRUPTION,grid,14,scanned,en,patient_intake_form
+llm_frontier,gold_synth-0059-patient_intake_form-t14,referring_provider_name,"Dr. John Rivera, NP","Dr.    John    Rivera,    NP",FORMAT_NORMALISATION,grid,14,scanned,en,patient_intake_form
+llm_frontier,gold_synth-0059-patient_intake_form-t14,payer_name,Premera Blue Cross,Premera    Blue   Cross,FORMAT_NORMALISATION,grid,14,scanned,en,patient_intake_form
+llm_frontier,gold_synth-0059-patient_intake_form-t14,document_date,"March 28, 2025","March    28,    2025",OCR_CORRUPTION,grid,14,scanned,en,patient_intake_form
+llm_frontier,gold_synth-0060-referral_letter-t11,patient_name,Ashley Ramirez,Ashley   Ramirez,FORMAT_NORMALISATION,grid,11,scanned,en,referral_letter
+llm_frontier,gold_synth-0060-referral_letter-t11,patient_dob,,06.  25.   L951,SPURIOUS_EXTRACTION,grid,11,scanned,en,referral_letter
+llm_frontier,gold_synth-0060-referral_letter-t11,referring_provider_name,"Dr. Kimberly Hernandez, D.O.","Dr.    Kimberly    Hernandez,    .D.O,",FORMAT_NORMALISATION,grid,11,scanned,en,referral_letter
+llm_frontier,gold_synth-0060-referral_letter-t11,servicing_facility,Brookfield Surgical Center,Brookfield    Surgical    Center,FORMAT_NORMALISATION,grid,11,scanned,en,referral_letter
+llm_frontier,gold_synth-0060-referral_letter-t11,member_id,FJN926031125,FIN926031125,OCR_CORRUPTION,grid,11,scanned,en,referral_letter
+llm_frontier,gold_synth-0060-referral_letter-t11,document_reference,,RE-790230,SPURIOUS_EXTRACTION,grid,11,scanned,en,referral_letter
+llm_frontier,gold_synth-0061-prior_auth_request-t12,patient_name,Kevin Green,KevinGreen,WRONG_VALUE,prose,12,scanned,en,prior_auth_request
+llm_frontier,gold_synth-0063-insurance_claim-t14,patient_name,Ashley Williams,Ashley   Williams,FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+llm_frontier,gold_synth-0063-insurance_claim-t14,referring_provider_name,"Daniel White, D.O.","Daniel   White,    D.O.",FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+llm_frontier,gold_synth-0063-insurance_claim-t14,servicing_facility,Pinehurst Diagnostic Laboratory,Pinehurst    Diagnostic   Laboratory,FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+llm_frontier,gold_synth-0063-insurance_claim-t14,payer_name,Premera Blue Cross,Premera   Blue   Cross,FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+llm_frontier,gold_synth-0064-remittance_advice-t11,patient_name,Barbara Nelson,Barbara    Nelson,FORMAT_NORMALISATION,grid,11,scanned,en,remittance_advice
+llm_frontier,gold_synth-0064-remittance_advice-t11,servicing_facility,,Brookfield   Orthopedic   Associlat,SPURIOUS_EXTRACTION,grid,11,scanned,en,remittance_advice
+llm_frontier,gold_synth-0064-remittance_advice-t11,document_date,,2802  8405 - 31,SPURIOUS_EXTRACTION,grid,11,scanned,en,remittance_advice
+llm_frontier,gold_synth-0064-remittance_advice-t11,patient_responsibility,,SL35. 09),SPURIOUS_EXTRACTION,grid,11,scanned,en,remittance_advice
+llm_frontier,gold_synth-0066-referral_letter-t13,referring_provider_name,"Joseph King, PA-C",Joseph King. PA-C,FORMAT_NORMALISATION,below,13,scanned,en,referral_letter
+llm_frontier,gold_synth-0066-referral_letter-t13,referring_provider_npi,,TAIT 149813,SPURIOUS_EXTRACTION,below,13,scanned,en,referral_letter
+llm_frontier,gold_synth-0066-referral_letter-t13,servicing_facility,Westgate Sports Medicine Clinic,Westwate Sporty Medivine Clinic,OCR_CORRUPTION,below,13,scanned,en,referral_letter
+llm_frontier,gold_synth-0066-referral_letter-t13,diagnosis_code,,ELLY,SPURIOUS_EXTRACTION,below,13,scanned,en,referral_letter
+llm_frontier,gold_synth-0069-insurance_claim-t12,servicing_facility,"Highland Radiology, P.C.",Highland Radiology. P.C.,FORMAT_NORMALISATION,prose,12,scanned,en,insurance_claim
+llm_frontier,gold_synth-0069-insurance_claim-t12,document_date,10.21.2025,10.21 2025,OCR_CORRUPTION,prose,12,scanned,en,insurance_claim
+llm_frontier,gold_synth-0070-remittance_advice-t13,patient_name,Nancy Allen,Naney   Allen,OCR_CORRUPTION,below,13,scanned,en,remittance_advice
+llm_frontier,gold_synth-0070-remittance_advice-t13,member_id,J48655049J,J48655049),OCR_CORRUPTION,below,13,scanned,en,remittance_advice
+llm_frontier,gold_synth-0070-remittance_advice-t13,document_date,02-Mar-2026,(02-Mar-2026,WRONG_VALUE,below,13,scanned,en,remittance_advice
+llm_frontier,gold_synth-0070-remittance_advice-t13,total_charge,203.73,"203,73",FORMAT_NORMALISATION,below,13,scanned,en,remittance_advice
+llm_frontier,gold_synth-0070-remittance_advice-t13,patient_responsibility,78.20,78:20,WRONG_VALUE,below,13,scanned,en,remittance_advice
+llm_frontier,gold_synth-0071-patient_intake_form-t14,patient_name,María Hill,María   Hill,OCR_CORRUPTION,grid,14,scanned,es,patient_intake_form
+llm_frontier,gold_synth-0071-patient_intake_form-t14,patient_dob,12 de diciembre de 2001,12    de   diciembre   de   2001,OCR_CORRUPTION,grid,14,scanned,es,patient_intake_form
+llm_frontier,gold_synth-0071-patient_intake_form-t14,referring_provider_name,"Donald Williams, DO","Donald   Williams,    DO",FORMAT_NORMALISATION,grid,14,scanned,es,patient_intake_form
+llm_frontier,gold_synth-0071-patient_intake_form-t14,payer_name,Blue Shield of California,Blue   Shield   of   California,FORMAT_NORMALISATION,grid,14,scanned,es,patient_intake_form
+llm_frontier,gold_synth-0071-patient_intake_form-t14,document_date,29 de agosto de 2025,29   de    agosto   de   2025,OCR_CORRUPTION,grid,14,scanned,es,patient_intake_form
+llm_frontier,gold_synth-0072-referral_letter-t11,patient_name,Donald Adams,Donald   Adams,FORMAT_NORMALISATION,grid,11,scanned,en,referral_letter
+llm_frontier,gold_synth-0072-referral_letter-t11,referring_provider_name,"Dr. Steven Adams, M.D.","Dr.    Steven   Adams,    M.D.",FORMAT_NORMALISATION,grid,11,scanned,en,referral_letter
+llm_frontier,gold_synth-0072-referral_letter-t11,servicing_facility,"Cedar Park Orthopedic Associates, LLC",Cedar   Park   Orthopedic   Associates,FORMAT_NORMALISATION,grid,11,scanned,en,referral_letter
+llm_frontier,gold_synth-0074-lab_order-t13,referring_provider_name,"Dr. Matthew Nelson, PA-C",Dr. Matthew Nelson; PA-C,FORMAT_NORMALISATION,below,13,scanned,en,lab_order
+llm_frontier,gold_synth-0074-lab_order-t13,referring_provider_npi,2472989203,2472989203.,FORMAT_NORMALISATION,below,13,scanned,en,lab_order
+llm_frontier,gold_synth-0075-insurance_claim-t14,patient_name,Anthony Harris,Anthony   Harris,FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+llm_frontier,gold_synth-0075-insurance_claim-t14,patient_dob,"July 9, 1945","July    9,    1945",OCR_CORRUPTION,grid,14,scanned,en,insurance_claim
+llm_frontier,gold_synth-0075-insurance_claim-t14,referring_provider_name,"Dr. Michael Wright, M.D.","Dr.    Michael   Wright,    M.D.",FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+llm_frontier,gold_synth-0075-insurance_claim-t14,servicing_facility,Kingsport Sports Medicine Clinic,Kingsport    Sports   Medicine   Clinic,FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+llm_frontier,gold_synth-0075-insurance_claim-t14,payer_name,TRICARE East,"TRICARE,   East",FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+llm_frontier,gold_synth-0075-insurance_claim-t14,document_date,"March 8, 2025","March   8,    2025",OCR_CORRUPTION,grid,14,scanned,en,insurance_claim
+llm_frontier,gold_synth-0075-insurance_claim-t14,date_of_service,"February 7, 2025","February    7,    2025",OCR_CORRUPTION,grid,14,scanned,en,insurance_claim
+llm_frontier,gold_synth-0076-remittance_advice-t11,patient_name,Susan Adams,Susan   Adams,FORMAT_NORMALISATION,grid,11,scanned,en,remittance_advice
+llm_frontier,gold_synth-0076-remittance_advice-t11,servicing_facility,Brookfield Surgical Center,Brookfield   Surgical   Center,FORMAT_NORMALISATION,grid,11,scanned,en,remittance_advice
+llm_frontier,gold_synth-0076-remittance_advice-t11,payer_name,Blue Shield of California,Blue    Shield   of   California,FORMAT_NORMALISATION,grid,11,scanned,en,remittance_advice
+llm_frontier,gold_synth-0076-remittance_advice-t11,document_date,"February 23, 2026","February   23,    2026",OCR_CORRUPTION,grid,11,scanned,en,remittance_advice
+llm_frontier,gold_synth-0076-remittance_advice-t11,date_of_service,"January 10, 2026","January   10,    2026",OCR_CORRUPTION,grid,11,scanned,en,remittance_advice
+llm_frontier,gold_synth-0078-referral_letter-t13,referring_provider_name,"Linda Smith, MD, FACP",Linda Smith. MD. FACP,FORMAT_NORMALISATION,below,13,scanned,en,referral_letter
+llm_frontier,gold_synth-0078-referral_letter-t13,servicing_facility,Granite Bay General Hospital,Granite Bay  General Hospital,FORMAT_NORMALISATION,below,13,scanned,en,referral_letter
+llm_frontier,gold_synth-0078-referral_letter-t13,document_reference,RF-7105103,RE-7 105103,OCR_CORRUPTION,below,13,scanned,en,referral_letter
+llm_frontier,gold_synth-0079-prior_auth_request-t14,patient_name,Mary Martinez,Mary.   Martinez,FORMAT_NORMALISATION,grid,14,scanned,en,prior_auth_request
+llm_frontier,gold_synth-0079-prior_auth_request-t14,referring_provider_name,"Dr. Andrew Lewis, D.O.","Dr.    Andrew   Lewis,    D.O.",FORMAT_NORMALISATION,grid,14,scanned,en,prior_auth_request
+llm_frontier,gold_synth-0079-prior_auth_request-t14,servicing_facility,Ashford Diagnostic Laboratory,Ashford   Diagnostic:   Laboratory,FORMAT_NORMALISATION,grid,14,scanned,en,prior_auth_request
+llm_frontier,gold_synth-0079-prior_auth_request-t14,payer_name,Kaiser Permanente,Kaiser   Permanente,FORMAT_NORMALISATION,grid,14,scanned,en,prior_auth_request
+llm_frontier,gold_synth-0080-lab_order-t11,patient_name,Charles Lewis,Charles   Lewis,FORMAT_NORMALISATION,grid,11,scanned,en,lab_order
+llm_frontier,gold_synth-0080-lab_order-t11,referring_provider_name,"Dr. Carol Moore, NP","Dr.    Carol   Moore,    NP",FORMAT_NORMALISATION,grid,11,scanned,en,lab_order
+llm_frontier,gold_synth-0080-lab_order-t11,servicing_facility,Lakeside Regional Medical Center,Lakeside   Regional   Medical    Cent,OCR_CORRUPTION,grid,11,scanned,en,lab_order
+llm_frontier,gold_synth-0080-lab_order-t11,diagnosis_code,,11.9,SPURIOUS_EXTRACTION,grid,11,scanned,en,lab_order
+llm_frontier,gold_synth-0081-insurance_claim-t12,patient_name,Barbara Hall,BarbaraHall,WRONG_VALUE,prose,12,scanned,en,insurance_claim
+llm_frontier,gold_synth-0081-insurance_claim-t12,patient_dob,12/19/47,12/1947,OCR_CORRUPTION,prose,12,scanned,en,insurance_claim
+llm_frontier,gold_synth-0083-patient_intake_form-t14,patient_name,Andrew Young,Andrew    Young,FORMAT_NORMALISATION,grid,14,scanned,en,patient_intake_form
+llm_frontier,gold_synth-0083-patient_intake_form-t14,patient_dob,"September 1, 1952","September    1,     1952",OCR_CORRUPTION,grid,14,scanned,en,patient_intake_form
+llm_frontier,gold_synth-0083-patient_intake_form-t14,referring_provider_name,"Donna Jackson, MD","Donna    Jackson,    MD",FORMAT_NORMALISATION,grid,14,scanned,en,patient_intake_form
+llm_frontier,gold_synth-0083-patient_intake_form-t14,payer_name,Premera Blue Cross,Premera    Blue   Cross,FORMAT_NORMALISATION,grid,14,scanned,en,patient_intake_form
+llm_frontier,gold_synth-0083-patient_intake_form-t14,document_date,"December 24, 2025","December    24,    °2025",OCR_CORRUPTION,grid,14,scanned,en,patient_intake_form
+llm_frontier,gold_synth-0084-referral_letter-t11,patient_name,Joshua Taylor,Joshua   Taylor,FORMAT_NORMALISATION,grid,11,scanned,en,referral_letter
+llm_frontier,gold_synth-0084-referral_letter-t11,referring_provider_name,"Dr. Kenneth Adams, MD, FACP","Dr.    Kenneth   Adams,    MD,    FACP",FORMAT_NORMALISATION,grid,11,scanned,en,referral_letter
+llm_frontier,gold_synth-0084-referral_letter-t11,servicing_facility,Kingsport Regional Medical Center,Kingsport   Regional   Medical   .Cent,OCR_CORRUPTION,grid,11,scanned,en,referral_letter
+llm_frontier,gold_synth-0084-referral_letter-t11,payer_name,Cigna Healthcare,Cigna   Healthcare,FORMAT_NORMALISATION,grid,11,scanned,en,referral_letter
+llm_frontier,gold_synth-0084-referral_letter-t11,document_date,08/26/2025,,MISSED_ENTIRELY,grid,11,scanned,en,referral_letter
+llm_local,gold_synth-0000-referral_letter-t11,document_date,5/9/25,5/12/25,WRONG_VALUE,grid,11,clean,en,referral_letter
+llm_local,gold_synth-0002-lab_order-t13,document_reference,LAB6478780,,MISSED_ENTIRELY,below,13,scanned,en,lab_order
+llm_local,gold_synth-0002-lab_order-t13,document_date,04.03.2025,03.12.2025,LABEL_CONFUSION,below,13,scanned,en,lab_order
+llm_local,gold_synth-0002-lab_order-t13,date_of_service,03.12.2025,04.03.2025,LABEL_CONFUSION,below,13,scanned,en,lab_order
+llm_local,gold_synth-0004-remittance_advice-t11,document_date,10/26/2025,10/27/2025,WRONG_VALUE,grid,11,clean,en,remittance_advice
+llm_local,gold_synth-0004-remittance_advice-t11,date_of_service,10/11/2025,10/10/2025,WRONG_VALUE,grid,11,clean,en,remittance_advice
+llm_local,gold_synth-0004-remittance_advice-t11,procedure_code,20610,73562,WRONG_VALUE,grid,11,clean,en,remittance_advice
+llm_local,gold_synth-0006-referral_letter-t13,member_id,YCF591565308,Y.CF59 1565308,OCR_CORRUPTION,below,13,scanned,en,referral_letter
+llm_local,gold_synth-0006-referral_letter-t13,document_date,23-Feb-2025,25-Feb-2025,WRONG_VALUE,below,13,scanned,en,referral_letter
+llm_local,gold_synth-0006-referral_letter-t13,diagnosis_code,E03.9,E03.9.,FORMAT_NORMALISATION,below,13,scanned,en,referral_letter
+llm_local,gold_synth-0007-prior_auth_request-t14,document_date,08/21/2025,08/22/2025,WRONG_VALUE,grid,14,clean,en,prior_auth_request
+llm_local,gold_synth-0008-lab_order-t11,patient_dob,"December 6, 1983","December 6, 1983",OCR_CORRUPTION,grid,11,scanned,en,lab_order
+llm_local,gold_synth-0008-lab_order-t11,document_date,"May 31, 2025","June 3, 2025",OCR_CORRUPTION,grid,11,scanned,en,lab_order
+llm_local,gold_synth-0008-lab_order-t11,date_of_service,"April 17, 2025","April 17, 2025",OCR_CORRUPTION,grid,11,scanned,en,lab_order
+llm_local,gold_synth-0010-remittance_advice-t13,member_id,08480763958,EOB-570886,LABEL_CONFUSION,below,13,clean,en,remittance_advice
+llm_local,gold_synth-0010-remittance_advice-t13,document_reference,EOB-570886,GRP96673,WRONG_VALUE,below,13,clean,en,remittance_advice
+llm_local,gold_synth-0010-remittance_advice-t13,document_date,4/11/26,4/12/26,WRONG_VALUE,below,13,clean,en,remittance_advice
+llm_local,gold_synth-0010-remittance_advice-t13,date_of_service,3/28/26,3/25/26,WRONG_VALUE,below,13,clean,en,remittance_advice
+llm_local,gold_synth-0011-patient_intake_form-t14,document_date,"November 10, 2025","November 13, 2025",WRONG_VALUE,grid,14,clean,en,patient_intake_form
+llm_local,gold_synth-0012-referral_letter-t11,servicing_facility,"Stone Creek Neurology Specialists, P.A.",Stone Creek Neurology Speciali,OCR_CORRUPTION,grid,11,scanned,en,referral_letter
+llm_local,gold_synth-0012-referral_letter-t11,document_date,,05/08/2026,SPURIOUS_EXTRACTION,grid,11,scanned,en,referral_letter
+llm_local,gold_synth-0013-prior_auth_request-t12,referring_provider_name,"Dr. Kevin Clark, NP","Dr. Kevin Clark, NP (NPI 8279597719)",OVER_CAPTURE,prose,12,clean,en,prior_auth_request
+llm_local,gold_synth-0013-prior_auth_request-t12,referring_provider_npi,8279597719,,MISSED_ENTIRELY,prose,12,clean,en,prior_auth_request
+llm_local,gold_synth-0013-prior_auth_request-t12,member_id,BJD804481628,,MISSED_ENTIRELY,prose,12,clean,en,prior_auth_request
+llm_local,gold_synth-0013-prior_auth_request-t12,document_date,03.13.2025,03.15.2025,WRONG_VALUE,prose,12,clean,en,prior_auth_request
+llm_local,gold_synth-0014-lab_order-t13,document_reference,ORD-1328862,,MISSED_ENTIRELY,below,13,scanned,en,lab_order
+llm_local,gold_synth-0014-lab_order-t13,document_date,2026-01-20,2026-01-23,WRONG_VALUE,below,13,scanned,en,lab_order
+llm_local,gold_synth-0014-lab_order-t13,date_of_service,2026-01-18,2026-01-20,LABEL_CONFUSION,below,13,scanned,en,lab_order
+llm_local,gold_synth-0014-lab_order-t13,diagnosis_code,,RS51.9,SPURIOUS_EXTRACTION,below,13,scanned,en,lab_order
+llm_local,gold_synth-0015-insurance_claim-t14,patient_name,Nancy Sanchez,Nancy   Sanchez,FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+llm_local,gold_synth-0015-insurance_claim-t14,referring_provider_name,"Dr. David Martinez, NP","Dr.    David   Martinez,    ‘NP",FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+llm_local,gold_synth-0015-insurance_claim-t14,servicing_facility,Riverbend Diagnostic Laboratory,Riverbend,TRUNCATION,grid,14,scanned,en,insurance_claim
+llm_local,gold_synth-0015-insurance_claim-t14,document_date,"April 30, 2026","April   30,    2026",OCR_CORRUPTION,grid,14,scanned,en,insurance_claim
+llm_local,gold_synth-0015-insurance_claim-t14,date_of_service,"April 17, 2026","7          April    17,    2026",OCR_CORRUPTION,grid,14,scanned,en,insurance_claim
+llm_local,gold_synth-0015-insurance_claim-t14,diagnosis_code,N39.0,,MISSED_ENTIRELY,grid,14,scanned,en,insurance_claim
+llm_local,gold_synth-0016-remittance_advice-t11,servicing_facility,"Cedar Park Neurology Specialists, P.A.",,MISSED_ENTIRELY,grid,11,clean,en,remittance_advice
+llm_local,gold_synth-0016-remittance_advice-t11,document_date,06.15.2025,06.16.2025,WRONG_VALUE,grid,11,clean,en,remittance_advice
+llm_local,gold_synth-0016-remittance_advice-t11,procedure_code,99213,84443,WRONG_VALUE,grid,11,clean,en,remittance_advice
+llm_local,gold_synth-0017-patient_intake_form-t12,document_date,03/29/2025,03/30/2025,WRONG_VALUE,prose,12,clean,en,patient_intake_form
+llm_local,gold_synth-0018-referral_letter-t13,document_date,03/15/2026,03/18/2026,WRONG_VALUE,below,13,clean,en,referral_letter
+llm_local,gold_synth-0019-prior_auth_request-t14,document_date,"April 13, 2026","April 14, 2026",WRONG_VALUE,grid,14,clean,en,prior_auth_request
+llm_local,gold_synth-0020-lab_order-t11,patient_dob,"January 16, 1970","January 16, 1970",OCR_CORRUPTION,grid,11,scanned,en,lab_order
+llm_local,gold_synth-0020-lab_order-t11,document_date,"January 27, 2025","January 28, 2025",OCR_CORRUPTION,grid,11,scanned,en,lab_order
+llm_local,gold_synth-0020-lab_order-t11,date_of_service,"January 15, 2025","January 15, 2025",OCR_CORRUPTION,grid,11,scanned,en,lab_order
+llm_local,gold_synth-0021-insurance_claim-t12,document_date,10/29/2025,10/31/2025,WRONG_VALUE,prose,12,clean,en,insurance_claim
+llm_local,gold_synth-0021-insurance_claim-t12,date_of_service,09/17/2025,09/16/2025,WRONG_VALUE,prose,12,clean,en,insurance_claim
+llm_local,gold_synth-0022-remittance_advice-t13,servicing_facility,Granite Bay Diagnostic Laboratory,Oscar Health Plan,LABEL_CONFUSION,below,13,scanned,en,remittance_advice
+llm_local,gold_synth-0022-remittance_advice-t13,member_id,24705620257,EOB-00314510,LABEL_CONFUSION,below,13,scanned,en,remittance_advice
+llm_local,gold_synth-0022-remittance_advice-t13,document_reference,EOB-00314510,,MISSED_ENTIRELY,below,13,scanned,en,remittance_advice
+llm_local,gold_synth-0022-remittance_advice-t13,document_date,"April 7, 2026","April 1, 2026",LABEL_CONFUSION,below,13,scanned,en,remittance_advice
+llm_local,gold_synth-0022-remittance_advice-t13,date_of_service,"April 1, 2026","March 30, 2026",WRONG_VALUE,below,13,scanned,en,remittance_advice
+llm_local,gold_synth-0022-remittance_advice-t13,procedure_code,97110,24705620257,LABEL_CONFUSION,below,13,scanned,en,remittance_advice
+llm_local,gold_synth-0022-remittance_advice-t13,amount_paid,"$2,892.95","$1,461.70",LABEL_CONFUSION,below,13,scanned,en,remittance_advice
+llm_local,gold_synth-0023-patient_intake_form-t14,document_date,7/20/25,7/22/25,WRONG_VALUE,grid,14,clean,en,patient_intake_form
+llm_local,gold_synth-0024-referral_letter-t11,document_date,03.25.2025,03.27.2025,WRONG_VALUE,grid,11,clean,en,referral_letter
+llm_local,gold_synth-0025-prior_auth_request-t12,member_id,CMY929930559,CMY.929930559,OCR_CORRUPTION,prose,12,scanned,en,prior_auth_request
+llm_local,gold_synth-0026-lab_order-t13,document_reference,LAB-844723,,MISSED_ENTIRELY,below,13,clean,en,lab_order
+llm_local,gold_synth-0026-lab_order-t13,document_date,02.17.2026,02.19.2026,WRONG_VALUE,below,13,clean,en,lab_order
+llm_local,gold_synth-0027-insurance_claim-t14,document_date,6/25/25,6/27/25,WRONG_VALUE,grid,14,clean,en,insurance_claim
+llm_local,gold_synth-0028-remittance_advice-t11,servicing_facility,Highland Sports Medicine Clinic,Highland Sports Medicine Clinic,OCR_CORRUPTION,grid,11,scanned,en,remittance_advice
+llm_local,gold_synth-0028-remittance_advice-t11,document_date,16-Apr-2025,18-Apr-2025,OCR_CORRUPTION,grid,11,scanned,en,remittance_advice
+llm_local,gold_synth-0028-remittance_advice-t11,date_of_service,03-Mar-2025,02-Mar-2025,WRONG_VALUE,grid,11,scanned,en,remittance_advice
+llm_local,gold_synth-0028-remittance_advice-t11,procedure_code,99213,"84443, 73130, 80053",HALLUCINATION,grid,11,scanned,en,remittance_advice
+llm_local,gold_synth-0029-patient_intake_form-t12,document_date,2026-01-17,2026-01-19,WRONG_VALUE,prose,12,scanned,en,patient_intake_form
+llm_local,gold_synth-0031-prior_auth_request-t14,patient_name,Michael Gonzalez,Michael   Gonzalez,FORMAT_NORMALISATION,grid,14,scanned,en,prior_auth_request
+llm_local,gold_synth-0031-prior_auth_request-t14,patient_dob,"December 21, 1945","December   21,    1945",OCR_CORRUPTION,grid,14,scanned,en,prior_auth_request
+llm_local,gold_synth-0031-prior_auth_request-t14,referring_provider_name,"Robert Williams, MD","Robert   Williams,    MD",FORMAT_NORMALISATION,grid,14,scanned,en,prior_auth_request
+llm_local,gold_synth-0031-prior_auth_request-t14,servicing_facility,Cedar Park Diagnostic Laboratory,Cedar   Park   Diagnostic   Laboratory,FORMAT_NORMALISATION,grid,14,scanned,en,prior_auth_request
+llm_local,gold_synth-0031-prior_auth_request-t14,payer_name,Bright HealthCare,Bright   HealthCare,FORMAT_NORMALISATION,grid,14,scanned,en,prior_auth_request
+llm_local,gold_synth-0031-prior_auth_request-t14,document_date,"March 2, 2026","March   4,    2026",OCR_CORRUPTION,grid,14,scanned,en,prior_auth_request
+llm_local,gold_synth-0031-prior_auth_request-t14,date_of_service,"January 23, 2026","January   23,    2026",OCR_CORRUPTION,grid,14,scanned,en,prior_auth_request
+llm_local,gold_synth-0031-prior_auth_request-t14,diagnosis_code,,110,SPURIOUS_EXTRACTION,grid,14,scanned,en,prior_auth_request
+llm_local,gold_synth-0032-lab_order-t11,servicing_facility,"Pinehurst Neurology Specialists, P.A.",Pinehurst Neurology Specialists,FORMAT_NORMALISATION,grid,11,clean,en,lab_order
+llm_local,gold_synth-0032-lab_order-t11,diagnosis_code,J06.9,J06.9 P.A.,OVER_CAPTURE,grid,11,clean,en,lab_order
+llm_local,gold_synth-0032-lab_order-t11,procedure_code,87880,,MISSED_ENTIRELY,grid,11,clean,en,lab_order
+llm_local,gold_synth-0034-remittance_advice-t13,servicing_facility,"Highland Neurology Specialists, P.A.",,MISSED_ENTIRELY,below,13,scanned,en,remittance_advice
+llm_local,gold_synth-0034-remittance_advice-t13,member_id,56415528204,,MISSED_ENTIRELY,below,13,scanned,en,remittance_advice
+llm_local,gold_synth-0034-remittance_advice-t13,document_date,08/14/2025,08/13/2025,LABEL_CONFUSION,below,13,scanned,en,remittance_advice
+llm_local,gold_synth-0034-remittance_advice-t13,date_of_service,08/13/2025,08/14/2025,LABEL_CONFUSION,below,13,scanned,en,remittance_advice
+llm_local,gold_synth-0035-patient_intake_form-t14,document_date,20-Feb-2025,22-Feb-2025,WRONG_VALUE,grid,14,clean,en,patient_intake_form
+llm_local,gold_synth-0036-referral_letter-t11,patient_name,María Torres,Maria Torres,FORMAT_NORMALISATION,grid,11,scanned,es,referral_letter
+llm_local,gold_synth-0036-referral_letter-t11,patient_dob,"October 4, 2005","October 4, 2005",OCR_CORRUPTION,grid,11,scanned,es,referral_letter
+llm_local,gold_synth-0036-referral_letter-t11,referring_provider_name,"Joshua Lopez, NP","Joshua ‘Lopez, NP",FORMAT_NORMALISATION,grid,11,scanned,es,referral_letter
+llm_local,gold_synth-0036-referral_letter-t11,payer_name,Medicaid Managed Care,Medicaid Managed,TRUNCATION,grid,11,scanned,es,referral_letter
+llm_local,gold_synth-0037-prior_auth_request-t12,document_date,03.02.2026,03.04.2026,WRONG_VALUE,prose,12,clean,en,prior_auth_request
+llm_local,gold_synth-0038-lab_order-t13,document_reference,ORD47468791,,MISSED_ENTIRELY,below,13,scanned,en,lab_order
+llm_local,gold_synth-0038-lab_order-t13,document_date,"November 19, 2025","November 20, 2025",WRONG_VALUE,below,13,scanned,en,lab_order
+llm_local,gold_synth-0038-lab_order-t13,diagnosis_code,,10,SPURIOUS_EXTRACTION,below,13,scanned,en,lab_order
+llm_local,gold_synth-0039-insurance_claim-t14,document_reference,CLM-748180,CLM+748180,OCR_CORRUPTION,grid,14,scanned,en,insurance_claim
+llm_local,gold_synth-0039-insurance_claim-t14,document_date,02-Feb-2025,04-Feb-2025,WRONG_VALUE,grid,14,scanned,en,insurance_claim
+llm_local,gold_synth-0039-insurance_claim-t14,procedure_code,70450,"70553, 70450, 99214",HALLUCINATION,grid,14,scanned,en,insurance_claim
+llm_local,gold_synth-0040-remittance_advice-t11,document_date,2025-04-30,2025-05-01,WRONG_VALUE,grid,11,clean,en,remittance_advice
+llm_local,gold_synth-0040-remittance_advice-t11,date_of_service,2025-04-29,2025-04-25,WRONG_VALUE,grid,11,clean,en,remittance_advice
+llm_local,gold_synth-0040-remittance_advice-t11,procedure_code,99214,90834,WRONG_VALUE,grid,11,clean,en,remittance_advice
+llm_local,gold_synth-0041-patient_intake_form-t12,document_date,14-Oct-2025,17-Oct-2025,WRONG_VALUE,prose,12,clean,en,patient_intake_form
+llm_local,gold_synth-0042-referral_letter-t13,referring_provider_name,"Dr. Patricia Miller, MD, FACP","Dr. Patricia Miller, MD, FACP.",FORMAT_NORMALISATION,below,13,scanned,en,referral_letter
+llm_local,gold_synth-0042-referral_letter-t13,member_id,YAA364859014,YAA3648590 14,OCR_CORRUPTION,below,13,scanned,en,referral_letter
+llm_local,gold_synth-0042-referral_letter-t13,document_reference,RF194851,RF19485,OCR_CORRUPTION,below,13,scanned,en,referral_letter
+llm_local,gold_synth-0043-prior_auth_request-t14,patient_name,Carmen Lee,NOMBRE DEL PACIENTE,WRONG_VALUE,grid,14,clean,es,prior_auth_request
+llm_local,gold_synth-0043-prior_auth_request-t14,referring_provider_name,"Dr. Emily Ramirez, DO",Carmen Lee,LABEL_CONFUSION,grid,14,clean,es,prior_auth_request
+llm_local,gold_synth-0043-prior_auth_request-t14,document_date,02/24/2026,02/26/2026,WRONG_VALUE,grid,14,clean,es,prior_auth_request
+llm_local,gold_synth-0044-lab_order-t11,document_date,2026-05-05,2026-05-07,WRONG_VALUE,grid,11,scanned,en,lab_order
+llm_local,gold_synth-0045-insurance_claim-t12,patient_name,Barbara Martin,Barbara Marin,OCR_CORRUPTION,prose,12,scanned,en,insurance_claim
+llm_local,gold_synth-0045-insurance_claim-t12,patient_dob,09.11.2014,09.11 201&,OCR_CORRUPTION,prose,12,scanned,en,insurance_claim
+llm_local,gold_synth-0045-insurance_claim-t12,document_date,"April 10, 2025","April 13, 2025",OCR_CORRUPTION,prose,12,scanned,en,insurance_claim
+llm_local,gold_synth-0045-insurance_claim-t12,date_of_service,"February 26, 2025",February 22. 2025,WRONG_VALUE,prose,12,scanned,en,insurance_claim
+llm_local,gold_synth-0045-insurance_claim-t12,procedure_code,92015,92014,WRONG_VALUE,prose,12,scanned,en,insurance_claim
+llm_local,gold_synth-0046-remittance_advice-t13,servicing_facility,Kingsport Diagnostic Laboratory,,MISSED_ENTIRELY,below,13,scanned,en,remittance_advice
+llm_local,gold_synth-0046-remittance_advice-t13,member_id,227-38-1272,,MISSED_ENTIRELY,below,13,scanned,en,remittance_advice
+llm_local,gold_synth-0046-remittance_advice-t13,document_reference,RA-8747814,,MISSED_ENTIRELY,below,13,scanned,en,remittance_advice
+llm_local,gold_synth-0046-remittance_advice-t13,document_date,10/29/2025,10/31/2025,WRONG_VALUE,below,13,scanned,en,remittance_advice
+llm_local,gold_synth-0046-remittance_advice-t13,date_of_service,10/06/2025,10/04/2025,WRONG_VALUE,below,13,scanned,en,remittance_advice
+llm_local,gold_synth-0046-remittance_advice-t13,procedure_code,92014,227-38-1272,LABEL_CONFUSION,below,13,scanned,en,remittance_advice
+llm_local,gold_synth-0047-patient_intake_form-t14,patient_name,Karen Robinson,Karen.   Robinson,FORMAT_NORMALISATION,grid,14,scanned,en,patient_intake_form
+llm_local,gold_synth-0047-patient_intake_form-t14,referring_provider_name,"Dr. Kenneth Anderson, PA-C","Dr.    Kenneth   Anderson,    PA-C",FORMAT_NORMALISATION,grid,14,scanned,en,patient_intake_form
+llm_local,gold_synth-0047-patient_intake_form-t14,payer_name,Medicaid Managed Care,,MISSED_ENTIRELY,grid,14,scanned,en,patient_intake_form
+llm_local,gold_synth-0047-patient_intake_form-t14,member_id,EGF957874402,EGF 957874402,OCR_CORRUPTION,grid,14,scanned,en,patient_intake_form
+llm_local,gold_synth-0047-patient_intake_form-t14,document_date,17-Oct-2025,19-Oct-2025,WRONG_VALUE,grid,14,scanned,en,patient_intake_form
+llm_local,gold_synth-0048-referral_letter-t11,referring_provider_npi,4781371065,RF-130798,LABEL_CONFUSION,grid,11,scanned,en,referral_letter
+llm_local,gold_synth-0048-referral_letter-t11,servicing_facility,"Maple Grove Radiology, P.C.",Maple Grove Radiology,FORMAT_NORMALISATION,grid,11,scanned,en,referral_letter
+llm_local,gold_synth-0048-referral_letter-t11,diagnosis_code,,RIQ.9,SPURIOUS_EXTRACTION,grid,11,scanned,en,referral_letter
+llm_local,gold_synth-0049-prior_auth_request-t12,document_date,07.16.2025,07.18.2025,WRONG_VALUE,prose,12,clean,en,prior_auth_request
+llm_local,gold_synth-0049-prior_auth_request-t12,total_charge,USD 211.63,211.63,FORMAT_NORMALISATION,prose,12,clean,en,prior_auth_request
+llm_local,gold_synth-0050-lab_order-t13,patient_name,Elizabeth Miller,Elizabeth Muller,OCR_CORRUPTION,below,13,scanned,en,lab_order
+llm_local,gold_synth-0050-lab_order-t13,patient_dob,,"Ovtober 16),  1942",SPURIOUS_EXTRACTION,below,13,scanned,en,lab_order
+llm_local,gold_synth-0050-lab_order-t13,referring_provider_name,"Dr. Margaret Wright, NP",Dr. Margaret Wright. NP,FORMAT_NORMALISATION,below,13,scanned,en,lab_order
+llm_local,gold_synth-0050-lab_order-t13,referring_provider_npi,,O38 LO87S85S4,SPURIOUS_EXTRACTION,below,13,scanned,en,lab_order
+llm_local,gold_synth-0050-lab_order-t13,servicing_facility,"Brookfield Orthopedic Associates, LLC","Brouktield Orthopedic Associates, LLC",OCR_CORRUPTION,below,13,scanned,en,lab_order
+llm_local,gold_synth-0050-lab_order-t13,document_reference,ORD-73253422,Contiet David Marines,WRONG_VALUE,below,13,scanned,en,lab_order
+llm_local,gold_synth-0050-lab_order-t13,document_date,"January 1, 2025",January 2. 2028,OCR_CORRUPTION,below,13,scanned,en,lab_order
+llm_local,gold_synth-0050-lab_order-t13,diagnosis_code,M17.11,M1711,OCR_CORRUPTION,below,13,scanned,en,lab_order
+llm_local,gold_synth-0050-lab_order-t13,procedure_code,,ORD-73253422,SPURIOUS_EXTRACTION,below,13,scanned,en,lab_order
+llm_local,gold_synth-0051-insurance_claim-t14,patient_name,Nancy Torres,Nancy   Torres,FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+llm_local,gold_synth-0051-insurance_claim-t14,referring_provider_name,"Elizabeth Scott, PA-C","Elizabeth   Scott,    PA-C",FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+llm_local,gold_synth-0051-insurance_claim-t14,servicing_facility,Lakeside Regional Medical Center,Lakeside   Regional   Medical   Center,FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+llm_local,gold_synth-0051-insurance_claim-t14,payer_name,Premera Blue Cross,Premera   Blue   Cross,FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+llm_local,gold_synth-0052-remittance_advice-t11,servicing_facility,"Pinehurst Neurology Specialists, P.A.",Pinehurst Neurology Specialists,FORMAT_NORMALISATION,grid,11,clean,en,remittance_advice
+llm_local,gold_synth-0052-remittance_advice-t11,date_of_service,3/24/25,3/20/25,WRONG_VALUE,grid,11,clean,en,remittance_advice
+llm_local,gold_synth-0052-remittance_advice-t11,procedure_code,71046,94010,WRONG_VALUE,grid,11,clean,en,remittance_advice
+llm_local,gold_synth-0053-patient_intake_form-t12,member_id,FYR007788056,,OCR_CORRUPTION,prose,12,scanned,en,patient_intake_form
+llm_local,gold_synth-0055-prior_auth_request-t14,document_reference,PA-33587620,,MISSED_ENTIRELY,grid,14,scanned,en,prior_auth_request
+llm_local,gold_synth-0056-lab_order-t11,patient_dob,,"OLs,09,  1962",SPURIOUS_EXTRACTION,grid,11,scanned,en,lab_order
+llm_local,gold_synth-0056-lab_order-t11,servicing_facility,"Pinehurst Neurology Specialists, P.A.",Pinehurst Neurology Specialist #41P. nL,OCR_CORRUPTION,grid,11,scanned,en,lab_order
+llm_local,gold_synth-0056-lab_order-t11,document_reference,LAB-0373137,REF,WRONG_VALUE,grid,11,scanned,en,lab_order
+llm_local,gold_synth-0056-lab_order-t11,date_of_service,,02.20.2025,SPURIOUS_EXTRACTION,grid,11,scanned,en,lab_order
+llm_local,gold_synth-0056-lab_order-t11,procedure_code,29881,LAB-0373137,LABEL_CONFUSION,grid,11,scanned,en,lab_order
+llm_local,gold_synth-0057-insurance_claim-t12,date_of_service,16-Sep-2025,14-Sep-2025,WRONG_VALUE,prose,12,clean,en,insurance_claim
+llm_local,gold_synth-0058-remittance_advice-t13,member_id,53168511105,RA-29364208,LABEL_CONFUSION,below,13,clean,en,remittance_advice
+llm_local,gold_synth-0058-remittance_advice-t13,document_reference,RA-29364208,GRP40097,WRONG_VALUE,below,13,clean,en,remittance_advice
+llm_local,gold_synth-0059-patient_intake_form-t14,patient_dob,"April 8, 1953","April °8, 1953",OCR_CORRUPTION,grid,14,scanned,en,patient_intake_form
+llm_local,gold_synth-0059-patient_intake_form-t14,document_date,"March 28, 2025",,OCR_CORRUPTION,grid,14,scanned,en,patient_intake_form
+llm_local,gold_synth-0060-referral_letter-t11,patient_dob,,06.  25.,SPURIOUS_EXTRACTION,grid,11,scanned,en,referral_letter
+llm_local,gold_synth-0060-referral_letter-t11,referring_provider_name,"Dr. Kimberly Hernandez, D.O.","Dr. Kimberly Hernandez, .D.O",FORMAT_NORMALISATION,grid,11,scanned,en,referral_letter
+llm_local,gold_synth-0060-referral_letter-t11,member_id,FJN926031125,FIN926031125,OCR_CORRUPTION,grid,11,scanned,en,referral_letter
+llm_local,gold_synth-0060-referral_letter-t11,document_reference,,RE-790230,SPURIOUS_EXTRACTION,grid,11,scanned,en,referral_letter
+llm_local,gold_synth-0060-referral_letter-t11,document_date,09-Jul-2025,,MISSED_ENTIRELY,grid,11,scanned,en,referral_letter
+llm_local,gold_synth-0061-prior_auth_request-t12,patient_name,Kevin Green,KevinGreen,WRONG_VALUE,prose,12,scanned,en,prior_auth_request
+llm_local,gold_synth-0061-prior_auth_request-t12,document_date,12/23/25,12/26/25,WRONG_VALUE,prose,12,scanned,en,prior_auth_request
+llm_local,gold_synth-0061-prior_auth_request-t12,total_charge,USD 162.49,162.49,FORMAT_NORMALISATION,prose,12,scanned,en,prior_auth_request
+llm_local,gold_synth-0062-lab_order-t13,document_date,5/19/25,5/22/25,WRONG_VALUE,below,13,clean,en,lab_order
+llm_local,gold_synth-0063-insurance_claim-t14,patient_name,Ashley Williams,Ashley   Williams,FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+llm_local,gold_synth-0063-insurance_claim-t14,referring_provider_name,"Daniel White, D.O.","Daniel   White,    D.O.",FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+llm_local,gold_synth-0063-insurance_claim-t14,servicing_facility,Pinehurst Diagnostic Laboratory,Pinehurst    Diagnostic   Laboratory,FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+llm_local,gold_synth-0063-insurance_claim-t14,payer_name,Premera Blue Cross,Premera   Blue   Cross,FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+llm_local,gold_synth-0063-insurance_claim-t14,document_date,08/21/2025,08/23/2025,WRONG_VALUE,grid,14,scanned,en,insurance_claim
+llm_local,gold_synth-0064-remittance_advice-t11,servicing_facility,,Brookfield Orthopedic Associlat,SPURIOUS_EXTRACTION,grid,11,scanned,en,remittance_advice
+llm_local,gold_synth-0064-remittance_advice-t11,document_date,,2025-04-20,SPURIOUS_EXTRACTION,grid,11,scanned,en,remittance_advice
+llm_local,gold_synth-0064-remittance_advice-t11,patient_responsibility,,$75.79,SPURIOUS_EXTRACTION,grid,11,scanned,en,remittance_advice
+llm_local,gold_synth-0065-patient_intake_form-t12,document_date,05-Jun-2025,08-Jun-2025,WRONG_VALUE,prose,12,scanned,en,patient_intake_form
+llm_local,gold_synth-0066-referral_letter-t13,referring_provider_name,"Joseph King, PA-C",Joseph King. PA-C,FORMAT_NORMALISATION,below,13,scanned,en,referral_letter
+llm_local,gold_synth-0066-referral_letter-t13,referring_provider_npi,,TAIT 149813,SPURIOUS_EXTRACTION,below,13,scanned,en,referral_letter
+llm_local,gold_synth-0066-referral_letter-t13,servicing_facility,Westgate Sports Medicine Clinic,Westwate Sporty Medivine Clinic,OCR_CORRUPTION,below,13,scanned,en,referral_letter
+llm_local,gold_synth-0066-referral_letter-t13,document_date,05.05.2026,5.408.2026,WRONG_VALUE,below,13,scanned,en,referral_letter
+llm_local,gold_synth-0066-referral_letter-t13,diagnosis_code,,ELLY,SPURIOUS_EXTRACTION,below,13,scanned,en,referral_letter
+llm_local,gold_synth-0067-prior_auth_request-t14,document_date,05/01/2025,05/03/2025,WRONG_VALUE,grid,14,clean,en,prior_auth_request
+llm_local,gold_synth-0068-lab_order-t11,servicing_facility,"Riverbend Orthopedic Associates, LLC","Riverbend Orthopedic Associates, H52.13 LLC",OVER_CAPTURE,grid,11,clean,en,lab_order
+llm_local,gold_synth-0068-lab_order-t11,document_date,02/15/2025,02/18/2025,WRONG_VALUE,grid,11,clean,en,lab_order
+llm_local,gold_synth-0069-insurance_claim-t12,servicing_facility,"Highland Radiology, P.C.",Highland Radiology. P.C.,FORMAT_NORMALISATION,prose,12,scanned,en,insurance_claim
+llm_local,gold_synth-0069-insurance_claim-t12,document_date,10.21.2025,10.23.2025,OCR_CORRUPTION,prose,12,scanned,en,insurance_claim
+llm_local,gold_synth-0070-remittance_advice-t13,patient_name,Nancy Allen,Naney Allen,OCR_CORRUPTION,below,13,scanned,en,remittance_advice
+llm_local,gold_synth-0070-remittance_advice-t13,servicing_facility,Stone Creek Regional Medical Center,Molina Healthcare,LABEL_CONFUSION,below,13,scanned,en,remittance_advice
+llm_local,gold_synth-0070-remittance_advice-t13,member_id,J48655049J,J48655049,OCR_CORRUPTION,below,13,scanned,en,remittance_advice
+llm_local,gold_synth-0070-remittance_advice-t13,document_reference,RA-2267433,USS9036046,WRONG_VALUE,below,13,scanned,en,remittance_advice
+llm_local,gold_synth-0070-remittance_advice-t13,document_date,02-Mar-2026,19-Feb-2026,LABEL_CONFUSION,below,13,scanned,en,remittance_advice
+llm_local,gold_synth-0070-remittance_advice-t13,procedure_code,90834,99714,WRONG_VALUE,below,13,scanned,en,remittance_advice
+llm_local,gold_synth-0070-remittance_advice-t13,total_charge,203.73,"203,73",FORMAT_NORMALISATION,below,13,scanned,en,remittance_advice
+llm_local,gold_synth-0070-remittance_advice-t13,patient_responsibility,78.20,78:20,WRONG_VALUE,below,13,scanned,en,remittance_advice
+llm_local,gold_synth-0071-patient_intake_form-t14,patient_name,María Hill,N.?   DE MIEMBRO   12    de   diciembre   de   2001,OCR_CORRUPTION,grid,14,scanned,es,patient_intake_form
+llm_local,gold_synth-0071-patient_intake_form-t14,patient_dob,12 de diciembre de 2001,N.?   DE MIEMBRO   12    de   diciembre   de   2001,OCR_CORRUPTION,grid,14,scanned,es,patient_intake_form
+llm_local,gold_synth-0071-patient_intake_form-t14,referring_provider_name,"Donald Williams, DO","Donald   Williams,    DO",FORMAT_NORMALISATION,grid,14,scanned,es,patient_intake_form
+llm_local,gold_synth-0071-patient_intake_form-t14,payer_name,Blue Shield of California,Blue   Shield   of   California,FORMAT_NORMALISATION,grid,14,scanned,es,patient_intake_form
+llm_local,gold_synth-0071-patient_intake_form-t14,member_id,244-90-8130,0712285207,WRONG_VALUE,grid,14,scanned,es,patient_intake_form
+llm_local,gold_synth-0071-patient_intake_form-t14,document_date,29 de agosto de 2025,30   de   agosto   de   2025,OCR_CORRUPTION,grid,14,scanned,es,patient_intake_form
+llm_local,gold_synth-0072-referral_letter-t11,servicing_facility,"Cedar Park Orthopedic Associates, LLC",Cedar Park Orthopedic Associates/25125,OVER_CAPTURE,grid,11,scanned,en,referral_letter
+llm_local,gold_synth-0074-lab_order-t13,referring_provider_name,"Dr. Matthew Nelson, PA-C",Dr. Matthew Nelson; PA-C,FORMAT_NORMALISATION,below,13,scanned,en,lab_order
+llm_local,gold_synth-0074-lab_order-t13,document_reference,ORD-06206118,,MISSED_ENTIRELY,below,13,scanned,en,lab_order
+llm_local,gold_synth-0074-lab_order-t13,document_date,24-Jan-2026,07-Jan-2026,LABEL_CONFUSION,below,13,scanned,en,lab_order
+llm_local,gold_synth-0074-lab_order-t13,date_of_service,07-Jan-2026,24-Jan-2026,LABEL_CONFUSION,below,13,scanned,en,lab_order
+llm_local,gold_synth-0075-insurance_claim-t14,patient_name,Anthony Harris,Anthony   Harris,FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+llm_local,gold_synth-0075-insurance_claim-t14,patient_dob,"July 9, 1945","July    9,    1945",OCR_CORRUPTION,grid,14,scanned,en,insurance_claim
+llm_local,gold_synth-0075-insurance_claim-t14,referring_provider_name,"Dr. Michael Wright, M.D.","Dr.    Michael   Wright,    M.D.",FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+llm_local,gold_synth-0075-insurance_claim-t14,servicing_facility,Kingsport Sports Medicine Clinic,Kingsport    Sports   Medicine   Clinic,FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+llm_local,gold_synth-0075-insurance_claim-t14,payer_name,TRICARE East,"TRICARE,   East",FORMAT_NORMALISATION,grid,14,scanned,en,insurance_claim
+llm_local,gold_synth-0075-insurance_claim-t14,document_date,"March 8, 2025","March   9,    2025",OCR_CORRUPTION,grid,14,scanned,en,insurance_claim
+llm_local,gold_synth-0075-insurance_claim-t14,date_of_service,"February 7, 2025","February    7,    2025",OCR_CORRUPTION,grid,14,scanned,en,insurance_claim
+llm_local,gold_synth-0076-remittance_advice-t11,document_date,"February 23, 2026","February 25, 2026",OCR_CORRUPTION,grid,11,scanned,en,remittance_advice
+llm_local,gold_synth-0076-remittance_advice-t11,date_of_service,"January 10, 2026","January 9, 2026",OCR_CORRUPTION,grid,11,scanned,en,remittance_advice
+llm_local,gold_synth-0076-remittance_advice-t11,amount_paid,$316.37,$76.88,LABEL_CONFUSION,grid,11,scanned,en,remittance_advice
+llm_local,gold_synth-0078-referral_letter-t13,referring_provider_name,"Linda Smith, MD, FACP",Linda Smith. MD. FACP,FORMAT_NORMALISATION,below,13,scanned,en,referral_letter
+llm_local,gold_synth-0078-referral_letter-t13,servicing_facility,Granite Bay General Hospital,Granite Bay  General Hospital,FORMAT_NORMALISATION,below,13,scanned,en,referral_letter
+llm_local,gold_synth-0078-referral_letter-t13,document_reference,RF-7105103,RE-7 105103,OCR_CORRUPTION,below,13,scanned,en,referral_letter
+llm_local,gold_synth-0078-referral_letter-t13,document_date,07.01.2025,07.03.2025,WRONG_VALUE,below,13,scanned,en,referral_letter
+llm_local,gold_synth-0079-prior_auth_request-t14,patient_name,Mary Martinez,Mary.   Martinez,FORMAT_NORMALISATION,grid,14,scanned,en,prior_auth_request
+llm_local,gold_synth-0079-prior_auth_request-t14,referring_provider_name,"Dr. Andrew Lewis, D.O.","Dr.    Andrew   Lewis,    D.O.",FORMAT_NORMALISATION,grid,14,scanned,en,prior_auth_request
+llm_local,gold_synth-0079-prior_auth_request-t14,servicing_facility,Ashford Diagnostic Laboratory,Ashford,TRUNCATION,grid,14,scanned,en,prior_auth_request
+llm_local,gold_synth-0079-prior_auth_request-t14,payer_name,Kaiser Permanente,Kaiser   Permanente,FORMAT_NORMALISATION,grid,14,scanned,en,prior_auth_request
+llm_local,gold_synth-0079-prior_auth_request-t14,document_date,2025-06-09,2025-06-10,WRONG_VALUE,grid,14,scanned,en,prior_auth_request
+llm_local,gold_synth-0080-lab_order-t11,patient_name,Charles Lewis,,MISSED_ENTIRELY,grid,11,scanned,en,lab_order
+llm_local,gold_synth-0080-lab_order-t11,referring_provider_npi,0856913674,,MISSED_ENTIRELY,grid,11,scanned,en,lab_order
+llm_local,gold_synth-0080-lab_order-t11,servicing_facility,Lakeside Regional Medical Center,Lakeside Regional Medical Cent##11.9,OCR_CORRUPTION,grid,11,scanned,en,lab_order
+llm_local,gold_synth-0080-lab_order-t11,document_reference,LAB-7957973,,MISSED_ENTIRELY,grid,11,scanned,en,lab_order
+llm_local,gold_synth-0080-lab_order-t11,document_date,04.27.2025,04.29.2025,WRONG_VALUE,grid,11,scanned,en,lab_order
+llm_local,gold_synth-0081-insurance_claim-t12,patient_name,Barbara Hall,BarbaraHall,WRONG_VALUE,prose,12,scanned,en,insurance_claim
+llm_local,gold_synth-0081-insurance_claim-t12,patient_dob,12/19/47,12/1947,OCR_CORRUPTION,prose,12,scanned,en,insurance_claim
+llm_local,gold_synth-0081-insurance_claim-t12,referring_provider_name,"Robert Scott, PA-C","Oakhurst Neurology Specialists, P.A.",WRONG_VALUE,prose,12,scanned,en,insurance_claim
+llm_local,gold_synth-0082-remittance_advice-t13,procedure_code,92015,92014,WRONG_VALUE,below,13,clean,es,remittance_advice
+llm_local,gold_synth-0083-patient_intake_form-t14,patient_name,Andrew Young,Andrew    Young,FORMAT_NORMALISATION,grid,14,scanned,en,patient_intake_form
+llm_local,gold_synth-0083-patient_intake_form-t14,patient_dob,"September 1, 1952","September    1,    1952",OCR_CORRUPTION,grid,14,scanned,en,patient_intake_form
+llm_local,gold_synth-0083-patient_intake_form-t14,referring_provider_name,"Donna Jackson, MD","Donna    Jackson,    MD",FORMAT_NORMALISATION,grid,14,scanned,en,patient_intake_form
+llm_local,gold_synth-0083-patient_intake_form-t14,payer_name,Premera Blue Cross,,MISSED_ENTIRELY,grid,14,scanned,en,patient_intake_form
+llm_local,gold_synth-0083-patient_intake_form-t14,document_date,"December 24, 2025","hesembur    ot,    edit",OCR_CORRUPTION,grid,14,scanned,en,patient_intake_form
+llm_local,gold_synth-0084-referral_letter-t11,servicing_facility,Kingsport Regional Medical Center,Kingsport Regional Medical .Cent,OCR_CORRUPTION,grid,11,scanned,en,referral_letter
+llm_local,gold_synth-0084-referral_letter-t11,document_date,08/26/2025,26/08/2025,FORMAT_NORMALISATION,grid,11,scanned,en,referral_letter
+llm_local,gold_synth-0088-remittance_advice-t11,servicing_facility,"Oakhurst Orthopedic Associates, LLC",,MISSED_ENTIRELY,grid,11,clean,en,remittance_advice
+llm_local,gold_synth-0088-remittance_advice-t11,document_date,4/9/26,4/11/26,WRONG_VALUE,grid,11,clean,en,remittance_advice
+llm_local,gold_synth-0088-remittance_advice-t11,procedure_code,87880,99213,WRONG_VALUE,grid,11,clean,en,remittance_advice

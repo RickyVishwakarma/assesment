@@ -1,0 +1,1814 @@
+{
+  "split": "gold_synth",
+  "n_documents": 90,
+  "gold_sources": [
+    "human_verified"
+  ],
+  "approaches": {
+    "nlp": {
+      "approach": "nlp",
+      "n_documents": 90,
+      "n_field_decisions": 945,
+      "overall": {
+        "precision": 0.8566,
+        "recall": 0.7963,
+        "f1": 0.8254,
+        "accuracy": 0.7052,
+        "support": 923,
+        "tp": 735,
+        "fp": 123,
+        "fn": 188,
+        "tn": 9,
+        "macro_f1": 0.7859,
+        "f1_ci95": [
+          0.79,
+          0.8568
+        ],
+        "exact_match_rate": 0.7259,
+        "partial_mean": 0.8483,
+        "hallucination_rate": 0.0
+      },
+      "by_field": {
+        "amount_paid": {
+          "precision": 0.8,
+          "recall": 0.8,
+          "f1": 0.8,
+          "accuracy": 0.6667,
+          "support": 15,
+          "tp": 12,
+          "fp": 3,
+          "fn": 3,
+          "tn": 0
+        },
+        "date_of_service": {
+          "precision": 0.65,
+          "recall": 0.661,
+          "f1": 0.6555,
+          "accuracy": 0.4875,
+          "support": 59,
+          "tp": 39,
+          "fp": 21,
+          "fn": 20,
+          "tn": 0
+        },
+        "diagnosis_code": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "support": 53,
+          "tp": 53,
+          "fp": 0,
+          "fn": 0,
+          "tn": 7
+        },
+        "document_date": {
+          "precision": 0.9,
+          "recall": 0.9419,
+          "f1": 0.9205,
+          "accuracy": 0.8526,
+          "support": 86,
+          "tp": 81,
+          "fp": 9,
+          "fn": 5,
+          "tn": 0
+        },
+        "document_reference": {
+          "precision": 0.76,
+          "recall": 0.7703,
+          "f1": 0.7651,
+          "accuracy": 0.6196,
+          "support": 74,
+          "tp": 57,
+          "fp": 18,
+          "fn": 17,
+          "tn": 0
+        },
+        "member_id": {
+          "precision": 0.9467,
+          "recall": 0.9467,
+          "f1": 0.9467,
+          "accuracy": 0.8987,
+          "support": 75,
+          "tp": 71,
+          "fp": 4,
+          "fn": 4,
+          "tn": 0
+        },
+        "patient_dob": {
+          "precision": 0.9067,
+          "recall": 0.9577,
+          "f1": 0.9315,
+          "accuracy": 0.8718,
+          "support": 71,
+          "tp": 68,
+          "fp": 7,
+          "fn": 3,
+          "tn": 0
+        },
+        "patient_name": {
+          "precision": 0.8429,
+          "recall": 0.6556,
+          "f1": 0.7375,
+          "accuracy": 0.5842,
+          "support": 90,
+          "tp": 59,
+          "fp": 11,
+          "fn": 31,
+          "tn": 0
+        },
+        "patient_responsibility": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "accuracy": 0.0,
+          "support": 14,
+          "tp": 0,
+          "fp": 15,
+          "fn": 14,
+          "tn": 0
+        },
+        "payer_name": {
+          "precision": 0.7193,
+          "recall": 0.5467,
+          "f1": 0.6212,
+          "accuracy": 0.4505,
+          "support": 75,
+          "tp": 41,
+          "fp": 16,
+          "fn": 34,
+          "tn": 0
+        },
+        "procedure_code": {
+          "precision": 0.9833,
+          "recall": 1.0,
+          "f1": 0.9916,
+          "accuracy": 0.9833,
+          "support": 59,
+          "tp": 59,
+          "fp": 1,
+          "fn": 0,
+          "tn": 0
+        },
+        "referring_provider_name": {
+          "precision": 0.98,
+          "recall": 0.6533,
+          "f1": 0.784,
+          "accuracy": 0.6447,
+          "support": 75,
+          "tp": 49,
+          "fp": 1,
+          "fn": 26,
+          "tn": 0
+        },
+        "referring_provider_npi": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "support": 58,
+          "tp": 58,
+          "fp": 0,
+          "fn": 0,
+          "tn": 2
+        },
+        "servicing_facility": {
+          "precision": 0.7333,
+          "recall": 0.5946,
+          "f1": 0.6567,
+          "accuracy": 0.4889,
+          "support": 74,
+          "tp": 44,
+          "fp": 16,
+          "fn": 30,
+          "tn": 0
+        },
+        "total_charge": {
+          "precision": 0.9778,
+          "recall": 0.9778,
+          "f1": 0.9778,
+          "accuracy": 0.9565,
+          "support": 45,
+          "tp": 44,
+          "fp": 1,
+          "fn": 1,
+          "tn": 0
+        }
+      },
+      "doc_type": {
+        "accuracy": 0.9111,
+        "macro_f1": 0.9043,
+        "per_class": {
+          "insurance_claim": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 15
+          },
+          "lab_order": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 15
+          },
+          "patient_intake_form": {
+            "precision": 1.0,
+            "recall": 0.4667,
+            "f1": 0.6364,
+            "support": 15
+          },
+          "prior_auth_request": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 15
+          },
+          "referral_letter": {
+            "precision": 0.6522,
+            "recall": 1.0,
+            "f1": 0.7895,
+            "support": 15
+          },
+          "remittance_advice": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 15
+          }
+        },
+        "confusion": {
+          "insurance_claim": {
+            "insurance_claim": 15,
+            "lab_order": 0,
+            "patient_intake_form": 0,
+            "prior_auth_request": 0,
+            "referral_letter": 0,
+            "remittance_advice": 0
+          },
+          "lab_order": {
+            "insurance_claim": 0,
+            "lab_order": 15,
+            "patient_intake_form": 0,
+            "prior_auth_request": 0,
+            "referral_letter": 0,
+            "remittance_advice": 0
+          },
+          "patient_intake_form": {
+            "insurance_claim": 0,
+            "lab_order": 0,
+            "patient_intake_form": 7,
+            "prior_auth_request": 0,
+            "referral_letter": 8,
+            "remittance_advice": 0
+          },
+          "prior_auth_request": {
+            "insurance_claim": 0,
+            "lab_order": 0,
+            "patient_intake_form": 0,
+            "prior_auth_request": 15,
+            "referral_letter": 0,
+            "remittance_advice": 0
+          },
+          "referral_letter": {
+            "insurance_claim": 0,
+            "lab_order": 0,
+            "patient_intake_form": 0,
+            "prior_auth_request": 0,
+            "referral_letter": 15,
+            "remittance_advice": 0
+          },
+          "remittance_advice": {
+            "insurance_claim": 0,
+            "lab_order": 0,
+            "patient_intake_form": 0,
+            "prior_auth_request": 0,
+            "referral_letter": 0,
+            "remittance_advice": 15
+          }
+        },
+        "n": 90
+      },
+      "service_lines": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 83,
+        "fn": 84
+      },
+      "slices": {
+        "condition": {
+          "clean": {
+            "precision": 0.8982,
+            "recall": 0.8115,
+            "f1": 0.8527,
+            "accuracy": 0.7432,
+            "support": 435,
+            "tp": 353,
+            "fp": 40,
+            "fn": 82,
+            "tn": 0,
+            "hallucination_rate": 0.0
+          },
+          "scanned": {
+            "precision": 0.8215,
+            "recall": 0.7828,
+            "f1": 0.8017,
+            "accuracy": 0.6741,
+            "support": 488,
+            "tp": 382,
+            "fp": 83,
+            "fn": 106,
+            "tn": 9,
+            "hallucination_rate": 0.0
+          }
+        },
+        "lang": {
+          "en": {
+            "precision": 0.8557,
+            "recall": 0.7928,
+            "f1": 0.823,
+            "accuracy": 0.702,
+            "support": 883,
+            "tp": 700,
+            "fp": 118,
+            "fn": 183,
+            "tn": 9,
+            "hallucination_rate": 0.0
+          },
+          "es": {
+            "precision": 0.875,
+            "recall": 0.875,
+            "f1": 0.875,
+            "accuracy": 0.7778,
+            "support": 40,
+            "tp": 35,
+            "fp": 5,
+            "fn": 5,
+            "tn": 0,
+            "hallucination_rate": 0.0
+          }
+        },
+        "doc_type": {
+          "insurance_claim": {
+            "precision": 0.8176,
+            "recall": 0.7128,
+            "f1": 0.7616,
+            "accuracy": 0.615,
+            "support": 195,
+            "tp": 139,
+            "fp": 31,
+            "fn": 56,
+            "tn": 0,
+            "hallucination_rate": 0.0
+          },
+          "lab_order": {
+            "precision": 0.9167,
+            "recall": 0.9362,
+            "f1": 0.9263,
+            "accuracy": 0.8671,
+            "support": 141,
+            "tp": 132,
+            "fp": 12,
+            "fn": 9,
+            "tn": 5,
+            "hallucination_rate": 0.0
+          },
+          "patient_intake_form": {
+            "precision": 0.8592,
+            "recall": 0.6778,
+            "f1": 0.7578,
+            "accuracy": 0.61,
+            "support": 90,
+            "tp": 61,
+            "fp": 10,
+            "fn": 29,
+            "tn": 0,
+            "hallucination_rate": 0.0
+          },
+          "prior_auth_request": {
+            "precision": 0.865,
+            "recall": 0.7344,
+            "f1": 0.7944,
+            "accuracy": 0.6605,
+            "support": 192,
+            "tp": 141,
+            "fp": 22,
+            "fn": 51,
+            "tn": 1,
+            "hallucination_rate": 0.0
+          },
+          "referral_letter": {
+            "precision": 0.8828,
+            "recall": 0.8951,
+            "f1": 0.8889,
+            "accuracy": 0.8037,
+            "support": 143,
+            "tp": 128,
+            "fp": 17,
+            "fn": 15,
+            "tn": 3,
+            "hallucination_rate": 0.0
+          },
+          "remittance_advice": {
+            "precision": 0.8121,
+            "recall": 0.8272,
+            "f1": 0.8196,
+            "accuracy": 0.6943,
+            "support": 162,
+            "tp": 134,
+            "fp": 31,
+            "fn": 28,
+            "tn": 0,
+            "hallucination_rate": 0.0
+          }
+        },
+        "gold_source": {
+          "human_verified": {
+            "precision": 0.8566,
+            "recall": 0.7963,
+            "f1": 0.8254,
+            "accuracy": 0.7052,
+            "support": 923,
+            "tp": 735,
+            "fp": 123,
+            "fn": 188,
+            "tn": 9,
+            "hallucination_rate": 0.0
+          }
+        }
+      },
+      "errors": [],
+      "n_errors": 0,
+      "profile": {
+        "name": "nlp",
+        "model_size_mb": 6.5,
+        "offline": true,
+        "deterministic": true,
+        "determinism_rate": 1.0,
+        "cost_per_doc_usd": 0.0,
+        "cost_basis": "measured",
+        "latency_p50_ms": 10.36,
+        "latency_p95_ms": 16.06,
+        "notes": "rules + dictionaries + TF-IDF doc-type classifier",
+        "determinism_basis": "5/5 documents byte-identical across 3 runs"
+      }
+    },
+    "small_model": {
+      "approach": "small_model",
+      "n_documents": 90,
+      "n_field_decisions": 945,
+      "overall": {
+        "precision": 0.8255,
+        "recall": 0.7432,
+        "f1": 0.7822,
+        "accuracy": 0.647,
+        "support": 923,
+        "tp": 686,
+        "fp": 145,
+        "fn": 237,
+        "tn": 14,
+        "macro_f1": 0.7402,
+        "f1_ci95": [
+          0.7514,
+          0.8142
+        ],
+        "exact_match_rate": 0.6339,
+        "partial_mean": 0.8099,
+        "hallucination_rate": 0.0
+      },
+      "by_field": {
+        "amount_paid": {
+          "precision": 0.5,
+          "recall": 0.2667,
+          "f1": 0.3478,
+          "accuracy": 0.2105,
+          "support": 15,
+          "tp": 4,
+          "fp": 4,
+          "fn": 11,
+          "tn": 0
+        },
+        "date_of_service": {
+          "precision": 0.4815,
+          "recall": 0.4407,
+          "f1": 0.4602,
+          "accuracy": 0.2989,
+          "support": 59,
+          "tp": 26,
+          "fp": 28,
+          "fn": 33,
+          "tn": 0
+        },
+        "diagnosis_code": {
+          "precision": 0.92,
+          "recall": 0.8679,
+          "f1": 0.8932,
+          "accuracy": 0.8226,
+          "support": 53,
+          "tp": 46,
+          "fp": 4,
+          "fn": 7,
+          "tn": 5
+        },
+        "document_date": {
+          "precision": 0.4143,
+          "recall": 0.3372,
+          "f1": 0.3718,
+          "accuracy": 0.2344,
+          "support": 86,
+          "tp": 29,
+          "fp": 41,
+          "fn": 57,
+          "tn": 1
+        },
+        "document_reference": {
+          "precision": 0.9275,
+          "recall": 0.8649,
+          "f1": 0.8951,
+          "accuracy": 0.8101,
+          "support": 74,
+          "tp": 64,
+          "fp": 5,
+          "fn": 10,
+          "tn": 0
+        },
+        "member_id": {
+          "precision": 0.875,
+          "recall": 0.84,
+          "f1": 0.8571,
+          "accuracy": 0.75,
+          "support": 75,
+          "tp": 63,
+          "fp": 9,
+          "fn": 12,
+          "tn": 0
+        },
+        "patient_dob": {
+          "precision": 0.913,
+          "recall": 0.8873,
+          "f1": 0.9,
+          "accuracy": 0.825,
+          "support": 71,
+          "tp": 63,
+          "fp": 6,
+          "fn": 8,
+          "tn": 3
+        },
+        "patient_name": {
+          "precision": 0.954,
+          "recall": 0.9222,
+          "f1": 0.9379,
+          "accuracy": 0.883,
+          "support": 90,
+          "tp": 83,
+          "fp": 4,
+          "fn": 7,
+          "tn": 0
+        },
+        "patient_responsibility": {
+          "precision": 0.5556,
+          "recall": 0.3571,
+          "f1": 0.4348,
+          "accuracy": 0.3158,
+          "support": 14,
+          "tp": 5,
+          "fp": 4,
+          "fn": 9,
+          "tn": 1
+        },
+        "payer_name": {
+          "precision": 0.9589,
+          "recall": 0.9333,
+          "f1": 0.9459,
+          "accuracy": 0.8974,
+          "support": 75,
+          "tp": 70,
+          "fp": 3,
+          "fn": 5,
+          "tn": 0
+        },
+        "procedure_code": {
+          "precision": 0.8947,
+          "recall": 0.8644,
+          "f1": 0.8793,
+          "accuracy": 0.7879,
+          "support": 59,
+          "tp": 51,
+          "fp": 6,
+          "fn": 8,
+          "tn": 1
+        },
+        "referring_provider_name": {
+          "precision": 0.7778,
+          "recall": 0.7467,
+          "f1": 0.7619,
+          "accuracy": 0.6154,
+          "support": 75,
+          "tp": 56,
+          "fp": 16,
+          "fn": 19,
+          "tn": 0
+        },
+        "referring_provider_npi": {
+          "precision": 0.913,
+          "recall": 0.7241,
+          "f1": 0.8077,
+          "accuracy": 0.6875,
+          "support": 58,
+          "tp": 42,
+          "fp": 4,
+          "fn": 16,
+          "tn": 2
+        },
+        "servicing_facility": {
+          "precision": 0.8333,
+          "recall": 0.6081,
+          "f1": 0.7031,
+          "accuracy": 0.5476,
+          "support": 74,
+          "tp": 45,
+          "fp": 9,
+          "fn": 29,
+          "tn": 1
+        },
+        "total_charge": {
+          "precision": 0.9512,
+          "recall": 0.8667,
+          "f1": 0.907,
+          "accuracy": 0.8298,
+          "support": 45,
+          "tp": 39,
+          "fp": 2,
+          "fn": 6,
+          "tn": 0
+        }
+      },
+      "doc_type": {
+        "accuracy": 0.8,
+        "macro_f1": 0.8008,
+        "per_class": {
+          "insurance_claim": {
+            "precision": 0.6842,
+            "recall": 0.8667,
+            "f1": 0.7647,
+            "support": 15
+          },
+          "lab_order": {
+            "precision": 0.9333,
+            "recall": 0.9333,
+            "f1": 0.9333,
+            "support": 15
+          },
+          "patient_intake_form": {
+            "precision": 0.7857,
+            "recall": 0.7333,
+            "f1": 0.7586,
+            "support": 15
+          },
+          "prior_auth_request": {
+            "precision": 1.0,
+            "recall": 0.8667,
+            "f1": 0.9286,
+            "support": 15
+          },
+          "referral_letter": {
+            "precision": 0.6667,
+            "recall": 0.8,
+            "f1": 0.7273,
+            "support": 15
+          },
+          "remittance_advice": {
+            "precision": 0.8182,
+            "recall": 0.6,
+            "f1": 0.6923,
+            "support": 15
+          }
+        },
+        "confusion": {
+          "insurance_claim": {
+            "insurance_claim": 13,
+            "lab_order": 0,
+            "patient_intake_form": 0,
+            "prior_auth_request": 0,
+            "referral_letter": 0,
+            "remittance_advice": 2
+          },
+          "lab_order": {
+            "insurance_claim": 0,
+            "lab_order": 14,
+            "patient_intake_form": 0,
+            "prior_auth_request": 0,
+            "referral_letter": 1,
+            "remittance_advice": 0
+          },
+          "patient_intake_form": {
+            "insurance_claim": 0,
+            "lab_order": 0,
+            "patient_intake_form": 11,
+            "prior_auth_request": 0,
+            "referral_letter": 4,
+            "remittance_advice": 0
+          },
+          "prior_auth_request": {
+            "insurance_claim": 0,
+            "lab_order": 1,
+            "patient_intake_form": 0,
+            "prior_auth_request": 13,
+            "referral_letter": 1,
+            "remittance_advice": 0
+          },
+          "referral_letter": {
+            "insurance_claim": 0,
+            "lab_order": 0,
+            "patient_intake_form": 3,
+            "prior_auth_request": 0,
+            "referral_letter": 12,
+            "remittance_advice": 0
+          },
+          "remittance_advice": {
+            "insurance_claim": 6,
+            "lab_order": 0,
+            "patient_intake_form": 0,
+            "prior_auth_request": 0,
+            "referral_letter": 0,
+            "remittance_advice": 9
+          }
+        },
+        "n": 90
+      },
+      "service_lines": {
+        "precision": 0.0154,
+        "recall": 0.0119,
+        "f1": 0.0134,
+        "tp": 1,
+        "fp": 64,
+        "fn": 83
+      },
+      "slices": {
+        "condition": {
+          "clean": {
+            "precision": 0.8553,
+            "recall": 0.7747,
+            "f1": 0.813,
+            "accuracy": 0.685,
+            "support": 435,
+            "tp": 337,
+            "fp": 57,
+            "fn": 98,
+            "tn": 0,
+            "hallucination_rate": 0.0
+          },
+          "scanned": {
+            "precision": 0.7986,
+            "recall": 0.7152,
+            "f1": 0.7546,
+            "accuracy": 0.6153,
+            "support": 488,
+            "tp": 349,
+            "fp": 88,
+            "fn": 139,
+            "tn": 14,
+            "hallucination_rate": 0.0
+          }
+        },
+        "lang": {
+          "en": {
+            "precision": 0.8235,
+            "recall": 0.7452,
+            "f1": 0.7824,
+            "accuracy": 0.6474,
+            "support": 883,
+            "tp": 658,
+            "fp": 141,
+            "fn": 225,
+            "tn": 14,
+            "hallucination_rate": 0.0
+          },
+          "es": {
+            "precision": 0.875,
+            "recall": 0.7,
+            "f1": 0.7778,
+            "accuracy": 0.6364,
+            "support": 40,
+            "tp": 28,
+            "fp": 4,
+            "fn": 12,
+            "tn": 0,
+            "hallucination_rate": 0.0
+          }
+        },
+        "doc_type": {
+          "insurance_claim": {
+            "precision": 0.8939,
+            "recall": 0.8205,
+            "f1": 0.8556,
+            "accuracy": 0.7477,
+            "support": 195,
+            "tp": 160,
+            "fp": 19,
+            "fn": 35,
+            "tn": 0,
+            "hallucination_rate": 0.0
+          },
+          "lab_order": {
+            "precision": 0.7188,
+            "recall": 0.6525,
+            "f1": 0.684,
+            "accuracy": 0.533,
+            "support": 141,
+            "tp": 92,
+            "fp": 36,
+            "fn": 49,
+            "tn": 5,
+            "hallucination_rate": 0.0
+          },
+          "patient_intake_form": {
+            "precision": 0.9091,
+            "recall": 0.8889,
+            "f1": 0.8989,
+            "accuracy": 0.8163,
+            "support": 90,
+            "tp": 80,
+            "fp": 8,
+            "fn": 10,
+            "tn": 0,
+            "hallucination_rate": 0.0
+          },
+          "prior_auth_request": {
+            "precision": 0.918,
+            "recall": 0.875,
+            "f1": 0.896,
+            "accuracy": 0.8134,
+            "support": 192,
+            "tp": 168,
+            "fp": 15,
+            "fn": 24,
+            "tn": 2,
+            "hallucination_rate": 0.0
+          },
+          "referral_letter": {
+            "precision": 0.7009,
+            "recall": 0.5734,
+            "f1": 0.6308,
+            "accuracy": 0.4725,
+            "support": 143,
+            "tp": 82,
+            "fp": 35,
+            "fn": 61,
+            "tn": 4,
+            "hallucination_rate": 0.0
+          },
+          "remittance_advice": {
+            "precision": 0.7647,
+            "recall": 0.642,
+            "f1": 0.698,
+            "accuracy": 0.5431,
+            "support": 162,
+            "tp": 104,
+            "fp": 32,
+            "fn": 58,
+            "tn": 3,
+            "hallucination_rate": 0.0
+          }
+        },
+        "gold_source": {
+          "human_verified": {
+            "precision": 0.8255,
+            "recall": 0.7432,
+            "f1": 0.7822,
+            "accuracy": 0.647,
+            "support": 923,
+            "tp": 686,
+            "fp": 145,
+            "fn": 237,
+            "tn": 14,
+            "hallucination_rate": 0.0
+          }
+        }
+      },
+      "errors": [],
+      "n_errors": 0,
+      "profile": {
+        "name": "small_model",
+        "model_size_mb": 525.4,
+        "offline": true,
+        "deterministic": true,
+        "determinism_rate": 1.0,
+        "cost_per_doc_usd": 0.0,
+        "cost_basis": "measured",
+        "latency_p50_ms": 50.88,
+        "latency_p95_ms": 68.71,
+        "notes": "distilbert-base-cased token + sequence classifier",
+        "determinism_basis": "5/5 documents byte-identical across 3 runs"
+      }
+    },
+    "llm_local": {
+      "approach": "llm_local",
+      "n_documents": 90,
+      "n_field_decisions": 945,
+      "overall": {
+        "precision": 0.8467,
+        "recall": 0.8375,
+        "f1": 0.842,
+        "accuracy": 0.7282,
+        "support": 923,
+        "tp": 773,
+        "fp": 140,
+        "fn": 150,
+        "tn": 4,
+        "macro_f1": 0.8557,
+        "f1_ci95": [
+          0.8137,
+          0.8682
+        ],
+        "exact_match_rate": 0.7608,
+        "partial_mean": 0.9104,
+        "hallucination_rate": 0.0055
+      },
+      "by_field": {
+        "amount_paid": {
+          "precision": 0.8667,
+          "recall": 0.8667,
+          "f1": 0.8667,
+          "accuracy": 0.7647,
+          "support": 15,
+          "tp": 13,
+          "fp": 2,
+          "fn": 2,
+          "tn": 0
+        },
+        "date_of_service": {
+          "precision": 0.7167,
+          "recall": 0.7288,
+          "f1": 0.7227,
+          "accuracy": 0.5658,
+          "support": 59,
+          "tp": 43,
+          "fp": 17,
+          "fn": 16,
+          "tn": 0
+        },
+        "diagnosis_code": {
+          "precision": 0.8947,
+          "recall": 0.9623,
+          "f1": 0.9273,
+          "accuracy": 0.8689,
+          "support": 53,
+          "tp": 51,
+          "fp": 6,
+          "fn": 2,
+          "tn": 2
+        },
+        "document_date": {
+          "precision": 0.3218,
+          "recall": 0.3256,
+          "f1": 0.3237,
+          "accuracy": 0.1986,
+          "support": 86,
+          "tp": 28,
+          "fp": 59,
+          "fn": 58,
+          "tn": 1
+        },
+        "document_reference": {
+          "precision": 0.9032,
+          "recall": 0.7568,
+          "f1": 0.8235,
+          "accuracy": 0.7,
+          "support": 74,
+          "tp": 56,
+          "fp": 6,
+          "fn": 18,
+          "tn": 0
+        },
+        "member_id": {
+          "precision": 0.9155,
+          "recall": 0.8667,
+          "f1": 0.8904,
+          "accuracy": 0.8025,
+          "support": 75,
+          "tp": 65,
+          "fp": 6,
+          "fn": 10,
+          "tn": 0
+        },
+        "patient_dob": {
+          "precision": 0.9189,
+          "recall": 0.9577,
+          "f1": 0.9379,
+          "accuracy": 0.8846,
+          "support": 71,
+          "tp": 68,
+          "fp": 6,
+          "fn": 3,
+          "tn": 1
+        },
+        "patient_name": {
+          "precision": 0.9326,
+          "recall": 0.9222,
+          "f1": 0.9274,
+          "accuracy": 0.8646,
+          "support": 90,
+          "tp": 83,
+          "fp": 6,
+          "fn": 7,
+          "tn": 0
+        },
+        "patient_responsibility": {
+          "precision": 0.8667,
+          "recall": 0.9286,
+          "f1": 0.8966,
+          "accuracy": 0.8125,
+          "support": 14,
+          "tp": 13,
+          "fp": 2,
+          "fn": 1,
+          "tn": 0
+        },
+        "payer_name": {
+          "precision": 0.9867,
+          "recall": 0.9867,
+          "f1": 0.9867,
+          "accuracy": 0.9737,
+          "support": 75,
+          "tp": 74,
+          "fp": 1,
+          "fn": 1,
+          "tn": 0
+        },
+        "procedure_code": {
+          "precision": 0.7966,
+          "recall": 0.7966,
+          "f1": 0.7966,
+          "accuracy": 0.662,
+          "support": 59,
+          "tp": 47,
+          "fp": 12,
+          "fn": 12,
+          "tn": 0
+        },
+        "referring_provider_name": {
+          "precision": 0.96,
+          "recall": 0.96,
+          "f1": 0.96,
+          "accuracy": 0.9231,
+          "support": 75,
+          "tp": 72,
+          "fp": 3,
+          "fn": 3,
+          "tn": 0
+        },
+        "referring_provider_npi": {
+          "precision": 0.9483,
+          "recall": 0.9483,
+          "f1": 0.9483,
+          "accuracy": 0.9016,
+          "support": 58,
+          "tp": 55,
+          "fp": 3,
+          "fn": 3,
+          "tn": 0
+        },
+        "servicing_facility": {
+          "precision": 0.8451,
+          "recall": 0.8108,
+          "f1": 0.8276,
+          "accuracy": 0.7059,
+          "support": 74,
+          "tp": 60,
+          "fp": 11,
+          "fn": 14,
+          "tn": 0
+        },
+        "total_charge": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "support": 45,
+          "tp": 45,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        }
+      },
+      "doc_type": {
+        "accuracy": 0.8333,
+        "macro_f1": 0.8312,
+        "per_class": {
+          "insurance_claim": {
+            "precision": 0.7143,
+            "recall": 1.0,
+            "f1": 0.8333,
+            "support": 15
+          },
+          "lab_order": {
+            "precision": 1.0,
+            "recall": 0.9333,
+            "f1": 0.9655,
+            "support": 15
+          },
+          "patient_intake_form": {
+            "precision": 0.7857,
+            "recall": 0.7333,
+            "f1": 0.7586,
+            "support": 15
+          },
+          "prior_auth_request": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 15
+          },
+          "referral_letter": {
+            "precision": 0.6875,
+            "recall": 0.7333,
+            "f1": 0.7097,
+            "support": 15
+          },
+          "remittance_advice": {
+            "precision": 0.9,
+            "recall": 0.6,
+            "f1": 0.72,
+            "support": 15
+          }
+        },
+        "confusion": {
+          "insurance_claim": {
+            "insurance_claim": 15,
+            "lab_order": 0,
+            "patient_intake_form": 0,
+            "prior_auth_request": 0,
+            "referral_letter": 0,
+            "remittance_advice": 0
+          },
+          "lab_order": {
+            "insurance_claim": 0,
+            "lab_order": 14,
+            "patient_intake_form": 0,
+            "prior_auth_request": 0,
+            "referral_letter": 1,
+            "remittance_advice": 0
+          },
+          "patient_intake_form": {
+            "insurance_claim": 0,
+            "lab_order": 0,
+            "patient_intake_form": 11,
+            "prior_auth_request": 0,
+            "referral_letter": 4,
+            "remittance_advice": 0
+          },
+          "prior_auth_request": {
+            "insurance_claim": 0,
+            "lab_order": 0,
+            "patient_intake_form": 0,
+            "prior_auth_request": 15,
+            "referral_letter": 0,
+            "remittance_advice": 0
+          },
+          "referral_letter": {
+            "insurance_claim": 0,
+            "lab_order": 0,
+            "patient_intake_form": 3,
+            "prior_auth_request": 0,
+            "referral_letter": 11,
+            "remittance_advice": 1
+          },
+          "remittance_advice": {
+            "insurance_claim": 6,
+            "lab_order": 0,
+            "patient_intake_form": 0,
+            "prior_auth_request": 0,
+            "referral_letter": 0,
+            "remittance_advice": 9
+          }
+        },
+        "n": 90
+      },
+      "service_lines": {
+        "precision": 0.5714,
+        "recall": 0.9048,
+        "f1": 0.7005,
+        "tp": 76,
+        "fp": 57,
+        "fn": 8
+      },
+      "slices": {
+        "condition": {
+          "clean": {
+            "precision": 0.8972,
+            "recall": 0.8828,
+            "f1": 0.8899,
+            "accuracy": 0.8017,
+            "support": 435,
+            "tp": 384,
+            "fp": 44,
+            "fn": 51,
+            "tn": 0,
+            "hallucination_rate": 0.0
+          },
+          "scanned": {
+            "precision": 0.8021,
+            "recall": 0.7971,
+            "f1": 0.7996,
+            "accuracy": 0.6684,
+            "support": 488,
+            "tp": 389,
+            "fp": 96,
+            "fn": 99,
+            "tn": 4,
+            "hallucination_rate": 0.0103
+          }
+        },
+        "lang": {
+          "en": {
+            "precision": 0.8477,
+            "recall": 0.8381,
+            "f1": 0.8428,
+            "accuracy": 0.7294,
+            "support": 883,
+            "tp": 740,
+            "fp": 133,
+            "fn": 143,
+            "tn": 4,
+            "hallucination_rate": 0.0057
+          },
+          "es": {
+            "precision": 0.825,
+            "recall": 0.825,
+            "f1": 0.825,
+            "accuracy": 0.7021,
+            "support": 40,
+            "tp": 33,
+            "fp": 7,
+            "fn": 7,
+            "tn": 0,
+            "hallucination_rate": 0.0
+          }
+        },
+        "doc_type": {
+          "insurance_claim": {
+            "precision": 0.9124,
+            "recall": 0.9077,
+            "f1": 0.91,
+            "accuracy": 0.8349,
+            "support": 195,
+            "tp": 177,
+            "fp": 17,
+            "fn": 18,
+            "tn": 0,
+            "hallucination_rate": 0.0052
+          },
+          "lab_order": {
+            "precision": 0.781,
+            "recall": 0.7589,
+            "f1": 0.7698,
+            "accuracy": 0.6301,
+            "support": 141,
+            "tp": 107,
+            "fp": 30,
+            "fn": 34,
+            "tn": 2,
+            "hallucination_rate": 0.0073
+          },
+          "patient_intake_form": {
+            "precision": 0.8636,
+            "recall": 0.8444,
+            "f1": 0.8539,
+            "accuracy": 0.7451,
+            "support": 90,
+            "tp": 76,
+            "fp": 12,
+            "fn": 14,
+            "tn": 0,
+            "hallucination_rate": 0.0
+          },
+          "prior_auth_request": {
+            "precision": 0.9211,
+            "recall": 0.9115,
+            "f1": 0.9162,
+            "accuracy": 0.8469,
+            "support": 192,
+            "tp": 175,
+            "fp": 15,
+            "fn": 17,
+            "tn": 2,
+            "hallucination_rate": 0.0
+          },
+          "referral_letter": {
+            "precision": 0.8523,
+            "recall": 0.8881,
+            "f1": 0.8699,
+            "accuracy": 0.7697,
+            "support": 143,
+            "tp": 127,
+            "fp": 22,
+            "fn": 16,
+            "tn": 0,
+            "hallucination_rate": 0.0
+          },
+          "remittance_advice": {
+            "precision": 0.7161,
+            "recall": 0.6852,
+            "f1": 0.7003,
+            "accuracy": 0.5388,
+            "support": 162,
+            "tp": 111,
+            "fp": 44,
+            "fn": 51,
+            "tn": 0,
+            "hallucination_rate": 0.0194
+          }
+        },
+        "gold_source": {
+          "human_verified": {
+            "precision": 0.8467,
+            "recall": 0.8375,
+            "f1": 0.842,
+            "accuracy": 0.7282,
+            "support": 923,
+            "tp": 773,
+            "fp": 140,
+            "fn": 150,
+            "tn": 4,
+            "hallucination_rate": 0.0055
+          }
+        }
+      },
+      "errors": [],
+      "n_errors": 0,
+      "profile": {
+        "name": "llm_local",
+        "model_size_mb": 1900.0,
+        "offline": true,
+        "deterministic": true,
+        "determinism_rate": 1.0,
+        "cost_per_doc_usd": 0.0,
+        "cost_basis": "measured",
+        "latency_p50_ms": 8384.58,
+        "latency_p95_ms": 13504.18,
+        "notes": "Qwen2.5-3B-Instruct via Ollama, schema-constrained",
+        "determinism_basis": "5/5 documents byte-identical across 3 runs"
+      }
+    },
+    "llm_frontier": {
+      "approach": "llm_frontier",
+      "n_documents": 90,
+      "n_field_decisions": 945,
+      "overall": {
+        "precision": 0.9511,
+        "recall": 0.9686,
+        "f1": 0.9597,
+        "accuracy": 0.9229,
+        "support": 923,
+        "tp": 894,
+        "fp": 46,
+        "fn": 29,
+        "tn": 4,
+        "macro_f1": 0.9614,
+        "f1_ci95": [
+          0.9417,
+          0.9756
+        ],
+        "exact_match_rate": 0.8201,
+        "partial_mean": 0.9673,
+        "hallucination_rate": 0.0053
+      },
+      "by_field": {
+        "amount_paid": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "support": 15,
+          "tp": 15,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "date_of_service": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "support": 59,
+          "tp": 59,
+          "fp": 0,
+          "fn": 0,
+          "tn": 1
+        },
+        "diagnosis_code": {
+          "precision": 0.8983,
+          "recall": 1.0,
+          "f1": 0.9464,
+          "accuracy": 0.9,
+          "support": 53,
+          "tp": 53,
+          "fp": 6,
+          "fn": 0,
+          "tn": 1
+        },
+        "document_date": {
+          "precision": 0.8977,
+          "recall": 0.9186,
+          "f1": 0.908,
+          "accuracy": 0.8333,
+          "support": 86,
+          "tp": 79,
+          "fp": 9,
+          "fn": 7,
+          "tn": 1
+        },
+        "document_reference": {
+          "precision": 0.96,
+          "recall": 0.973,
+          "f1": 0.9664,
+          "accuracy": 0.9351,
+          "support": 74,
+          "tp": 72,
+          "fp": 3,
+          "fn": 2,
+          "tn": 0
+        },
+        "member_id": {
+          "precision": 0.96,
+          "recall": 0.96,
+          "f1": 0.96,
+          "accuracy": 0.9231,
+          "support": 75,
+          "tp": 72,
+          "fp": 3,
+          "fn": 3,
+          "tn": 0
+        },
+        "patient_dob": {
+          "precision": 0.9189,
+          "recall": 0.9577,
+          "f1": 0.9379,
+          "accuracy": 0.8846,
+          "support": 71,
+          "tp": 68,
+          "fp": 6,
+          "fn": 3,
+          "tn": 1
+        },
+        "patient_name": {
+          "precision": 0.9444,
+          "recall": 0.9444,
+          "f1": 0.9444,
+          "accuracy": 0.8947,
+          "support": 90,
+          "tp": 85,
+          "fp": 5,
+          "fn": 5,
+          "tn": 0
+        },
+        "patient_responsibility": {
+          "precision": 0.8667,
+          "recall": 0.9286,
+          "f1": 0.8966,
+          "accuracy": 0.8125,
+          "support": 14,
+          "tp": 13,
+          "fp": 2,
+          "fn": 1,
+          "tn": 0
+        },
+        "payer_name": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "support": 75,
+          "tp": 75,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "procedure_code": {
+          "precision": 0.9833,
+          "recall": 1.0,
+          "f1": 0.9916,
+          "accuracy": 0.9833,
+          "support": 59,
+          "tp": 59,
+          "fp": 1,
+          "fn": 0,
+          "tn": 0
+        },
+        "referring_provider_name": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "support": 75,
+          "tp": 75,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "referring_provider_npi": {
+          "precision": 0.9667,
+          "recall": 1.0,
+          "f1": 0.9831,
+          "accuracy": 0.9667,
+          "support": 58,
+          "tp": 58,
+          "fp": 2,
+          "fn": 0,
+          "tn": 0
+        },
+        "servicing_facility": {
+          "precision": 0.88,
+          "recall": 0.8919,
+          "f1": 0.8859,
+          "accuracy": 0.7952,
+          "support": 74,
+          "tp": 66,
+          "fp": 9,
+          "fn": 8,
+          "tn": 0
+        },
+        "total_charge": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "accuracy": 1.0,
+          "support": 45,
+          "tp": 45,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        }
+      },
+      "doc_type": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "per_class": {
+          "insurance_claim": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 15
+          },
+          "lab_order": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 15
+          },
+          "patient_intake_form": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 15
+          },
+          "prior_auth_request": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 15
+          },
+          "referral_letter": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 15
+          },
+          "remittance_advice": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 15
+          }
+        },
+        "confusion": {
+          "insurance_claim": {
+            "insurance_claim": 15,
+            "lab_order": 0,
+            "patient_intake_form": 0,
+            "prior_auth_request": 0,
+            "referral_letter": 0,
+            "remittance_advice": 0
+          },
+          "lab_order": {
+            "insurance_claim": 0,
+            "lab_order": 15,
+            "patient_intake_form": 0,
+            "prior_auth_request": 0,
+            "referral_letter": 0,
+            "remittance_advice": 0
+          },
+          "patient_intake_form": {
+            "insurance_claim": 0,
+            "lab_order": 0,
+            "patient_intake_form": 15,
+            "prior_auth_request": 0,
+            "referral_letter": 0,
+            "remittance_advice": 0
+          },
+          "prior_auth_request": {
+            "insurance_claim": 0,
+            "lab_order": 0,
+            "patient_intake_form": 0,
+            "prior_auth_request": 15,
+            "referral_letter": 0,
+            "remittance_advice": 0
+          },
+          "referral_letter": {
+            "insurance_claim": 0,
+            "lab_order": 0,
+            "patient_intake_form": 0,
+            "prior_auth_request": 0,
+            "referral_letter": 15,
+            "remittance_advice": 0
+          },
+          "remittance_advice": {
+            "insurance_claim": 0,
+            "lab_order": 0,
+            "patient_intake_form": 0,
+            "prior_auth_request": 0,
+            "referral_letter": 0,
+            "remittance_advice": 15
+          }
+        },
+        "n": 90
+      },
+      "service_lines": {
+        "precision": 0.9167,
+        "recall": 0.9167,
+        "f1": 0.9167,
+        "tp": 77,
+        "fp": 7,
+        "fn": 7
+      },
+      "slices": {
+        "condition": {
+          "clean": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "accuracy": 1.0,
+            "support": 435,
+            "tp": 435,
+            "fp": 0,
+            "fn": 0,
+            "tn": 0,
+            "hallucination_rate": 0.0115
+          },
+          "scanned": {
+            "precision": 0.9089,
+            "recall": 0.9406,
+            "f1": 0.9245,
+            "accuracy": 0.8606,
+            "support": 488,
+            "tp": 459,
+            "fp": 46,
+            "fn": 29,
+            "tn": 4,
+            "hallucination_rate": 0.0
+          }
+        },
+        "lang": {
+          "en": {
+            "precision": 0.9489,
+            "recall": 0.9672,
+            "f1": 0.9579,
+            "accuracy": 0.9196,
+            "support": 883,
+            "tp": 854,
+            "fp": 46,
+            "fn": 29,
+            "tn": 4,
+            "hallucination_rate": 0.0056
+          },
+          "es": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "accuracy": 1.0,
+            "support": 40,
+            "tp": 40,
+            "fp": 0,
+            "fn": 0,
+            "tn": 0,
+            "hallucination_rate": 0.0
+          }
+        },
+        "doc_type": {
+          "insurance_claim": {
+            "precision": 0.9692,
+            "recall": 0.9692,
+            "f1": 0.9692,
+            "accuracy": 0.9403,
+            "support": 195,
+            "tp": 189,
+            "fp": 6,
+            "fn": 6,
+            "tn": 0,
+            "hallucination_rate": 0.0
+          },
+          "lab_order": {
+            "precision": 0.9257,
+            "recall": 0.9716,
+            "f1": 0.9481,
+            "accuracy": 0.9026,
+            "support": 141,
+            "tp": 137,
+            "fp": 11,
+            "fn": 4,
+            "tn": 2,
+            "hallucination_rate": 0.0135
+          },
+          "patient_intake_form": {
+            "precision": 0.9667,
+            "recall": 0.9667,
+            "f1": 0.9667,
+            "accuracy": 0.9355,
+            "support": 90,
+            "tp": 87,
+            "fp": 3,
+            "fn": 3,
+            "tn": 0,
+            "hallucination_rate": 0.0
+          },
+          "prior_auth_request": {
+            "precision": 0.9845,
+            "recall": 0.9948,
+            "f1": 0.9896,
+            "accuracy": 0.9796,
+            "support": 192,
+            "tp": 191,
+            "fp": 3,
+            "fn": 1,
+            "tn": 1,
+            "hallucination_rate": 0.0
+          },
+          "referral_letter": {
+            "precision": 0.9054,
+            "recall": 0.9371,
+            "f1": 0.921,
+            "accuracy": 0.8544,
+            "support": 143,
+            "tp": 134,
+            "fp": 14,
+            "fn": 9,
+            "tn": 1,
+            "hallucination_rate": 0.0
+          },
+          "remittance_advice": {
+            "precision": 0.9455,
+            "recall": 0.963,
+            "f1": 0.9541,
+            "accuracy": 0.9123,
+            "support": 162,
+            "tp": 156,
+            "fp": 9,
+            "fn": 6,
+            "tn": 0,
+            "hallucination_rate": 0.0182
+          }
+        },
+        "gold_source": {
+          "human_verified": {
+            "precision": 0.9511,
+            "recall": 0.9686,
+            "f1": 0.9597,
+            "accuracy": 0.9229,
+            "support": 923,
+            "tp": 894,
+            "fp": 46,
+            "fn": 29,
+            "tn": 4,
+            "hallucination_rate": 0.0053
+          }
+        }
+      },
+      "errors": [],
+      "n_errors": 0,
+      "profile": {
+        "name": "llm_frontier",
+        "model_size_mb": null,
+        "offline": false,
+        "deterministic": true,
+        "determinism_rate": 1.0,
+        "cost_per_doc_usd": 0.006665,
+        "cost_basis": "estimated from published per-token pricing; not metered",
+        "latency_p50_ms": null,
+        "latency_p95_ms": null,
+        "notes": "claude-opus-5; reference tier replayed from cache",
+        "determinism_basis": "5/5 documents byte-identical across 3 runs"
+      }
+    }
+  },
+  "comparisons": {
+    "nlp_vs_small_model": {
+      "f1_a": 0.8254,
+      "f1_b": 0.7822,
+      "p_value": 0.1019,
+      "significant_at_05": false
+    }
+  },
+  "merged": true
+}
