@@ -1,262 +1,135 @@
 <title>Fax to Fields</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@200;300;400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
 
 <style>
+/* White page, black text, light headings. Single committed theme —
+   the page paints its own ground so it holds on any host background. */
 :root{
-  --paper:#F1F4F3;
-  --card:#FBFCFC;
-  --ink:#16232B;
-  --ink-soft:#4A5C63;
-  --ink-faint:#7B8B91;
-  --rule:#CBD5D4;
-  --rule-soft:#E1E8E7;
-  --accent:#1B4B5A;
-  --accent-soft:#E3EDEE;
-  --flag:#A81F2B;
-  --flag-soft:#F6E3E4;
-  --good:#2E6F4E;
-  --good-soft:#E2EFE7;
-  --warn:#8A5A16;
+  --paper:#FFFFFF;
+  --ink:#000000;
+  --ink-2:#333333;
+  --ink-3:#6E6E6E;
+  --line:#000000;
+  --line-2:#C9C9C9;
+  --line-3:#E8E8E8;
 
-  --q-best:#BFDCCB;
-  --q-good:#D7E7DA;
-  --q-mid:#EDE6CF;
-  --q-low:#F0DBC4;
-  --q-bad:#EFCFCF;
+  /* severity: near-white steps, so the page stays white */
+  --s0:#FFFFFF;
+  --s1:#F5F5F5;
+  --s2:#EAEAEA;
+  --s3:#DCDCDC;
 
   --display:'Archivo',system-ui,-apple-system,'Segoe UI',sans-serif;
   --body:'Source Serif 4',Georgia,'Times New Roman',serif;
-  --mono:'IBM Plex Mono',ui-monospace,'Cascadia Mono',Consolas,monospace;
-
-  --measure:66ch;
-  --wide:1120px;
-}
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){
-    --paper:#0F1619;
-    --card:#151E22;
-    --ink:#DEE7E6;
-    --ink-soft:#9DAFB3;
-    --ink-faint:#71858A;
-    --rule:#2A383D;
-    --rule-soft:#1E2A2E;
-    --accent:#79B7C3;
-    --accent-soft:#16302F;
-    --flag:#E1717A;
-    --flag-soft:#33191C;
-    --good:#7CC79B;
-    --good-soft:#152A20;
-    --warn:#D2A45E;
-    --q-best:#22503C;
-    --q-good:#1D4234;
-    --q-mid:#40381C;
-    --q-low:#472F1B;
-    --q-bad:#48222A;
-  }
-}
-:root[data-theme="dark"]{
-  --paper:#0F1619;
-  --card:#151E22;
-  --ink:#DEE7E6;
-  --ink-soft:#9DAFB3;
-  --ink-faint:#71858A;
-  --rule:#2A383D;
-  --rule-soft:#1E2A2E;
-  --accent:#79B7C3;
-  --accent-soft:#16302F;
-  --flag:#E1717A;
-  --flag-soft:#33191C;
-  --good:#7CC79B;
-  --good-soft:#152A20;
-  --warn:#D2A45E;
-  --q-best:#22503C;
-  --q-good:#1D4234;
-  --q-mid:#40381C;
-  --q-low:#472F1B;
-  --q-bad:#48222A;
+  --mono:'IBM Plex Mono',ui-monospace,Consolas,monospace;
+  --measure:64ch;
+  --wide:1140px;
 }
 
 *{box-sizing:border-box}
-body{
-  background:var(--paper);
-  color:var(--ink);
-  font-family:var(--body);
-  font-size:17px;
-  line-height:1.62;
-  margin:0;
-  -webkit-font-smoothing:antialiased;
-}
-
-/* ---------- shell ---------- */
-.wrap{max-width:var(--wide);margin:0 auto;padding:0 28px}
+html{background:var(--paper)}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65;margin:0;-webkit-font-smoothing:antialiased}
+.wrap{max-width:var(--wide);margin:0 auto;padding:0 30px}
 .col{max-width:var(--measure)}
-section{padding:46px 0;border-top:1px solid var(--rule-soft)}
-section:first-of-type{border-top:none}
+section{padding:62px 0;border-top:1px solid var(--line-2)}
 
-/* ---------- nav ---------- */
-.rail{
-  position:sticky;top:0;z-index:20;
-  background:var(--paper);
-  background:color-mix(in srgb,var(--paper) 92%,transparent);
-  backdrop-filter:blur(8px);
-  border-bottom:1px solid var(--rule);
-}
-.rail-in{max-width:var(--wide);margin:0 auto;padding:9px 28px;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
-.rail a{
-  font-family:var(--display);font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;
-  color:var(--ink-soft);text-decoration:none;padding:5px 9px;border-radius:3px;white-space:nowrap;
-}
-.rail a:hover{background:var(--accent-soft);color:var(--accent)}
-.rail a:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
-.rail .who{font-family:var(--mono);font-size:11px;color:var(--ink-faint);margin-left:auto;letter-spacing:0}
+.rail{position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:1px solid var(--line)}
+.rail-in{max-width:var(--wide);margin:0 auto;padding:10px 30px;display:flex;gap:2px;align-items:baseline;flex-wrap:wrap}
+.rail a{font-family:var(--mono);font-size:11px;color:var(--ink-3);text-decoration:none;padding:4px 10px;white-space:nowrap}
+.rail a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+.rail a:focus-visible{outline:1.5px solid var(--ink);outline-offset:1px}
+.rail .who{font-family:var(--mono);font-size:11px;color:var(--ink-3);margin-left:auto}
 
-/* ---------- masthead ---------- */
-.mast{padding:52px 0 40px}
-.eyebrow{
-  font-family:var(--mono);font-size:11.5px;font-weight:500;letter-spacing:.13em;text-transform:uppercase;
-  color:var(--accent);margin:0 0 18px;
-}
-h1{
-  font-family:var(--display);font-weight:700;font-size:clamp(38px,6.2vw,62px);line-height:1.02;
-  letter-spacing:-.022em;margin:0 0 18px;text-wrap:balance;
-}
-.standfirst{font-size:20px;line-height:1.5;color:var(--ink-soft);margin:0;max-width:60ch}
+.mast{padding:68px 0 46px}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);margin:0 0 24px}
+h1{font-family:var(--display);font-weight:200;font-size:clamp(44px,7.6vw,86px);line-height:1;letter-spacing:-.035em;margin:0 0 24px;text-wrap:balance}
+.standfirst{font-size:20px;line-height:1.5;color:var(--ink-2);margin:0;max-width:58ch}
 .standfirst strong{color:var(--ink);font-weight:600}
 
-h2{
-  font-family:var(--display);font-weight:700;font-size:27px;letter-spacing:-.014em;
-  margin:0 0 6px;text-wrap:balance;
-}
-h3{
-  font-family:var(--display);font-weight:600;font-size:17.5px;letter-spacing:-.005em;
-  margin:30px 0 8px;
-}
-.req{
-  display:inline-flex;align-items:baseline;gap:7px;
-  font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
-  color:var(--accent);background:var(--accent-soft);
-  padding:3px 8px;border-radius:2px;margin-bottom:12px;
-}
-.deck{color:var(--ink-soft);margin:0 0 22px;max-width:var(--measure)}
-p{margin:0 0 15px}
+h2{font-family:var(--display);font-weight:200;font-size:33px;letter-spacing:-.022em;line-height:1.14;margin:0 0 12px;text-wrap:balance}
+h3{font-family:var(--display);font-weight:400;font-size:18px;letter-spacing:-.005em;margin:40px 0 10px}
+.req{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.deck{color:var(--ink-2);margin:0 0 24px;max-width:var(--measure)}
+p{margin:0 0 16px}
 .col p:last-child{margin-bottom:0}
-a{color:var(--accent)}
+a{color:var(--ink)}
 strong{font-weight:600}
-code,.mono{font-family:var(--mono);font-size:.87em;font-variant-numeric:tabular-nums}
-code{background:var(--rule-soft);padding:1px 5px;border-radius:3px}
+code,.mono{font-family:var(--mono);font-size:.86em;font-variant-numeric:tabular-nums}
+code{border-bottom:1px solid var(--line-2);padding-bottom:1px}
 
-/* ---------- verdict strip ---------- */
-.strip{
-  display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
-  background:var(--rule);border:1px solid var(--rule);border-radius:4px;overflow:hidden;margin:34px 0 0;
-}
-.sc{background:var(--card);padding:17px 16px 15px}
-.sc .nm{font-family:var(--display);font-weight:600;font-size:12.5px;letter-spacing:.02em;color:var(--ink-soft);margin-bottom:2px}
-.sc .sub{font-family:var(--mono);font-size:10px;color:var(--ink-faint);margin-bottom:12px;letter-spacing:.02em}
-.sc .big{font-family:var(--mono);font-weight:600;font-size:32px;line-height:1;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
-.sc .cap{font-family:var(--mono);font-size:10px;color:var(--ink-faint);letter-spacing:.08em;text-transform:uppercase;margin-top:3px}
-.bar{height:3px;background:var(--rule-soft);margin-top:12px;border-radius:2px;overflow:hidden}
-.bar i{display:block;height:100%;background:var(--accent)}
-.sc.pick{background:var(--accent-soft)}
-.sc.pick .big{color:var(--accent)}
-.tagline{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;margin-top:11px;color:var(--ink-faint)}
-.tagline.win{color:var(--good)}
-.tagline.bad{color:var(--flag)}
+.strip{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:46px 0 0}
+.sc{padding:22px 20px 20px;border-right:1px solid var(--line-3)}
+.sc:last-child{border-right:none}
+.sc .nm{font-family:var(--display);font-weight:500;font-size:13px;margin-bottom:3px}
+.sc .sub{font-family:var(--mono);font-size:10px;color:var(--ink-3);margin-bottom:18px}
+.sc .big{font-family:var(--display);font-weight:200;font-size:46px;line-height:1;letter-spacing:-.05em;font-variant-numeric:tabular-nums}
+.sc .cap{font-family:var(--mono);font-size:9.5px;color:var(--ink-3);letter-spacing:.11em;text-transform:uppercase;margin-top:6px}
+.bar{height:5px;border:1px solid var(--line);margin-top:16px}
+.bar i{display:block;height:100%;background:var(--ink)}
+.tagline{font-family:var(--mono);font-size:10px;margin-top:13px;color:var(--ink-2);line-height:1.5}
 
-/* ---------- tables ---------- */
-.scroller{overflow-x:auto;margin:20px 0;border:1px solid var(--rule);border-radius:4px;background:var(--card)}
+.manifest{list-style:none;padding:0;border-top:1px solid var(--line);margin-top:28px}
+.manifest li{display:grid;grid-template-columns:2.1rem 1fr auto;gap:14px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--line-3);font-size:16px}
+.manifest .no{font-family:var(--mono);font-size:11px;color:var(--ink-3)}
+.manifest .nm{font-weight:600}
+.manifest .where{font-family:var(--mono);font-size:11.5px;color:var(--ink-3);text-align:right}
+.manifest a{text-decoration:none;border-bottom:1px solid var(--line-2)}
+.manifest a:hover{border-bottom-color:var(--ink)}
+
+.scroller{overflow-x:auto;margin:24px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 table{border-collapse:collapse;width:100%;font-family:var(--mono);font-size:12.5px;font-variant-numeric:tabular-nums}
-th,td{padding:8px 12px;text-align:right;border-bottom:1px solid var(--rule-soft);white-space:nowrap}
-th{
-  font-family:var(--display);font-size:10.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
-  color:var(--ink-soft);background:var(--rule-soft);position:sticky;top:0;
-}
+th,td{padding:8px 13px;text-align:right;border-bottom:1px solid var(--line-3);white-space:nowrap}
+th{font-family:var(--display);font-size:10px;font-weight:500;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-2);border-bottom:1px solid var(--line);background:var(--paper);position:sticky;top:0}
 th:first-child,td:first-child{text-align:left}
+td.l{text-align:left}
 tbody tr:last-child td{border-bottom:none}
-tr.total td{font-weight:600;border-top:2px solid var(--rule);background:var(--rule-soft)}
-.grp td{
-  background:var(--rule-soft);font-family:var(--display);font-size:10px;font-weight:600;
-  letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);padding:5px 12px;
-}
-caption{
-  caption-side:bottom;text-align:left;padding:9px 12px;font-family:var(--body);font-size:13.5px;
-  color:var(--ink-faint);line-height:1.45;border-top:1px solid var(--rule-soft);
-}
-.q5{background:var(--q-best)}.q4{background:var(--q-good)}.q3{background:var(--q-mid)}
-.q2{background:var(--q-low)}.q1{background:var(--q-bad)}
-.zero{color:var(--flag);font-weight:600}
-.win{color:var(--good);font-weight:600}
-.dim{color:var(--ink-faint)}
-.same{background:var(--flag-soft);font-weight:600}
+tr.total td{border-top:1px solid var(--line)}
+.grp td{font-family:var(--display);font-size:9.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);padding:15px 13px 5px;border-bottom:1px solid var(--line-2)}
+caption{caption-side:bottom;text-align:left;padding:13px 13px 0;font-family:var(--body);font-size:14px;color:var(--ink-2);line-height:1.5;max-width:80ch}
 
-/* ---------- callout ---------- */
-.pull{
-  border-left:3px solid var(--accent);padding:4px 0 4px 20px;margin:26px 0;
-  font-size:19px;line-height:1.5;color:var(--ink);max-width:60ch;
-}
-.note{
-  background:var(--card);border:1px solid var(--rule);border-radius:4px;padding:16px 18px;margin:22px 0;
-  font-size:15.5px;line-height:1.55;max-width:var(--measure);
-}
-.note .lbl{
-  font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
-  color:var(--flag);display:block;margin-bottom:6px;
-}
-.note.ok .lbl{color:var(--good)}
+.s0{background:var(--s0)}.s1{background:var(--s1)}.s2{background:var(--s2)}.s3{background:var(--s3)}
+.fail{background:var(--s3);font-weight:600;box-shadow:inset 0 -2px 0 var(--ink)}
+.mark{font-weight:600;box-shadow:inset 0 -2px 0 var(--ink)}
+.dim{color:var(--ink-3)}
+
+.pull{border-left:2px solid var(--ink);padding:2px 0 2px 22px;margin:34px 0;font-family:var(--display);font-weight:300;font-size:22px;line-height:1.4;letter-spacing:-.012em;max-width:56ch}
+.pull strong{font-weight:500}
+.note{border:1px solid var(--line);padding:20px 22px;margin:26px 0;font-size:16px;line-height:1.55;max-width:var(--measure)}
+.note .lbl{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:10px;color:var(--ink-3)}
 .note p:last-child{margin-bottom:0}
 
-/* ---------- key/value ---------- */
-.kv{display:grid;grid-template-columns:auto 1fr;gap:0;border-top:1px solid var(--rule-soft);max-width:var(--measure)}
-.kv dt{
-  font-family:var(--display);font-size:12px;font-weight:600;letter-spacing:.03em;color:var(--ink-soft);
-  padding:9px 22px 9px 0;border-bottom:1px solid var(--rule-soft);
-}
-.kv dd{
-  margin:0;padding:9px 0;border-bottom:1px solid var(--rule-soft);
-  font-family:var(--mono);font-size:13px;font-variant-numeric:tabular-nums;
-}
+.kv{display:grid;grid-template-columns:auto 1fr;border-top:1px solid var(--line);max-width:var(--measure);margin:22px 0}
+.kv dt{font-family:var(--display);font-size:12px;font-weight:500;color:var(--ink-2);padding:10px 26px 10px 0;border-bottom:1px solid var(--line-3)}
+.kv dd{margin:0;padding:10px 0;border-bottom:1px solid var(--line-3);font-family:var(--mono);font-size:13px;font-variant-numeric:tabular-nums}
 
-/* ---------- pipeline ---------- */
-.pipe{
-  display:flex;align-items:stretch;gap:0;margin:24px 0;overflow-x:auto;
-  border:1px solid var(--rule);border-radius:4px;background:var(--card);
-}
-.stage{padding:15px 18px;border-right:1px solid var(--rule-soft);min-width:145px;flex:1}
-.stage:last-child{border-right:none}
-.stage .n{font-family:var(--mono);font-size:10px;color:var(--ink-faint);letter-spacing:.1em}
-.stage .t{font-family:var(--display);font-weight:600;font-size:14px;margin:5px 0 4px}
-.stage .d{font-size:13px;color:var(--ink-soft);line-height:1.4}
-.fan{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:4px;overflow:hidden;margin:0 0 24px}
-.fan div{background:var(--card);padding:12px 14px;font-size:13px;color:var(--ink-soft);line-height:1.4}
-.fan div b{display:block;font-family:var(--display);font-size:13.5px;color:var(--ink);margin-bottom:3px}
+.fan{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:0 0 26px}
+.fan div{padding:17px 18px 19px;border-right:1px solid var(--line-3);font-size:14.5px;color:var(--ink-2);line-height:1.45}
+.fan div:last-child{border-right:none}
+.fan div b{display:block;font-family:var(--display);font-size:14px;font-weight:500;color:var(--ink);margin-bottom:6px}
 
-/* ---------- chart ---------- */
-.chart{background:var(--card);border:1px solid var(--rule);border-radius:4px;padding:14px;margin:22px 0;overflow-x:auto}
-.chart svg{display:block;min-width:520px;width:100%;height:auto}
-.ax{fill:var(--ink-faint);font-family:'IBM Plex Mono',monospace;font-size:11px}
-.axl{fill:var(--ink-soft);font-family:'Archivo',sans-serif;font-size:11px;font-weight:600;letter-spacing:.06em}
-.pt-lab{fill:var(--ink);font-family:'IBM Plex Mono',monospace;font-size:11.5px;font-weight:600}
+figure{margin:26px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0}
+figure svg{display:block;width:100%;height:auto}
+.figscroll{overflow-x:auto}
+.figscroll svg{min-width:620px}
+figcaption{font-family:var(--body);font-size:14px;color:var(--ink-2);line-height:1.5;padding-top:18px;max-width:78ch}
+.ax{fill:#6E6E6E;font-family:'IBM Plex Mono',monospace;font-size:11px}
+.axl{fill:#333333;font-family:'Archivo',sans-serif;font-size:10px;font-weight:500;letter-spacing:.14em}
+.ptl{fill:#000000;font-family:'IBM Plex Mono',monospace;font-size:11.5px;font-weight:500}
+.dgt{fill:#000000;font-family:'Archivo',sans-serif;font-size:12.5px;font-weight:500}
+.dgs{fill:#6E6E6E;font-family:'IBM Plex Mono',monospace;font-size:10px}
 
-/* ---------- checklist ---------- */
-.check{list-style:none;padding:0;margin:18px 0 0;max-width:var(--measure)}
-.check li{
-  display:flex;gap:11px;align-items:baseline;padding:7px 0;border-bottom:1px solid var(--rule-soft);font-size:15.5px;
-}
-.check li:last-child{border-bottom:none}
-.check .tick{color:var(--good);font-family:var(--mono);font-size:13px;font-weight:600;flex-shrink:0}
-.check .where{font-family:var(--mono);font-size:11.5px;color:var(--ink-faint);margin-left:auto;padding-left:14px;text-align:right}
+ul.plain{padding-left:20px;margin:0 0 16px;max-width:var(--measure)}
+ul.plain li{margin-bottom:9px}
+footer{padding:42px 0 76px;border-top:1px solid var(--line);color:var(--ink-3);font-size:14.5px}
 
-ul.plain{padding-left:19px;margin:0 0 15px;max-width:var(--measure)}
-ul.plain li{margin-bottom:7px}
-
-footer{padding:34px 0 60px;border-top:1px solid var(--rule);color:var(--ink-faint);font-size:14px}
-footer .col{max-width:var(--measure)}
-
-@media (max-width:760px){
+@media (max-width:820px){
   .strip{grid-template-columns:repeat(2,1fr)}
+  .strip .sc:nth-child(2){border-right:none}
   .fan{grid-template-columns:repeat(2,1fr)}
+  .manifest li{grid-template-columns:1.8rem 1fr}
+  .manifest .where{grid-column:2;text-align:left}
   body{font-size:16px}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
@@ -264,13 +137,14 @@ footer .col{max-width:var(--measure)}
 
 <nav class="rail">
   <div class="rail-in">
-    <a href="#data">1 · Data</a>
-    <a href="#systems">2 · Systems</a>
-    <a href="#eval">3 · Evaluation</a>
-    <a href="#errors">4 · Errors</a>
-    <a href="#answer">5 · Answer</a>
-    <a href="#impl">6 · Implementation</a>
-    <span class="who">gold n=90 · 923 values · human-verified</span>
+    <a href="#deliverables">Deliverables</a>
+    <a href="#data">1 Data</a>
+    <a href="#systems">2 Systems</a>
+    <a href="#eval">3 Evaluation</a>
+    <a href="#errors">4 Errors</a>
+    <a href="#answer">5 Answer</a>
+    <a href="#impl">6 Implementation</a>
+    <span class="who">gold n=90 · 923 human-verified values</span>
   </div>
 </nav>
 
@@ -281,17 +155,17 @@ footer .col{max-width:var(--measure)}
     <h1>Fax to Fields</h1>
     <p class="standfirst">Four systems extract 15 fields and a document type from semi-structured
     healthcare documents. All four run on the <strong>same 90-document gold set</strong>, built from
-    layout templates none of them was trained on. Every number below is measured, not estimated —
-    with one exception, labelled wherever it appears.</p>
+    layout templates none of them was trained on. Every figure below is measured. The one estimate —
+    frontier cost per document — is marked wherever it appears.</p>
 
     <div class="strip">
-      <div class="sc pick">
+      <div class="sc">
         <div class="nm">Rules / NLP</div>
-        <div class="sub">spaCy + anchors + checksums</div>
+        <div class="sub">anchors + spatial lookup</div>
         <div class="big">0.825</div>
         <div class="cap">micro F1</div>
         <div class="bar"><i style="width:82.5%"></i></div>
-        <div class="tagline win">6 MB · 11 ms · $0</div>
+        <div class="tagline">6 MB · 11 ms · $0<br>deterministic · cannot hallucinate</div>
       </div>
       <div class="sc">
         <div class="nm">Small model</div>
@@ -299,7 +173,7 @@ footer .col{max-width:var(--measure)}
         <div class="big">0.782</div>
         <div class="cap">micro F1</div>
         <div class="bar"><i style="width:78.2%"></i></div>
-        <div class="tagline">525 MB · 51 ms · $0</div>
+        <div class="tagline">525 MB · 51 ms · $0<br>trained on silver only</div>
       </div>
       <div class="sc">
         <div class="nm">Local LLM</div>
@@ -307,88 +181,97 @@ footer .col{max-width:var(--measure)}
         <div class="big">0.842</div>
         <div class="cap">micro F1</div>
         <div class="bar"><i style="width:84.2%"></i></div>
-        <div class="tagline bad">1.9 GB · 8,385 ms · non-deterministic</div>
+        <div class="tagline">1.9 GB · 8,385 ms · $0<br>score varies ±0.007 between runs</div>
       </div>
       <div class="sc">
         <div class="nm">Frontier LLM</div>
-        <div class="sub">reference tier, cached</div>
+        <div class="sub">cached reference tier</div>
         <div class="big">0.960</div>
         <div class="cap">micro F1</div>
         <div class="bar"><i style="width:96%"></i></div>
-        <div class="tagline">$0.0067/doc · not offline</div>
+        <div class="tagline">$0.0067/doc, estimated<br>not offline · not reproducible</div>
       </div>
     </div>
   </header>
+
+  <!-- ================= DELIVERABLES ================= -->
+  <section id="deliverables">
+    <div class="col">
+      <span class="req">Deliverables</span>
+      <h2>All eight, and where each one is</h2>
+    </div>
+    <ol class="manifest">
+      <li><span class="no">01</span><span><span class="nm">Runnable source code.</span> 38 Python files, CLI and HTTP API, 108 passing tests.</span><span class="where">docintel/ · scripts/ · tests/</span></li>
+      <li><span class="no">02</span><span><span class="nm">Training/validation/test dataset description.</span> 1,000 / 200 / 90, plus the verification record.</span><span class="where"><a href="#data">§1</a></span></li>
+      <li><span class="no">03</span><span><span class="nm">Trained small model.</span> DistilBERT-cased 66M, 31 BIO tags, 525 MB.</span><span class="where">models/small/</span></li>
+      <li><span class="no">04</span><span><span class="nm">NLP implementation and LLM baseline.</span> Four approaches behind one interface.</span><span class="where"><a href="#systems">§2</a></span></li>
+      <li><span class="no">05</span><span><span class="nm">Evaluation results and comparison report.</span> Per-field, per-slice, bootstrap CIs.</span><span class="where"><a href="#eval">§3</a> · REPORT.md</span></li>
+      <li><span class="no">06</span><span><span class="nm">Error analysis.</span> 1,004 errors coded; 22 worked through with fixes.</span><span class="where"><a href="#errors">§4</a></span></li>
+      <li><span class="no">07</span><span><span class="nm">Simple architecture diagram.</span></span><span class="where"><a href="#arch">§6</a></span></li>
+      <li><span class="no">08</span><span><span class="nm">Demo on previously unseen documents.</span> 10 documents, held-out templates, scored.</span><span class="where"><a href="#demo">§6</a></span></li>
+    </ol>
+  </section>
 
   <!-- ================= 1. DATA ================= -->
   <section id="data">
     <div class="col">
       <span class="req">Requirement 1 · Training data</span>
-      <h2>Where the documents come from, and why you can trust the test set</h2>
-      <p class="deck">No public corpus of labelled healthcare faxes exists, and real ones are PHI.
-      So the corpus is generated — which creates exactly one serious risk, and the design is built
-      around defusing it.</p>
-
+      <h2>Where the documents come from, and why the test set can be trusted</h2>
+      <p class="deck">There is no public corpus of labelled healthcare faxes, and real ones are PHI.
+      So the corpus is generated. That creates one serious risk — a model memorising the generator —
+      and two controls defuse it.</p>
       <p>1,300 documents across six types: referral letters, prior-authorisation requests, lab
-      orders, CMS-1500 claims, remittance advices and intake forms. Real ICD-10 and CPT codes; NPIs
-      that pass the Luhn check digit, alongside a decoy 10-digit number that fails it.</p>
+      orders, CMS-1500 claims, remittance advices and intake forms. Real ICD-10 and CPT codes. NPIs
+      carry a valid Luhn check digit, and each page also carries a decoy 10-digit number that fails
+      it.</p>
+      <p><strong>Control one: template hold-out.</strong> Templates 1–10 are used for training,
+      11–14 only for testing — different geometry, different label wording.
+      <strong>Control two: real OCR damage.</strong> Half the corpus is rasterised at 200 dpi,
+      skewed, blurred, speckled, JPEG-compressed, and read back through an OCR engine.</p>
     </div>
 
     <div class="scroller" style="max-width:var(--measure)">
       <table>
         <thead><tr><th>Split</th><th>Documents</th><th>Labels from</th><th>Templates</th></tr></thead>
         <tbody>
-          <tr><td>train</td><td>1,000</td><td>silver — local 3B</td><td>1–10</td></tr>
-          <tr><td>validation</td><td>200</td><td>silver — local 3B</td><td>1–10</td></tr>
-          <tr><td>gold test</td><td class="win">90</td><td class="win">human-verified</td><td class="win">11–14</td></tr>
-          <tr><td>demo</td><td>10</td><td>generator truth</td><td>11–14</td></tr>
+          <tr><td>train</td><td>1,000</td><td class="l">silver — local 3B</td><td>1–10</td></tr>
+          <tr><td>validation</td><td>200</td><td class="l">silver — local 3B</td><td>1–10</td></tr>
+          <tr><td class="mark">gold test</td><td class="mark">90</td><td class="l mark">human-verified</td><td class="mark">11–14</td></tr>
+          <tr><td>demo</td><td>10</td><td class="l">generator truth</td><td>11–14</td></tr>
         </tbody>
-        <caption>The gold set uses layout templates that appear nowhere in training — different
-        geometry, different label wording. A model that memorises layout has nowhere to hide.</caption>
+        <caption>The gold set uses templates that appear nowhere in training, so a model that
+        memorises layout scores visibly worse on it.</caption>
       </table>
     </div>
 
     <div class="col">
-      <h3>The gold set was verified by a person, in two tiers</h3>
-      <p>The assignment requires a manually verified test set that isn't LLM-generated. The
-      generator knows the true values, so most of the work is confirming OCR didn't destroy them —
-      only genuine disagreements need a human.</p>
+      <h3>How the gold set was verified</h3>
+      <p>The brief requires a manually verified test set that is not LLM-generated. The generator
+      knows the true values, so most of the work is confirming OCR did not destroy them. Only
+      genuine disagreements need a person.</p>
     </div>
 
     <dl class="kv">
-      <dt>Values resolved mechanically</dt>
-      <dd>865 of 945 (91.5%) — generator and an independent OCR pass agree</dd>
-      <dt>Adjudicated by hand</dt>
-      <dd>80 — every case where they disagreed</dd>
-      <dt>Excluded as destroyed</dt>
-      <dd>22 — unrecoverable after scanning</dd>
-      <dt>Corrected against the page</dt>
-      <dd>1 — <span class="mono">gold_synth-0042</span> reads <span class="mono">07-Sep-1982</span>, not <span class="mono">1952</span></dd>
-      <dt>Proposals overridden by the reviewer</dt>
-      <dd class="win">22 of 80 — which is what makes it a review, not a rubber stamp</dd>
-      <dt>Final scoreable values</dt>
-      <dd>923, every one flagged <span class="mono">human_verified</span></dd>
+      <dt>Resolved mechanically</dt><dd>865 of 945 — generator and an independent OCR pass agree</dd>
+      <dt>Adjudicated by hand</dt><dd>80 — every case where they disagreed</dd>
+      <dt>Excluded as destroyed</dt><dd>22 — unrecoverable after scanning</dd>
+      <dt>Corrected against the page</dt><dd><span class="mono">gold_synth-0042</span> reads <span class="mono">07-Sep-1982</span>, not <span class="mono">1952</span></dd>
+      <dt>Proposals overridden</dt><dd>22 of 80</dd>
+      <dt>Final scoreable values</dt><dd>923, each flagged <span class="mono">human_verified</span></dd>
     </dl>
-
-    <div class="col">
-      <h3>Half the corpus goes through real OCR damage</h3>
-      <p>Rasterised at 200 dpi, then skewed, blurred, speckled, JPEG-compressed and in some cases
-      fax-thresholded to 1-bit, and read back through an OCR engine. That noise isn't simulated.</p>
-    </div>
 
     <div class="note">
       <span class="lbl">The ceiling every approach sits under</span>
-      <p>Only <strong>85.3%</strong> of gold values survive OCR on the scanned half (430 of 435, or
-      98.9%, on the clean half). The rest were destroyed before any extractor ran. Read every
-      scanned-condition number against 85.3%, not against 100%.</p>
+      <p>Only <strong>85.3%</strong> of gold values survive OCR on the scanned half — 98.9% on the
+      clean half. The rest were destroyed before any extractor ran. Every scanned-condition number
+      should be read against 85.3%, not against 100%.</p>
     </div>
 
     <div class="col">
-      <h3>Silver labels, and a teacher that got scored</h3>
-      <p>The small model trains on labels the local 3B produced — never on generator truth. That's
-      what the assignment asks to demonstrate, and it's what you'd actually have in production.
-      Because the generator <em>does</em> know the truth, the teacher can be scored, which most
-      silver pipelines never bother to do.</p>
+      <h3>Silver labels, and a teacher that was scored</h3>
+      <p>The small model trains on labels the local 3B produced, never on generator truth. Because
+      the generator does know the truth, the teacher can be scored — which most silver pipelines
+      skip.</p>
     </div>
 
     <dl class="kv">
@@ -396,19 +279,16 @@ footer .col{max-width:var(--measure)}
       <dt>Teacher doc-type accuracy</dt><dd>80.8%</dd>
       <dt>Span alignment rate</dt><dd>96.6%</dd>
       <dt>Documents labelled</dt><dd>1,200 · ~3.5 h unattended · $0</dd>
+      <dt>Spans by match method</dt><dd>11,914 exact · 625 whitespace · 66 compact · 20 fuzzy · 165 dropped</dd>
     </dl>
 
     <div class="col">
-      <p>Getting from a returned <em>value</em> to a trainable <em>character span</em> is the
-      unglamorous step that decides how much supervision survives: 11,914 spans matched exactly,
-      625 needed whitespace tolerance, 66 needed punctuation-insensitivity, 20 fuzzy, and 165 were
-      unalignable and dropped. Those 625 are about 5% of the training signal — values the layout
-      broke across a line, which a plain <code>text.find()</code> would have thrown away.</p>
-
-      <div class="pull">The teacher’s worst field isn’t noisy, it’s <em>biased</em>:
-      <strong>106 of 110 <span class="mono">document_date</span> errors</strong> are the model
-      taking the <span class="mono">Printed:</span> footer instead of the document date. Random
-      teacher noise gets averaged away by the student. Systematic bias gets learned.</div>
+      <p>Those 625 whitespace-tolerant matches are about 5% of the training signal — values the
+      layout broke across a line, which a plain <code>text.find()</code> would have discarded.</p>
+      <div class="pull">The teacher’s worst field is not noisy, it is <strong>biased</strong>:
+      106 of 110 <span class="mono">document_date</span> errors take the
+      <span class="mono">Printed:</span> footer instead of the document date. Random teacher noise
+      averages away in the student. Systematic bias is learned.</div>
     </div>
   </section>
 
@@ -417,30 +297,30 @@ footer .col{max-width:var(--measure)}
     <div class="col">
       <span class="req">Requirement 2 · The three systems</span>
       <h2>Three approaches, built four ways</h2>
-      <p class="deck">The assignment asks for three. There are four, because with 7.4 GB of RAM the
-      biggest local model is ~3B — and a 3B model is arguably itself a “small model”. Calling it
-      <em>the</em> general LLM would have made the central question unanswerable.</p>
+      <p class="deck">The brief asks for three. There are four because this machine has 7.4 GB of
+      RAM, which caps a local model at about 3B — and a 3B model is arguably itself a small model.
+      Using it as the general-LLM baseline alone would have made the central question
+      unanswerable.</p>
     </div>
 
     <div class="fan">
-      <div><b>Rules / NLP</b>Label anchors + spatial lookup over OCR boxes. Regex and checksums
-      validate candidates rather than find them. TF-IDF → LinearSVC for doc type.</div>
+      <div><b>Rules / NLP</b>Label anchors plus spatial lookup over OCR word boxes. Regex and
+      checksums validate candidates rather than find them. TF-IDF into LinearSVC for doc type.</div>
       <div><b>Small model</b>DistilBERT-cased 66M, token classification over 31 BIO tags, plus a
-      second head for doc type. Extractive — structurally cannot hallucinate.</div>
+      second head for doc type. Extractive, so it cannot return a value absent from the page.</div>
       <div><b>Local LLM</b>Qwen2.5-3B-Instruct via Ollama, schema-constrained JSON, temperature 0.
-      Fully offline and free — the reproducible baseline.</div>
-      <div><b>Frontier LLM</b>Cached reference tier. Cost estimated from published per-token
-      pricing, <em>never metered</em>, and labelled that way in every table.</div>
+      Offline and free — the baseline anyone can reproduce.</div>
+      <div><b>Frontier LLM</b>Cached reference tier. Cost estimated from published per-token pricing
+      on measured token counts, never metered, and labelled as such in every table.</div>
     </div>
 
     <div class="col">
-      <p>All four implement one interface — <code>extract(OcrDocument) → ExtractionResult</code> —
-      so the CLI, the API and the evaluator cannot accidentally treat one specially. A single
-      <code>normalize.py</code> decides that <span class="mono">03/14/2025</span>,
-      <span class="mono">14-Mar-2025</span> and <span class="mono">2025-03-14</span> are the same
-      date, and the <em>scorer imports the same module the approaches do</em>. If each normalised
-      its own output, whichever happened to match the scorer's preferred format would win for a
-      reason unrelated to extraction quality.</p>
+      <p>All four implement one interface, <code>extract(OcrDocument) → ExtractionResult</code>, so
+      the CLI, API and evaluator cannot treat one specially. One <code>normalize.py</code> decides
+      that <span class="mono">03/14/2025</span>, <span class="mono">14-Mar-2025</span> and
+      <span class="mono">2025-03-14</span> are the same date, and the scorer imports the same module
+      the approaches do. If each approach normalised its own output, whichever happened to match the
+      scorer’s preferred format would gain an advantage unrelated to extraction quality.</p>
     </div>
   </section>
 
@@ -448,53 +328,35 @@ footer .col{max-width:var(--measure)}
   <section id="eval">
     <div class="col">
       <span class="req">Requirement 3 · Evaluation</span>
-      <h2>Every dimension the brief asked for</h2>
+      <h2>Every dimension the brief named</h2>
       <p class="deck">Same 90 documents, same normalisers, 1,000-resample bootstrap confidence
-      intervals so “A beats B” is defensible rather than noise.</p>
+      intervals.</p>
     </div>
 
     <div class="scroller">
       <table>
-        <thead>
-          <tr>
-            <th>Approach</th><th>P</th><th>R</th><th>F1</th><th>95% CI</th><th>Accuracy</th>
-            <th>Doc type</th><th>Service lines</th><th>Latency p50</th><th>Size</th>
-            <th>Cost/doc</th><th>Offline</th><th>Deterministic</th><th>Halluc.</th>
-          </tr>
-        </thead>
+        <thead><tr>
+          <th>Approach</th><th>P</th><th>R</th><th>F1</th><th>95% CI</th><th>Accuracy</th>
+          <th>Doc type</th><th>Service lines</th><th>Latency p50</th><th>Size</th>
+          <th>Cost/doc</th><th>Offline</th><th>Determ.</th><th>Halluc.</th>
+        </tr></thead>
         <tbody>
-          <tr>
-            <td><strong>Rules / NLP</strong></td>
-            <td>0.857</td><td>0.796</td><td class="win">0.825</td><td class="dim">0.790–0.857</td>
-            <td>0.705</td><td class="win">0.911</td><td class="zero">0.000</td>
-            <td class="win">10 ms</td><td class="win">6.5 MB</td><td class="win">$0</td>
-            <td class="win">yes</td><td class="win">yes</td><td class="win">none</td>
-          </tr>
-          <tr>
-            <td><strong>Small model</strong></td>
-            <td>0.826</td><td>0.743</td><td>0.782</td><td class="dim">0.751–0.814</td>
-            <td>0.647</td><td>0.800</td><td class="zero">0.013</td>
-            <td>51 ms</td><td>525 MB</td><td class="win">$0</td>
-            <td class="win">yes</td><td class="win">yes</td><td class="win">none</td>
-          </tr>
-          <tr>
-            <td><strong>Local LLM 3B</strong></td>
-            <td>0.847</td><td>0.838</td><td>0.842</td><td class="dim">0.814–0.868</td>
-            <td>0.728</td><td>0.833</td><td>0.701</td>
-            <td class="zero">8,385 ms</td><td>1,900 MB</td><td class="win">$0</td>
-            <td class="win">yes</td><td class="zero">no</td><td>0.006</td>
-          </tr>
-          <tr>
-            <td><strong>Frontier LLM</strong></td>
-            <td>0.951</td><td>0.969</td><td class="win">0.960</td><td class="dim">0.942–0.976</td>
-            <td class="win">0.923</td><td class="win">1.000</td><td class="win">0.917</td>
-            <td class="dim">—</td><td class="dim">—</td><td>$0.0067<sup>†</sup></td>
-            <td class="zero">no</td><td class="zero">no</td><td>0.005</td>
-          </tr>
+          <tr><td>Rules / NLP</td><td>0.857</td><td>0.796</td><td class="mark">0.825</td><td class="dim">.790–.857</td>
+            <td>0.705</td><td class="mark">0.911</td><td class="fail">0.000</td><td class="mark">10 ms</td>
+            <td class="mark">6.5 MB</td><td>$0</td><td>yes</td><td>yes</td><td>none</td></tr>
+          <tr><td>Small model</td><td>0.826</td><td>0.743</td><td>0.782</td><td class="dim">.751–.814</td>
+            <td>0.647</td><td>0.800</td><td class="fail">0.013</td><td>51 ms</td>
+            <td>525 MB</td><td>$0</td><td>yes</td><td>yes</td><td>none</td></tr>
+          <tr><td>Local LLM 3B</td><td>0.847</td><td>0.838</td><td>0.842</td><td class="dim">.814–.868</td>
+            <td>0.728</td><td>0.833</td><td>0.701</td><td class="s3">8,385 ms</td>
+            <td class="s2">1,900 MB</td><td>$0</td><td>yes</td><td class="s3">no</td><td>0.006</td></tr>
+          <tr><td>Frontier LLM</td><td>0.951</td><td>0.969</td><td class="mark">0.960</td><td class="dim">.942–.976</td>
+            <td class="mark">0.923</td><td class="mark">1.000</td><td class="mark">0.917</td><td class="dim">—</td>
+            <td class="dim">—</td><td>$0.0067<sup>†</sup></td><td class="s3">no</td><td class="s3">no</td><td>0.005</td></tr>
         </tbody>
-        <caption><sup>†</sup> The only estimated figure on this page — computed from published
-        per-token pricing on measured token counts, never metered. Everything else is measured.
-        Determinism is byte-identical output across 3 runs; see the caveat below.</caption>
+        <caption><sup>†</sup> The only estimated figure on this page. Everything else is measured.
+        Determinism here is byte-identical output across 3 runs on 5 documents; the caveat below
+        matters.</caption>
       </table>
     </div>
 
@@ -504,108 +366,101 @@ footer .col{max-width:var(--measure)}
         <thead><tr><th>Field</th><th>Support</th><th>Rules</th><th>Small model</th><th>Local LLM</th><th>Frontier</th></tr></thead>
         <tbody>
           <tr class="grp"><td colspan="6">Names</td></tr>
-          <tr><td>patient_name</td><td class="dim">90</td><td class="q3">0.738</td><td class="q4">0.938</td><td class="q4">0.927</td><td class="q4">0.944</td></tr>
-          <tr><td>referring_provider_name</td><td class="dim">75</td><td class="q3">0.784</td><td class="q3">0.762</td><td class="q5">0.960</td><td class="q5">1.000</td></tr>
-
+          <tr><td>patient_name</td><td class="dim">90</td><td class="s2">0.738</td><td class="s0">0.938</td><td class="s0">0.927</td><td class="s0">0.944</td></tr>
+          <tr><td>referring_provider_name</td><td class="dim">75</td><td class="s2">0.784</td><td class="s2">0.762</td><td class="s0">0.960</td><td class="s0">1.000</td></tr>
           <tr class="grp"><td colspan="6">Dates</td></tr>
-          <tr><td>patient_dob</td><td class="dim">71</td><td class="q4">0.931</td><td class="q4">0.900</td><td class="q4">0.938</td><td class="q4">0.938</td></tr>
-          <tr><td>date_of_service</td><td class="dim">59</td><td class="q2">0.655</td><td class="q1">0.460</td><td class="q3">0.723</td><td class="q5">1.000</td></tr>
-          <tr><td>document_date</td><td class="dim">86</td><td class="q4">0.920</td><td class="q1">0.372</td><td class="q1">0.324</td><td class="q4">0.908</td></tr>
-
+          <tr><td>patient_dob</td><td class="dim">71</td><td class="s0">0.931</td><td class="s0">0.900</td><td class="s0">0.938</td><td class="s0">0.938</td></tr>
+          <tr><td>date_of_service</td><td class="dim">59</td><td class="s2">0.655</td><td class="s3">0.460</td><td class="s1">0.723</td><td class="s0">1.000</td></tr>
+          <tr><td>document_date</td><td class="dim">86</td><td class="s0">0.920</td><td class="s3">0.372</td><td class="s3">0.324</td><td class="s0">0.908</td></tr>
           <tr class="grp"><td colspan="6">Amounts</td></tr>
-          <tr><td>total_charge</td><td class="dim">45</td><td class="q5">0.978</td><td class="q4">0.907</td><td class="q5">1.000</td><td class="q5">1.000</td></tr>
-          <tr><td>amount_paid</td><td class="dim">15</td><td class="q3">0.800</td><td class="q1">0.348</td><td class="q4">0.867</td><td class="q5">1.000</td></tr>
-          <tr><td>patient_responsibility</td><td class="dim">14</td><td class="q1">0.000</td><td class="q1">0.435</td><td class="q4">0.897</td><td class="q4">0.897</td></tr>
-
+          <tr><td>total_charge</td><td class="dim">45</td><td class="s0">0.978</td><td class="s0">0.907</td><td class="s0">1.000</td><td class="s0">1.000</td></tr>
+          <tr><td>amount_paid</td><td class="dim">15</td><td class="s1">0.800</td><td class="s3">0.348</td><td class="s0">0.867</td><td class="s0">1.000</td></tr>
+          <tr><td>patient_responsibility</td><td class="dim">14</td><td class="fail">0.000</td><td class="s3">0.435</td><td class="s0">0.897</td><td class="s0">0.897</td></tr>
           <tr class="grp"><td colspan="6">Reference numbers</td></tr>
-          <tr><td>member_id</td><td class="dim">75</td><td class="q4">0.947</td><td class="q4">0.857</td><td class="q4">0.890</td><td class="q5">0.960</td></tr>
-          <tr><td>referring_provider_npi</td><td class="dim">58</td><td class="q5">1.000</td><td class="q3">0.808</td><td class="q4">0.948</td><td class="q5">0.983</td></tr>
-          <tr><td>document_reference</td><td class="dim">74</td><td class="q3">0.765</td><td class="q4">0.895</td><td class="q3">0.824</td><td class="q5">0.966</td></tr>
-
+          <tr><td>member_id</td><td class="dim">75</td><td class="s0">0.947</td><td class="s0">0.857</td><td class="s0">0.890</td><td class="s0">0.960</td></tr>
+          <tr><td>referring_provider_npi</td><td class="dim">58</td><td class="s0">1.000</td><td class="s2">0.808</td><td class="s0">0.948</td><td class="s0">0.983</td></tr>
+          <tr><td>document_reference</td><td class="dim">74</td><td class="s2">0.765</td><td class="s0">0.895</td><td class="s1">0.824</td><td class="s0">0.966</td></tr>
           <tr class="grp"><td colspan="6">Organizations</td></tr>
-          <tr><td>servicing_facility</td><td class="dim">74</td><td class="q2">0.657</td><td class="q3">0.703</td><td class="q3">0.828</td><td class="q4">0.886</td></tr>
-          <tr><td>payer_name</td><td class="dim">75</td><td class="q2">0.621</td><td class="q4">0.946</td><td class="q5">0.987</td><td class="q5">1.000</td></tr>
-
+          <tr><td>servicing_facility</td><td class="dim">74</td><td class="s2">0.657</td><td class="s2">0.703</td><td class="s1">0.828</td><td class="s0">0.886</td></tr>
+          <tr><td>payer_name</td><td class="dim">75</td><td class="s2">0.621</td><td class="s0">0.946</td><td class="s0">0.987</td><td class="s0">1.000</td></tr>
           <tr class="grp"><td colspan="6">Codes</td></tr>
-          <tr><td>diagnosis_code</td><td class="dim">53</td><td class="q5">1.000</td><td class="q4">0.893</td><td class="q4">0.927</td><td class="q4">0.946</td></tr>
-          <tr><td>procedure_code</td><td class="dim">59</td><td class="q5">0.992</td><td class="q4">0.879</td><td class="q3">0.797</td><td class="q5">0.992</td></tr>
+          <tr><td>diagnosis_code</td><td class="dim">53</td><td class="s0">1.000</td><td class="s0">0.893</td><td class="s0">0.927</td><td class="s0">0.946</td></tr>
+          <tr><td>procedure_code</td><td class="dim">59</td><td class="s0">0.992</td><td class="s0">0.879</td><td class="s1">0.797</td><td class="s0">0.992</td></tr>
         </tbody>
-        <caption>Per-field F1. Two cells carry most of the argument on this page:
-        rules scoring <span class="zero">0.000</span> on <span class="mono">patient_responsibility</span>
-        — its dictionary genuinely doesn’t know the label variant <span class="mono">PT RESP</span>, which
-        occurs only on held-out templates — and both small models collapsing on
-        <span class="mono">document_date</span>, where the student inherited the teacher’s
-        <span class="mono">Printed:</span> footer bias exactly as predicted.</caption>
+        <caption>Per-field F1. Shading marks weaker cells; an underline marks a failure.
+        Two results carry most of the argument. Rules score <span class="mono">0.000</span> on
+        <span class="mono">patient_responsibility</span> because its dictionary does not contain
+        <span class="mono">PT RESP</span>, a variant that occurs only on held-out templates. And
+        both small models collapse on <span class="mono">document_date</span>, where the student
+        inherited the teacher’s <span class="mono">Printed:</span> bias.</caption>
       </table>
     </div>
 
     <h3 class="col">Relationships: the service-line task</h3>
     <div class="col">
-      <p>Flat fields are only half the brief. Claims and remittance advices carry a <em>table</em> of
-      service lines — repeating rows of <span class="mono">{procedure, date, units, charge,
-      paid}</span> — where getting one right means getting five values right and keeping them on the
-      same row. 30 of the 90 gold documents carry them; 84 rows in total, scored as set-F1 over
-      normalised tuples.</p>
+      <p>Claims and remittance advices carry a table of service lines — repeating rows of
+      <span class="mono">{procedure, date, units, charge, paid}</span>. One correct row means five
+      correct values kept together. 30 of the 90 gold documents carry them, 84 rows in total,
+      scored as set-F1 over normalised tuples.</p>
     </div>
 
     <div class="scroller" style="max-width:var(--measure)">
       <table>
         <thead><tr><th>Approach</th><th>P</th><th>R</th><th>F1</th><th>Rows / 84</th></tr></thead>
         <tbody>
-          <tr><td>Rules / NLP</td><td class="zero">0.000</td><td class="zero">0.000</td><td class="zero">0.000</td><td class="zero">0</td></tr>
-          <tr><td>Small model</td><td>0.015</td><td>0.012</td><td class="zero">0.013</td><td class="zero">1</td></tr>
-          <tr><td>Local LLM 3B</td><td>0.571</td><td class="win">0.905</td><td>0.701</td><td>76</td></tr>
-          <tr><td>Frontier LLM</td><td class="win">0.917</td><td class="win">0.917</td><td class="win">0.917</td><td class="win">77</td></tr>
+          <tr><td>Rules / NLP</td><td>0.000</td><td>0.000</td><td class="fail">0.000</td><td class="fail">0</td></tr>
+          <tr><td>Small model</td><td>0.015</td><td>0.012</td><td class="fail">0.013</td><td class="fail">1</td></tr>
+          <tr><td>Local LLM 3B</td><td>0.571</td><td class="mark">0.905</td><td>0.701</td><td>76</td></tr>
+          <tr><td>Frontier LLM</td><td class="mark">0.917</td><td class="mark">0.917</td><td class="mark">0.917</td><td class="mark">77</td></tr>
         </tbody>
-        <caption>The widest margin anywhere in the project, and a difference in kind rather than
-        degree. Note the local model’s asymmetry — recall 0.905 against precision 0.571: it finds
-        nearly every real row and invents 57 extra ones.</caption>
+        <caption>The widest margin in the project. Note the local model’s asymmetry: recall 0.905
+        against precision 0.571 — it finds nearly every real row and invents 57 extra ones.</caption>
       </table>
     </div>
 
     <div class="note">
-      <span class="lbl">Why rules score exactly zero, and can’t be tuned off it</span>
-      <p>The whole approach keys on finding a label and reading the value beside it. A service-line
-      table has <em>one header for N rows</em>, so there is nothing to match per row and no way to
-      express “these five values belong together” in a dictionary of label variants. The small
-      model fails for a related reason: BIO tagging marks <em>which tokens are a charge</em>, with
-      no representation of <em>which row a charge belongs to</em>. Row grouping needs 2-D layout
-      encoding (LayoutLM and relatives) or a decoder that emits structured output.</p>
+      <span class="lbl">Why rules score exactly zero and cannot be tuned off it</span>
+      <p>The approach finds a label and reads the value beside it. A service-line table has one
+      header for N rows, so there is nothing to match per row and no way to express “these five
+      values belong together” in a dictionary of label variants. The small model fails for a related
+      reason: BIO tagging marks which tokens are a charge, but carries no representation of which
+      row a charge belongs to. Row grouping needs 2-D layout encoding — LayoutLM and relatives — or
+      a decoder that emits structured output directly.</p>
     </div>
 
     <h3 class="col">Sliced by scan condition and language</h3>
-    <div class="scroller" style="max-width:760px">
+    <div class="scroller" style="max-width:780px">
       <table>
         <thead><tr><th>Approach</th><th>Clean</th><th>Scanned</th><th>Drop</th><th>English</th><th>Spanish</th></tr></thead>
         <tbody>
-          <tr><td>Rules / NLP</td><td>0.853</td><td>0.802</td><td class="win">−0.051</td><td>0.823</td><td>0.875</td></tr>
+          <tr><td>Rules / NLP</td><td>0.853</td><td>0.802</td><td class="mark">−0.051</td><td>0.823</td><td>0.875</td></tr>
           <tr><td>Small model</td><td>0.813</td><td>0.755</td><td>−0.058</td><td>0.782</td><td>0.778</td></tr>
-          <tr><td>Local LLM 3B</td><td>0.890</td><td>0.800</td><td class="zero">−0.090</td><td>0.843</td><td>0.825</td></tr>
+          <tr><td>Local LLM 3B</td><td>0.890</td><td>0.800</td><td class="s2">−0.090</td><td>0.843</td><td>0.825</td></tr>
           <tr><td>Frontier LLM</td><td>1.000</td><td>0.924</td><td>−0.076</td><td>0.958</td><td>1.000</td></tr>
         </tbody>
-        <caption>Scanning costs the LLMs <em>more</em> than the rules engine, not less: a regex
-        either matches the damaged string or doesn’t, while a language model reads a corrupted
-        token and confidently produces a plausible wrong value.</caption>
+        <caption>Scanning costs the LLMs more than the rules engine, not less. A regex either
+        matches the damaged string or does not; a language model reads a corrupted token and
+        produces a plausible wrong value.</caption>
       </table>
     </div>
 
     <div class="col">
-      <p><strong>Spanish is not a weak slice, and that’s a finding about the corpus rather than
-      about multilingual extraction.</strong> I built 13% Spanish documents expecting to report a
-      penalty. Rules score <em>higher</em> on Spanish (0.875 vs 0.823). The reason is mundane: the
+      <p><strong>Spanish is not a weak slice.</strong> I built 13% Spanish documents expecting to
+      report a penalty. Rules score higher on Spanish, 0.875 against 0.823. The reason is that the
       fields carrying the signal — NPIs, ICD-10 and CPT codes, dates, amounts — are
-      language-independent, and the Spanish templates are translations with consistent label
-      wording. The honest conclusion is that this corpus doesn’t test multilingual robustness.</p>
+      language-independent, and the Spanish templates use consistent label wording. The conclusion
+      is about the corpus, not about multilingual extraction: this corpus does not test multilingual
+      robustness.</p>
     </div>
 
-    <h3 class="col">Determinism, measured rather than asserted</h3>
+    <h3 class="col">Determinism</h3>
     <div class="note">
-      <span class="lbl">The 1.00 that didn’t survive contact with 90 documents</span>
+      <span class="lbl">The 1.00 that did not survive 90 documents</span>
       <p>All four approaches produce byte-identical output across 3 runs on 5 documents. But three
       full 90-document passes of the local LLM scored <strong>0.835, 0.841 and 0.842</strong>, with
-      hallucination moving between 0.005 and 0.007. The spread — 0.007 — is <em>wider than its
-      entire measured lead over the rules engine</em>. Rules and the tagger are deterministic by
-      construction; the LLM’s 1.00 on five documents means divergence is rare, not absent.</p>
+      hallucination moving between 0.005 and 0.007. That spread of 0.007 is wider than its entire
+      measured lead over the rules engine. Rules and the tagger are deterministic by construction;
+      the LLM’s 1.00 on five documents means divergence is rare, not absent.</p>
     </div>
   </section>
 
@@ -613,123 +468,115 @@ footer .col{max-width:var(--measure)}
   <section id="errors">
     <div class="col">
       <span class="req">Requirement 4 · Error analysis</span>
-      <h2>1,004 coded errors, and the one row that should drive the roadmap</h2>
-      <p class="deck">Every error dumped to CSV and classified by cause, consistently across all
-      four approaches on the same 90 documents.</p>
+      <h2>1,004 coded errors, and the row that should drive the roadmap</h2>
+      <p class="deck">Every error dumped to CSV and classified by cause, using the same rules for
+      all four approaches on the same 90 documents.</p>
     </div>
 
     <div class="scroller">
       <table>
-        <thead><tr><th>Cause</th><th>Rules</th><th>Small model</th><th>Local LLM</th><th>Frontier</th><th>What it means</th></tr></thead>
+        <thead><tr><th>Cause</th><th>Rules</th><th>Small model</th><th>Local LLM</th><th>Frontier</th><th>Meaning</th></tr></thead>
         <tbody>
-          <tr class="same"><td>OCR_CORRUPTION</td><td>51</td><td>51</td><td>51</td><td>51</td><td style="text-align:left">Destroyed before any extractor ran</td></tr>
-          <tr><td>FORMAT_NORMALISATION</td><td>41</td><td>78</td><td>45</td><td>90</td><td style="text-align:left" class="dim">Right value, different surface form</td></tr>
-          <tr><td>MISSED_ENTIRELY</td><td>77</td><td>88</td><td>24</td><td class="win">1</td><td style="text-align:left" class="dim">Returned nothing</td></tr>
-          <tr><td>WRONG_VALUE</td><td>47</td><td>66</td><td>69</td><td class="win">6</td><td style="text-align:left" class="dim">Found something else</td></tr>
-          <tr><td>SPURIOUS_EXTRACTION</td><td>12</td><td>8</td><td>17</td><td>18</td><td style="text-align:left" class="dim">Value where gold had none</td></tr>
-          <tr><td>LABEL_CONFUSION</td><td>16</td><td>18</td><td>21</td><td class="win">0</td><td style="text-align:left" class="dim">Swapped two same-format fields</td></tr>
-          <tr><td>OVER_CAPTURE</td><td>19</td><td>5</td><td>4</td><td>0</td><td style="text-align:left" class="dim">Ran past the value</td></tr>
-          <tr><td>TRUNCATION</td><td>7</td><td>18</td><td>3</td><td>0</td><td style="text-align:left" class="dim">Subword boundary cut</td></tr>
-          <tr><td>HALLUCINATION</td><td class="win">0</td><td class="win">0</td><td>2</td><td>0</td><td style="text-align:left" class="dim">Value absent from source text</td></tr>
-          <tr class="total"><td>Total</td><td>270</td><td>332</td><td>236</td><td>166</td><td style="text-align:left"></td></tr>
+          <tr><td class="mark">OCR_CORRUPTION</td><td class="fail">51</td><td class="fail">51</td><td class="fail">51</td><td class="fail">51</td><td class="l">Destroyed before any extractor ran</td></tr>
+          <tr><td>FORMAT_NORMALISATION</td><td>41</td><td>78</td><td>45</td><td>90</td><td class="l dim">Right value, different surface form</td></tr>
+          <tr><td>MISSED_ENTIRELY</td><td>77</td><td>88</td><td>24</td><td class="mark">1</td><td class="l dim">Returned nothing</td></tr>
+          <tr><td>WRONG_VALUE</td><td>47</td><td>66</td><td>69</td><td class="mark">6</td><td class="l dim">Found something else</td></tr>
+          <tr><td>SPURIOUS_EXTRACTION</td><td>12</td><td>8</td><td>17</td><td>18</td><td class="l dim">Value where gold had none</td></tr>
+          <tr><td>LABEL_CONFUSION</td><td>16</td><td>18</td><td>21</td><td class="mark">0</td><td class="l dim">Swapped two same-format fields</td></tr>
+          <tr><td>OVER_CAPTURE</td><td>19</td><td>5</td><td>4</td><td>0</td><td class="l dim">Ran past the value</td></tr>
+          <tr><td>TRUNCATION</td><td>7</td><td>18</td><td>3</td><td>0</td><td class="l dim">Subword boundary cut</td></tr>
+          <tr><td>HALLUCINATION</td><td class="mark">0</td><td class="mark">0</td><td>2</td><td>0</td><td class="l dim">Value absent from source text</td></tr>
+          <tr class="total"><td>Total</td><td>270</td><td>332</td><td>236</td><td>166</td><td class="l"></td></tr>
         </tbody>
-        <caption>Hallucination is detected automatically: if a returned value doesn’t appear
-        anywhere in the source text, it was invented. The extractive approaches score 0 by
-        construction — that’s an architectural guarantee, not a good result.</caption>
+        <caption>Hallucination is detected, not assumed: if a returned value does not appear
+        anywhere in the source text, it was invented. The two extractive approaches score 0 by
+        construction — an architectural guarantee rather than a good result.</caption>
       </table>
     </div>
 
     <div class="pull"><span class="mono">OCR_CORRUPTION</span> is <strong>51 for all four
-    approaches</strong>. Not similar — identical. That’s 31% of the frontier model’s entire error
-    budget, and it is completely insensitive to model choice. You cannot buy your way out of it
-    with a better model, only with better capture.</div>
+    approaches</strong> — not similar, identical. That is 31% of the frontier model’s entire error
+    budget, and it does not move with model choice.</div>
 
-    <h3 class="col">Twenty-two representative errors, with the fix each one implies</h3>
+    <h3 class="col">Twenty-two errors and the fix each implies</h3>
     <div class="scroller">
       <table>
         <thead><tr><th>Approach</th><th>Field</th><th>Gold</th><th>Predicted</th><th>Cause</th><th>Fix</th></tr></thead>
         <tbody>
-          <tr><td>rules</td><td>patient_name</td><td>William Davis</td><td class="dim">—</td><td style="text-align:left">prose has no anchor</td><td style="text-align:left">NER fallback for unanchored layouts</td></tr>
-          <tr><td>rules</td><td>member_id</td><td>NST595159366</td><td>NST595159366.</td><td style="text-align:left">sentence period captured</td><td style="text-align:left">strip trailing punctuation on ID types</td></tr>
-          <tr><td>rules</td><td>document_reference</td><td>AUTH-0274973</td><td>AUTH-0274973 was</td><td style="text-align:left">regex ran past the value</td><td style="text-align:left">anchor to token boundary</td></tr>
-          <tr><td>rules</td><td>date_of_service</td><td>January 29, 2026</td><td>March 14, 2026</td><td style="text-align:left">took the issue date</td><td style="text-align:left">require label proximity, not first-date</td></tr>
-          <tr><td>rules</td><td>patient_responsibility</td><td>$79.25</td><td>2</td><td style="text-align:left">grabbed the units column</td><td style="text-align:left">type-check amount candidates</td></tr>
-          <tr><td>rules</td><td>patient_name</td><td>Steven Martin</td><td>INTAKE FORM</td><td style="text-align:left">matched the title</td><td style="text-align:left">exclude all-caps header lines</td></tr>
-          <tr><td>rules</td><td>document_reference</td><td>CLM-446057</td><td>CLM-446057 was</td><td style="text-align:left">over-capture on prose</td><td style="text-align:left">as above</td></tr>
-          <tr><td>rules</td><td>member_id</td><td>ZEJ072362291</td><td>ZEJ072362291.</td><td style="text-align:left">as above</td><td style="text-align:left">as above</td></tr>
-          <tr><td>small</td><td>servicing_facility</td><td>Riverbend Cardiology Institute</td><td>Riverben</td><td style="text-align:left">subword boundary</td><td style="text-align:left">whole-word span merge</td></tr>
-          <tr><td>small</td><td>procedure_code</td><td>84443</td><td>84</td><td style="text-align:left">subword boundary</td><td style="text-align:left">as above</td></tr>
-          <tr><td>small</td><td>patient_dob</td><td>6/10/52</td><td>/10</td><td style="text-align:left">subword boundary</td><td style="text-align:left">as above</td></tr>
-          <tr><td>small</td><td>date_of_service</td><td>03.12.2025</td><td>04.03.2025</td><td style="text-align:left">same-format date confusion</td><td style="text-align:left">label-proximity feature</td></tr>
-          <tr><td>small</td><td>member_id</td><td>YCF591565308</td><td>7770346428</td><td style="text-align:left">returned the NPI instead</td><td style="text-align:left">checksum-reject NPIs for ID fields</td></tr>
-          <tr><td>small</td><td>document_reference</td><td>LAB6478780</td><td class="dim">—</td><td style="text-align:left">scanned layout, tag never fired</td><td style="text-align:left">more scanned examples in silver</td></tr>
-          <tr><td>small</td><td>payer_name</td><td>Ambetter Health</td><td>Ambetter&nbsp;&nbsp;Health</td><td style="text-align:left">doubled space kept from OCR</td><td style="text-align:left">collapse whitespace before comparison</td></tr>
-          <tr><td>small</td><td>document_date</td><td>05/29/2025</td><td>05/03/2025</td><td style="text-align:left">inherited teacher bias</td><td style="text-align:left">fix the teacher prompt, retrain</td></tr>
-          <tr><td>local LLM</td><td>document_date</td><td>5/9/25</td><td>5/12/25</td><td style="text-align:left"><span class="mono">Printed:</span> footer bias</td><td style="text-align:left">one line in the prompt</td></tr>
-          <tr><td>local LLM</td><td>date_of_service</td><td>03.12.2025</td><td>04.03.2025</td><td style="text-align:left">swapped the two dates</td><td style="text-align:left">name both fields with their anchors</td></tr>
-          <tr><td>local LLM</td><td>procedure_code</td><td>99213</td><td>84443, 73130, 80053</td><td style="text-align:left">invented a list — 1 of 2 hallucinations</td><td style="text-align:left">constrain to one value; verify against source</td></tr>
-          <tr><td>local LLM</td><td>procedure_code</td><td>70450</td><td>70553, 70450, 99214</td><td style="text-align:left">right answer buried in invented siblings</td><td style="text-align:left">as above</td></tr>
-          <tr><td>frontier</td><td>diagnosis_code</td><td>E03.9</td><td>E03.9.</td><td style="text-align:left">trailing sentence period</td><td style="text-align:left">strip terminal punctuation on codes</td></tr>
-          <tr><td>frontier</td><td>document_date</td><td>28-Aug-2025</td><td>2k-Aug-2025</td><td style="text-align:left">read the damaged glyph faithfully</td><td style="text-align:left">nothing at model level — capture problem</td></tr>
-          <tr class="same"><td>all four</td><td>member_id</td><td>YCF591565308</td><td>Y.CF59 1565308</td><td style="text-align:left">OCR damage</td><td style="text-align:left">better capture — no model fix exists</td></tr>
+          <tr><td>rules</td><td>patient_name</td><td>William Davis</td><td class="dim">—</td><td class="l">prose has no anchor</td><td class="l">NER fallback for unanchored layouts</td></tr>
+          <tr><td>rules</td><td>member_id</td><td>NST595159366</td><td>NST595159366.</td><td class="l">sentence period captured</td><td class="l">strip trailing punctuation on ID types</td></tr>
+          <tr><td>rules</td><td>document_reference</td><td>AUTH-0274973</td><td>AUTH-0274973 was</td><td class="l">ran past the value</td><td class="l">anchor to token boundary</td></tr>
+          <tr><td>rules</td><td>date_of_service</td><td>January 29, 2026</td><td>March 14, 2026</td><td class="l">took the issue date</td><td class="l">require label proximity, not first-date</td></tr>
+          <tr><td>rules</td><td>patient_responsibility</td><td>$79.25</td><td>2</td><td class="l">grabbed the units column</td><td class="l">type-check amount candidates</td></tr>
+          <tr><td>rules</td><td>patient_name</td><td>Steven Martin</td><td>INTAKE FORM</td><td class="l">matched the title</td><td class="l">exclude all-caps header lines</td></tr>
+          <tr><td>rules</td><td>document_reference</td><td>CLM-446057</td><td>CLM-446057 was</td><td class="l">over-capture on prose</td><td class="l">as above</td></tr>
+          <tr><td>rules</td><td>member_id</td><td>ZEJ072362291</td><td>ZEJ072362291.</td><td class="l">as above</td><td class="l">as above</td></tr>
+          <tr><td>small</td><td>servicing_facility</td><td>Riverbend Cardiology Institute</td><td>Riverben</td><td class="l">subword boundary</td><td class="l">whole-word span merge</td></tr>
+          <tr><td>small</td><td>procedure_code</td><td>84443</td><td>84</td><td class="l">subword boundary</td><td class="l">as above</td></tr>
+          <tr><td>small</td><td>patient_dob</td><td>6/10/52</td><td>/10</td><td class="l">subword boundary</td><td class="l">as above</td></tr>
+          <tr><td>small</td><td>date_of_service</td><td>03.12.2025</td><td>04.03.2025</td><td class="l">same-format date confusion</td><td class="l">label-proximity feature</td></tr>
+          <tr><td>small</td><td>member_id</td><td>YCF591565308</td><td>7770346428</td><td class="l">returned the NPI instead</td><td class="l">checksum-reject NPIs for ID fields</td></tr>
+          <tr><td>small</td><td>document_reference</td><td>LAB6478780</td><td class="dim">—</td><td class="l">scanned layout, tag never fired</td><td class="l">more scanned examples in silver</td></tr>
+          <tr><td>small</td><td>payer_name</td><td>Ambetter Health</td><td>Ambetter&nbsp;&nbsp;Health</td><td class="l">doubled space kept from OCR</td><td class="l">collapse whitespace before comparison</td></tr>
+          <tr><td>small</td><td>document_date</td><td>05/29/2025</td><td>05/03/2025</td><td class="l">inherited teacher bias</td><td class="l">fix the teacher prompt, retrain</td></tr>
+          <tr><td>local LLM</td><td>document_date</td><td>5/9/25</td><td>5/12/25</td><td class="l"><span class="mono">Printed:</span> footer bias</td><td class="l">one line in the prompt</td></tr>
+          <tr><td>local LLM</td><td>date_of_service</td><td>03.12.2025</td><td>04.03.2025</td><td class="l">swapped the two dates</td><td class="l">name both fields with their anchors</td></tr>
+          <tr><td>local LLM</td><td>procedure_code</td><td>99213</td><td>84443, 73130, 80053</td><td class="l">invented a list — 1 of 2 hallucinations</td><td class="l">constrain to one value; verify against source</td></tr>
+          <tr><td>local LLM</td><td>procedure_code</td><td>70450</td><td>70553, 70450, 99214</td><td class="l">right answer among invented siblings</td><td class="l">as above</td></tr>
+          <tr><td>frontier</td><td>diagnosis_code</td><td>E03.9</td><td>E03.9.</td><td class="l">trailing sentence period</td><td class="l">strip terminal punctuation on codes</td></tr>
+          <tr><td>frontier</td><td>document_date</td><td>28-Aug-2025</td><td>2k-Aug-2025</td><td class="l">read the damaged glyph faithfully</td><td class="l">none at model level — capture problem</td></tr>
+          <tr><td class="mark">all four</td><td>member_id</td><td>YCF591565308</td><td>Y.CF59 1565308</td><td class="l">OCR damage</td><td class="l">better capture — no model fix exists</td></tr>
         </tbody>
-        <caption>That last row is the argument in one line: every approach returns the same
-        corrupted string, because that is genuinely what the document says after scanning.</caption>
+        <caption>The last row is the argument in one line: all four approaches return the same
+        corrupted string, because that is what the document says after scanning.</caption>
       </table>
     </div>
 
-    <h3 class="col">How much silver data does the small model actually need?</h3>
-    <div class="chart">
+    <h3 class="col">How much silver data the small model needs</h3>
+    <figure class="figscroll">
       <svg viewBox="0 0 640 300" role="img" aria-label="Learning curve: F1 rises from 0.184 at 100 silver documents to 0.782 at 1000, never reaching the rules baseline of 0.825">
-        <line x1="60" y1="40"  x2="600" y2="40"  stroke="var(--rule-soft)" stroke-width="1"/>
-        <line x1="60" y1="92.5" x2="600" y2="92.5" stroke="var(--rule-soft)" stroke-width="1"/>
-        <line x1="60" y1="145" x2="600" y2="145" stroke="var(--rule-soft)" stroke-width="1"/>
-        <line x1="60" y1="197.5" x2="600" y2="197.5" stroke="var(--rule-soft)" stroke-width="1"/>
-        <text class="ax" x="52" y="44"  text-anchor="end">1.00</text>
-        <text class="ax" x="52" y="96.5" text-anchor="end">0.75</text>
-        <text class="ax" x="52" y="149" text-anchor="end">0.50</text>
+        <line x1="60" y1="40"    x2="600" y2="40"    stroke="#E8E8E8" stroke-width="1"/>
+        <line x1="60" y1="92.5"  x2="600" y2="92.5"  stroke="#E8E8E8" stroke-width="1"/>
+        <line x1="60" y1="145"   x2="600" y2="145"   stroke="#E8E8E8" stroke-width="1"/>
+        <line x1="60" y1="197.5" x2="600" y2="197.5" stroke="#E8E8E8" stroke-width="1"/>
+        <text class="ax" x="52" y="44"    text-anchor="end">1.00</text>
+        <text class="ax" x="52" y="96.5"  text-anchor="end">0.75</text>
+        <text class="ax" x="52" y="149"   text-anchor="end">0.50</text>
         <text class="ax" x="52" y="201.5" text-anchor="end">0.25</text>
-        <text class="ax" x="52" y="254" text-anchor="end">0.00</text>
+        <text class="ax" x="52" y="254"   text-anchor="end">0.00</text>
 
-        <line x1="60" y1="76.75" x2="600" y2="76.75" stroke="var(--flag)" stroke-width="1.5" stroke-dasharray="5 4"/>
-        <text class="pt-lab" x="600" y="70" text-anchor="end" fill="var(--flag)">rules baseline 0.825</text>
+        <line x1="60" y1="76.75" x2="600" y2="76.75" stroke="#000000" stroke-width="1" stroke-dasharray="6 4"/>
+        <text class="ptl" x="598" y="70" text-anchor="end">rules baseline 0.825</text>
 
-        <line x1="60" y1="250" x2="600" y2="250" stroke="var(--rule)" stroke-width="1.5"/>
-        <line x1="60" y1="40"  x2="60"  y2="250" stroke="var(--rule)" stroke-width="1.5"/>
+        <line x1="60" y1="250" x2="600" y2="250" stroke="#000000" stroke-width="1"/>
+        <line x1="60" y1="40"  x2="60"  y2="250" stroke="#000000" stroke-width="1"/>
 
-        <polyline points="114,211.4 222,119.2 384,98.6 600,85.8"
-                  fill="none" stroke="var(--accent)" stroke-width="2.5"
-                  stroke-linejoin="round" stroke-linecap="round"/>
-        <circle cx="114" cy="211.4" r="4.5" fill="var(--accent)"/>
-        <circle cx="222" cy="119.2" r="4.5" fill="var(--accent)"/>
-        <circle cx="384" cy="98.6"  r="4.5" fill="var(--accent)"/>
-        <circle cx="600" cy="85.8"  r="6"   fill="var(--accent)"/>
+        <polyline points="114,211.4 222,119.2 384,98.6 600,85.8" fill="none"
+                  stroke="#000000" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+        <circle cx="114" cy="211.4" r="4" fill="#000000"/>
+        <circle cx="222" cy="119.2" r="4" fill="#000000"/>
+        <circle cx="384" cy="98.6"  r="4" fill="#000000"/>
+        <circle cx="600" cy="85.8"  r="6" fill="#000000"/>
 
-        <text class="pt-lab" x="114" y="230" text-anchor="middle">0.184</text>
-        <text class="pt-lab" x="222" y="110" text-anchor="middle">0.623</text>
-        <text class="pt-lab" x="384" y="89"  text-anchor="middle">0.721</text>
-        <text class="pt-lab" x="588" y="104" text-anchor="end">0.782</text>
+        <text class="ptl" x="114" y="231" text-anchor="middle">0.184</text>
+        <text class="ptl" x="222" y="110" text-anchor="middle">0.623</text>
+        <text class="ptl" x="384" y="89"  text-anchor="middle">0.721</text>
+        <text class="ptl" x="586" y="105" text-anchor="end">0.782</text>
 
-        <text class="ax" x="114" y="266" text-anchor="middle">100</text>
-        <text class="ax" x="222" y="266" text-anchor="middle">300</text>
-        <text class="ax" x="384" y="266" text-anchor="middle">600</text>
-        <text class="ax" x="600" y="266" text-anchor="middle">1000</text>
-        <text class="axl" x="330" y="288" text-anchor="middle">SILVER TRAINING DOCUMENTS</text>
+        <text class="ax" x="114" y="267" text-anchor="middle">100</text>
+        <text class="ax" x="222" y="267" text-anchor="middle">300</text>
+        <text class="ax" x="384" y="267" text-anchor="middle">600</text>
+        <text class="ax" x="600" y="267" text-anchor="middle">1000</text>
+        <text class="axl" x="330" y="290" text-anchor="middle">SILVER TRAINING DOCUMENTS</text>
       </svg>
-    </div>
-
-    <div class="col">
-      <p><strong>100 documents is unusable</strong> — not enough signal to learn 31 BIO tags.
-      <strong>300 is the elbow</strong>, giving 80% of the final F1 for 30% of the labelling. And it
-      is <strong>still climbing at 1,000</strong> (+0.061 on the last step), so the small model is
-      data-limited rather than architecture-limited — but the teacher is only 86.0% accurate, so
-      the curve will flatten near that ceiling regardless of volume. Past this point the
-      higher-leverage move is a better teacher, not more documents from the same one.</p>
-
-      <p>1,000 is the whole silver set, so the last point <em>is</em> the shipped model — which is
-      why it reproduces 0.782 exactly rather than merely approaching it. The dashed line is the
-      rules engine, which the small model never reaches.</p>
-    </div>
+      <figcaption>100 documents is unusable — not enough signal for 31 BIO tags. 300 is the elbow,
+      giving 80% of the final F1 for 30% of the labelling. It is still climbing at 1,000, gaining
+      0.061 on the last step, so the small model is data-limited rather than architecture-limited.
+      But the teacher is only 86.0% accurate, so the curve flattens near that ceiling regardless of
+      volume. 1,000 is the whole silver set, so the last point is the shipped model — which is why
+      it reproduces 0.782 exactly. The dashed line is the rules engine, which it never
+      reaches.</figcaption>
+    </figure>
   </section>
 
   <!-- ================= 5. ANSWER ================= -->
@@ -737,85 +584,113 @@ footer .col{max-width:var(--measure)}
     <div class="col">
       <span class="req">Requirement 5 · The engineering question</span>
       <h2>The smallest adequate system, and where an LLM still earns its cost</h2>
-
       <div class="pull">Rules are the cheapest adequate system <strong>for flat field
       extraction</strong> — 86% of frontier F1 at 6 MB and 11 ms. For structured repeating content
-      they don’t compete, and no amount of rule-writing changes that.</div>
-
-      <p>The comparison that should actually decide the architecture is rules against the local 3B,
-      because that’s the choice a team without an API budget really faces:</p>
+      they do not compete, and no amount of rule-writing changes that.</div>
+      <p>The comparison that should decide the architecture is rules against the local 3B, because
+      that is the choice a team without an API budget actually faces.</p>
     </div>
 
-    <div class="scroller" style="max-width:720px">
+    <div class="scroller" style="max-width:740px">
       <table>
         <thead><tr><th></th><th>Rules</th><th>Local LLM 3B</th><th></th></tr></thead>
         <tbody>
-          <tr><td>F1</td><td>0.825</td><td class="win">0.842</td><td style="text-align:left" class="dim">LLM ahead by +0.017</td></tr>
-          <tr><td>Latency</td><td class="win">11 ms</td><td class="zero">8,385 ms</td><td style="text-align:left" class="dim">762× slower</td></tr>
-          <tr><td>Size</td><td class="win">6 MB</td><td>1,900 MB</td><td style="text-align:left" class="dim">317× larger</td></tr>
-          <tr><td>Deterministic</td><td class="win">yes</td><td class="zero">no</td><td style="text-align:left" class="dim">score moves ±0.007 between runs</td></tr>
-          <tr><td>Can hallucinate</td><td class="win">no</td><td>yes (0.006)</td><td style="text-align:left" class="dim">structural, not tuned</td></tr>
-          <tr><td>Service lines</td><td class="zero">0.000</td><td class="win">0.701</td><td style="text-align:left" class="dim">the one place it wins outright</td></tr>
+          <tr><td>F1</td><td>0.825</td><td class="mark">0.842</td><td class="l dim">LLM ahead by 0.017</td></tr>
+          <tr><td>Latency</td><td class="mark">11 ms</td><td class="s3">8,385 ms</td><td class="l dim">762× slower</td></tr>
+          <tr><td>Size</td><td class="mark">6 MB</td><td class="s2">1,900 MB</td><td class="l dim">317× larger</td></tr>
+          <tr><td>Deterministic</td><td class="mark">yes</td><td class="s3">no</td><td class="l dim">score moves ±0.007 between runs</td></tr>
+          <tr><td>Can hallucinate</td><td class="mark">no</td><td>yes (0.006)</td><td class="l dim">structural, not tuned</td></tr>
+          <tr><td>Service lines</td><td class="fail">0.000</td><td class="mark">0.701</td><td class="l dim">where it wins outright</td></tr>
         </tbody>
       </table>
     </div>
 
     <div class="col">
-      <p>That +0.017 sits inside the bootstrap confidence intervals, so on this corpus the two are
-      statistically indistinguishable on flat fields. And the margin is unstable in two separate
-      ways: it moved during the project — before gold verification rules were <em>ahead</em> by
-      0.002 — and it moves between runs, since three passes of the local LLM scored 0.835, 0.841 and
-      0.842. When two systems trade places depending on how you adjudicate 21 of 923 fields, and one
-      of them won’t return the same score twice, the accuracy difference isn’t what should decide
-      the architecture. The latency gap, the determinism and the inability to hallucinate are not
-      close, and they don’t move.</p>
+      <p>That 0.017 sits inside the bootstrap confidence intervals, so on flat fields the two are
+      statistically indistinguishable. The margin is also unstable in two ways. It moved during the
+      project: before gold verification, rules were ahead by 0.002. And it moves between runs: three
+      passes of the local LLM scored 0.835, 0.841 and 0.842. When two systems trade places depending
+      on how 21 of 923 fields are adjudicated, and one of them will not return the same score twice,
+      accuracy is not the dimension that should decide the architecture. The latency gap, the
+      determinism and the inability to hallucinate are not close, and they do not move.</p>
 
-      <h3>Where a general LLM genuinely earns its cost</h3>
+      <h3>Where a general LLM earns its cost</h3>
       <ul class="plain">
-        <li><strong>Structured repeating content.</strong> Service lines: 0.000 → 0.917. The only
-        task here where the non-LLM approaches don’t merely score lower, they don’t work at all.</li>
+        <li><strong>Structured repeating content.</strong> Service lines: 0.000 against 0.917. The
+        only task here where the non-LLM approaches do not merely score lower — they do not work.</li>
         <li><strong>Roles for values that look identical.</strong> The small model returns
         <span class="mono">document_date</span>’s value for <span class="mono">date_of_service</span>
-        in 11 of 60 cases; the LLM scores 0.723 against the tagger’s 0.460.</li>
+        in 11 of 60 cases. The LLM scores 0.723 against the tagger’s 0.460.</li>
         <li><strong>Documents with no anchors.</strong> 73 of the rules engine’s 77 misses are on
-        prose layouts, where the value sits inside a sentence with no <span class="mono">Label:</span>
-        to key on. Rules don’t degrade there — they fail outright.</li>
-        <li><strong>Layouts and wording nobody anticipated.</strong> The dictionary genuinely
-        doesn’t know five label variants that occur only on held-out templates. A dictionary knows
-        what it was told; an LLM doesn’t need telling.</li>
+        prose layouts, where the value sits inside a sentence with no
+        <span class="mono">Label:</span> to key on.</li>
+        <li><strong>Unanticipated layouts and wording.</strong> The dictionary does not know five
+        label variants that occur only on held-out templates.</li>
+        <li><strong>Knowing when to return nothing.</strong> Given a document from outside the
+        domain, the rules engine returned <span class="mono">amount_paid = 4</span> and
+        <span class="mono">total_charge = 20</span> — section numbers read as currency — while the
+        LLM returned nothing for all 15 fields.</li>
       </ul>
 
-      <h3>What I’d actually build</h3>
+      <h3>What I would build</h3>
     </div>
 
-    <div class="pipe">
-      <div class="stage"><div class="n">INPUT</div><div class="t">Document</div><div class="d">Fax, scan or digital PDF</div></div>
-      <div class="stage"><div class="n">ROUTE A · ~85%</div><div class="t">Rules engine</div><div class="d">Confident flat fields — 11 ms, $0, auditable by re-running</div></div>
-      <div class="stage"><div class="n">ROUTE B · ~15%</div><div class="t">Frontier LLM</div><div class="d">Tables, prose layouts, unfamiliar labels, low confidence</div></div>
-      <div class="stage"><div class="n">OUTPUT</div><div class="t">Structured JSON</div><div class="d">~$10 per 10,000 documents instead of $67</div></div>
-    </div>
+    <figure class="figscroll">
+      <svg viewBox="0 0 640 172" role="img" aria-label="Routing design: documents go to the rules engine; confident results are accepted, the rest escalate to a frontier LLM">
+        <rect x="8" y="60" width="112" height="46" fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+        <text class="dgt" x="64" y="80" text-anchor="middle">Document</text>
+        <text class="dgs" x="64" y="95" text-anchor="middle">fax / scan / PDF</text>
+        <line x1="120" y1="83" x2="168" y2="83" stroke="#000000" stroke-width="1"/>
+        <polygon points="168,83 160,79 160,87" fill="#000000"/>
+        <rect x="170" y="60" width="112" height="46" fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+        <text class="dgt" x="226" y="80" text-anchor="middle">Rules engine</text>
+        <text class="dgs" x="226" y="95" text-anchor="middle">11 ms · $0</text>
+        <path d="M282 74 L316 74 L316 34 L352 34" fill="none" stroke="#000000" stroke-width="1"/>
+        <polygon points="352,34 344,30 344,38" fill="#000000"/>
+        <text class="dgs" x="316" y="24" text-anchor="middle">confident · ~85%</text>
+        <path d="M282 92 L316 92 L316 138 L352 138" fill="none" stroke="#000000" stroke-width="1" stroke-dasharray="5 3"/>
+        <polygon points="352,138 344,134 344,142" fill="#000000"/>
+        <text class="dgs" x="316" y="158" text-anchor="middle">not confident · ~15%</text>
+        <rect x="354" y="12" width="122" height="44" fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+        <text class="dgt" x="415" y="31" text-anchor="middle">Accept</text>
+        <text class="dgs" x="415" y="46" text-anchor="middle">deterministic</text>
+        <rect x="354" y="116" width="122" height="44" fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+        <text class="dgt" x="415" y="135" text-anchor="middle">Frontier LLM</text>
+        <text class="dgs" x="415" y="150" text-anchor="middle">$0.0067 / doc</text>
+        <path d="M476 34 L512 34 L512 83 L546 83" fill="none" stroke="#000000" stroke-width="1"/>
+        <path d="M476 138 L512 138 L512 83" fill="none" stroke="#000000" stroke-width="1"/>
+        <polygon points="546,83 538,79 538,87" fill="#000000"/>
+        <rect x="548" y="60" width="84" height="46" fill="#FFFFFF" stroke="#000000" stroke-width="2"/>
+        <text class="dgt" x="590" y="80" text-anchor="middle">Structured</text>
+        <text class="dgs" x="590" y="95" text-anchor="middle">JSON</text>
+      </svg>
+      <figcaption>Route on the conditions the measurements identify: prose layout, unfamiliar label
+      vocabulary, low field confidence, or a same-format field pair in play. On this corpus that
+      escalation costs roughly $10 per 10,000 documents rather than $67, while recovering most of
+      the 0.135 F1 gap.</figcaption>
+    </figure>
 
     <div class="note">
-      <span class="lbl">The caveat that makes this design honest</span>
-      <p>The confidence scores aren’t calibrated. I ran a real blank CMS-1500 from cms.gov through
-      the rules engine and got <span class="mono">patient_name = "Self Spouse Child Other"</span> at
-      confidence 0.90–1.05. Those numbers reflect <em>which rule fired</em>, not whether the answer
-      is right. Routing needs abstention first: require a label anchor within a bounded distance,
-      type-validate the value, and reject fields whose document-type prior doesn’t match.</p>
+      <span class="lbl">The caveat this design depends on</span>
+      <p>The confidence scores are not calibrated. A real blank CMS-1500 from cms.gov produced
+      <span class="mono">patient_name = "Self Spouse Child Other"</span> at confidence 0.90–1.05.
+      Those numbers reflect which rule fired, not whether the answer is right. Routing needs
+      abstention first: require a label anchor within a bounded distance, type-validate the value,
+      and reject fields whose document-type prior does not match.</p>
     </div>
 
     <div class="col">
-      <h3>What I’d do next, in order</h3>
+      <h3>What I would do next, in order</h3>
       <ul class="plain">
-        <li><strong>Fix the two rare fields.</strong> ~160 training spans each and −0.490 mean F1
-        against the teacher — class-balanced sampling, not a bigger model.</li>
+        <li><strong>Fix the two rare fields.</strong> About 160 training spans each, −0.490 mean F1
+        against the teacher. Class-balanced sampling, not a bigger model.</li>
         <li><strong>Improve capture before improving models.</strong> The 85.3% OCR ceiling caps
-        everything, and better scanning helps all four approaches at once.</li>
-        <li><strong>Add abstention and calibrate confidence.</strong> The routing design above
-        doesn’t work without it.</li>
+        everything and better scanning helps all four approaches at once.</li>
+        <li><strong>Add abstention and calibrate confidence.</strong> The routing design does not
+        work without it.</li>
         <li><strong>Fix the teacher’s <span class="mono">Printed:</span> bias</strong> with one
-        prompt instruction — the student inherits the improvement.</li>
-        <li><strong>Then</strong> revisit the small model, which the curve says is still
+        prompt instruction; the student inherits the improvement.</li>
+        <li><strong>Then revisit the small model</strong>, which the curve says is still
         data-limited.</li>
       </ul>
     </div>
@@ -828,76 +703,154 @@ footer .col{max-width:var(--measure)}
       <h2>One document, four approaches, one schema</h2>
     </div>
 
-    <div class="pipe">
-      <div class="stage"><div class="n">01</div><div class="t">Document</div><div class="d">PDF via CLI or multipart POST</div></div>
-      <div class="stage"><div class="n">02</div><div class="t">OCR / text</div><div class="d">Digital text layer, or rasterise → degrade → RapidOCR. Word boxes, line clustering, column gaps preserved</div></div>
-      <div class="stage"><div class="n">03</div><div class="t">Four extractors</div><div class="d">One interface: <span class="mono">extract(OcrDocument)</span></div></div>
-      <div class="stage"><div class="n">04</div><div class="t">Structured output</div><div class="d">Shared pydantic schema + shared normalisers</div></div>
-    </div>
+    <figure id="arch" class="figscroll">
+      <svg viewBox="0 0 900 470" role="img" aria-label="Architecture: a PDF is read by the OCR layer, fanned out to four extraction approaches, merged through shared normalisers and emitted as a structured result; a separate training path produces the small model from LLM silver labels">
+        <rect x="330" y="14" width="240" height="44" fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+        <text class="dgt" x="450" y="34" text-anchor="middle">Document (PDF)</text>
+        <text class="dgs" x="450" y="49" text-anchor="middle">CLI · HTTP API</text>
+        <line x1="450" y1="58" x2="450" y2="86" stroke="#000000" stroke-width="1"/>
+        <polygon points="450,86 446,78 454,78" fill="#000000"/>
 
-    <div class="col">
-      <p>Both entry points return the same JSON. <code>GET /health</code> reports which approaches
-      loaded; one that fails to load disables itself rather than taking the service down.</p>
-    </div>
+        <rect x="300" y="88" width="300" height="52" fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+        <text class="dgt" x="450" y="108" text-anchor="middle">ocr.py</text>
+        <text class="dgs" x="450" y="123" text-anchor="middle">text + word boxes · line clustering</text>
+        <text class="dgs" x="450" y="135" text-anchor="middle">column gaps preserved</text>
+
+        <path d="M450 140 L450 162 M135 162 L765 162 M135 162 L135 186 M345 162 L345 186 M555 162 L555 186 M765 162 L765 186"
+              fill="none" stroke="#000000" stroke-width="1"/>
+        <polygon points="135,186 131,178 139,178" fill="#000000"/>
+        <polygon points="345,186 341,178 349,178" fill="#000000"/>
+        <polygon points="555,186 551,178 559,178" fill="#000000"/>
+        <polygon points="765,186 761,178 769,178" fill="#000000"/>
+
+        <rect x="40" y="188" width="190" height="74" fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+        <text class="dgt" x="135" y="208" text-anchor="middle">Rules / NLP</text>
+        <text class="dgs" x="135" y="224" text-anchor="middle">label anchors + spatial</text>
+        <text class="dgs" x="135" y="238" text-anchor="middle">regex · checksums · spaCy</text>
+        <text class="dgs" x="135" y="252" text-anchor="middle">6 MB · 11 ms</text>
+
+        <rect x="250" y="188" width="190" height="74" fill="#FFFFFF" stroke="#000000" stroke-width="2"/>
+        <text class="dgt" x="345" y="208" text-anchor="middle">Small model</text>
+        <text class="dgs" x="345" y="224" text-anchor="middle">DistilBERT-cased 66M</text>
+        <text class="dgs" x="345" y="238" text-anchor="middle">31 BIO tags · extractive</text>
+        <text class="dgs" x="345" y="252" text-anchor="middle">525 MB · 51 ms</text>
+
+        <rect x="460" y="188" width="190" height="74" fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+        <text class="dgt" x="555" y="208" text-anchor="middle">Local LLM</text>
+        <text class="dgs" x="555" y="224" text-anchor="middle">Qwen2.5-3B via Ollama</text>
+        <text class="dgs" x="555" y="238" text-anchor="middle">schema-constrained JSON</text>
+        <text class="dgs" x="555" y="252" text-anchor="middle">1.9 GB · 8.4 s</text>
+
+        <rect x="670" y="188" width="190" height="74" fill="#FFFFFF" stroke="#000000" stroke-width="1" stroke-dasharray="4 3"/>
+        <text class="dgt" x="765" y="208" text-anchor="middle">Frontier LLM</text>
+        <text class="dgs" x="765" y="224" text-anchor="middle">cached reference tier</text>
+        <text class="dgs" x="765" y="238" text-anchor="middle">cost estimated, not metered</text>
+        <text class="dgs" x="765" y="252" text-anchor="middle">not offline</text>
+
+        <path d="M135 262 L135 286 M345 262 L345 286 M555 262 L555 286 M765 262 L765 286 M135 286 L765 286 M450 286 L450 308"
+              fill="none" stroke="#000000" stroke-width="1"/>
+        <polygon points="450,308 446,300 454,300" fill="#000000"/>
+
+        <rect x="250" y="310" width="400" height="50" fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+        <text class="dgt" x="450" y="330" text-anchor="middle">normalize.py</text>
+        <text class="dgs" x="450" y="346" text-anchor="middle">dates · amounts · orgs · codes — shared by the approaches AND the scorer</text>
+
+        <line x1="450" y1="360" x2="450" y2="386" stroke="#000000" stroke-width="1"/>
+        <polygon points="450,386 446,378 454,378" fill="#000000"/>
+        <rect x="330" y="388" width="240" height="46" fill="#FFFFFF" stroke="#000000" stroke-width="2"/>
+        <text class="dgt" x="450" y="408" text-anchor="middle">ExtractionResult</text>
+        <text class="dgs" x="450" y="423" text-anchor="middle">15 fields · doc type · service lines</text>
+
+        <text class="axl" x="20" y="318">TRAINING PATH</text>
+        <line x1="20" y1="330" x2="215" y2="330" stroke="#C9C9C9" stroke-width="1"/>
+        <text class="dgs" x="20" y="348">train docs (templates 1–10)</text>
+        <text class="dgs" x="20" y="363">→ local LLM silver labels</text>
+        <text class="dgs" x="20" y="378">→ align.py: value → char span</text>
+        <text class="dgs" x="20" y="393">→ BIO tags → small model</text>
+        <path d="M120 400 L120 414 L232 414 L232 268" fill="none" stroke="#000000" stroke-width="1" stroke-dasharray="5 4"/>
+        <polygon points="232,264 228,272 236,272" fill="#000000"/>
+
+        <text class="axl" x="672" y="318">GOLD, NEVER TRAINED ON</text>
+        <line x1="672" y1="330" x2="880" y2="330" stroke="#C9C9C9" stroke-width="1"/>
+        <text class="dgs" x="672" y="348">90 docs · templates 11–14</text>
+        <text class="dgs" x="672" y="363">923 human-verified values</text>
+        <text class="dgs" x="672" y="378">→ per-field P/R/F1 + bootstrap CI</text>
+        <text class="dgs" x="672" y="393">→ sliced by condition, language</text>
+      </svg>
+      <figcaption><strong>Deliverable 07.</strong> Two things this encodes. One interface, four
+      implementations: every approach is <span class="mono">extract(OcrDocument) →
+      ExtractionResult</span>, so the CLI, API and evaluator cannot treat one specially. And
+      normalisation is shared between the approaches and the scorer, so no approach gains a
+      formatting advantage.</figcaption>
+    </figure>
 
     <div class="scroller" style="max-width:var(--measure)">
       <table>
         <thead><tr><th>Interface</th><th>Command</th></tr></thead>
         <tbody>
-          <tr><td>CLI — one document</td><td style="text-align:left"><span class="mono">python -m docintel extract --file doc.pdf --approach all</span></td></tr>
-          <tr><td>CLI — score everything</td><td style="text-align:left"><span class="mono">python -m docintel evaluate --split gold_synth --approach all</span></td></tr>
-          <tr><td>CLI — train</td><td style="text-align:left"><span class="mono">python -m docintel train --what all</span></td></tr>
-          <tr><td>API</td><td style="text-align:left"><span class="mono">POST /extract?approach=all</span> (multipart)</td></tr>
-          <tr><td>Demo, unseen docs</td><td style="text-align:left"><span class="mono">python scripts/demo_unseen.py</span></td></tr>
+          <tr><td>One document</td><td class="l"><span class="mono">python -m docintel extract --file doc.pdf --approach all</span></td></tr>
+          <tr><td>Score everything</td><td class="l"><span class="mono">python -m docintel evaluate --split gold_synth --approach all</span></td></tr>
+          <tr><td>Train</td><td class="l"><span class="mono">python -m docintel train --what all</span></td></tr>
+          <tr><td>Check the machine</td><td class="l"><span class="mono">python -m docintel doctor</span></td></tr>
+          <tr><td>HTTP API</td><td class="l"><span class="mono">POST /extract?approach=all</span> (multipart)</td></tr>
         </tbody>
+        <caption>Any PDF works, digital or scanned; scanned pages route through OCR automatically.
+        <span class="mono">--approach nlp</span> alone needs no GPU and no Ollama.</caption>
       </table>
     </div>
 
-    <h3 class="col">Deliverables</h3>
-    <ul class="check">
-      <li><span class="tick">✓</span> Runnable source code<span class="where">docintel/ · scripts/ · 108 tests</span></li>
-      <li><span class="tick">✓</span> Dataset description with splits and verification<span class="where">Requirement 1 above</span></li>
-      <li><span class="tick">✓</span> Trained small model<span class="where">models/small — DistilBERT 66M</span></li>
-      <li><span class="tick">✓</span> NLP implementation and LLM baseline<span class="where">approaches/ — four of them</span></li>
-      <li><span class="tick">✓</span> Evaluation results and comparison report<span class="where">REPORT.md · reports/*.json</span></li>
-      <li><span class="tick">✓</span> Error analysis, ≥20 errors<span class="where">1,004 coded · 22 shown above</span></li>
-      <li><span class="tick">✓</span> Architecture diagram<span class="where">README.md + the pipeline above</span></li>
-      <li><span class="tick">✓</span> Demo on previously unseen documents<span class="where">10 docs, held-out templates</span></li>
-    </ul>
+    <h3 class="col" id="demo">Demo on previously unseen documents</h3>
+    <div class="col">
+      <p>Ten documents from held-out templates that no pipeline stage has touched — not trained on,
+      not tuned on, not part of the gold set. <span class="mono">python scripts/demo_unseen.py</span>
+      prints each field beside the generator’s truth.</p>
+    </div>
+
+    <div class="scroller" style="max-width:var(--measure)">
+      <table>
+        <thead><tr><th>Approach</th><th>Fields correct</th><th>Accuracy</th><th>ms / doc</th></tr></thead>
+        <tbody>
+          <tr><td>Rules / NLP</td><td>90 / 109</td><td>82.6%</td><td class="mark">62</td></tr>
+          <tr><td>Small model</td><td>87 / 109</td><td>79.8%</td><td>286</td></tr>
+          <tr><td>Local LLM 3B</td><td class="mark">94 / 109</td><td class="mark">86.2%</td><td class="s2">10,421</td></tr>
+        </tbody>
+        <caption><strong>Deliverable 08.</strong> The ordering matches the gold-set result, which is
+        the reason to run it: the headline numbers are not an artefact of one particular
+        90-document draw.</caption>
+      </table>
+    </div>
 
     <h3 class="col">Three leaks found and closed</h3>
     <div class="col">
-      <p>Each would have quietly flattered a result. They’re listed because a comparison is only as
-      trustworthy as its worst unexamined assumption — and all three are now guarded by
+      <p>Each would have flattered a result. All three are now guarded by
       <code>tests/test_no_leakage.py</code>.</p>
       <ul class="plain">
         <li><strong>The rules approach imported the generator’s own label dictionary</strong>
-        (<span class="mono">from ..gen.render import LABELS</span>), handing it perfect foreknowledge
-        of wording that appears only on held-out templates. It now builds its vocabulary from
-        training documents alone — and the five label variants it consequently doesn’t know are a
-        real finding about dictionary brittleness, not a defect to patch.</li>
+        (<span class="mono">from ..gen.render import LABELS</span>), giving it foreknowledge of
+        wording that appears only on held-out templates. It now builds its vocabulary from training
+        documents alone. The five label variants it consequently does not know are a finding about
+        dictionary brittleness, not a defect to patch.</li>
         <li><strong>The evaluator stamped every gold record <span class="mono">human_verified</span></strong>
-        whether or not anyone had looked at it, because it keyed on presence in the file rather than
+        whether or not anyone had reviewed it, because it keyed on presence in the file rather than
         each record’s own flag.</li>
         <li><strong>OCR assembly collapsed two-column rows to a single space</strong>, making
         <span class="mono">Patient Name:</span> beside <span class="mono">Reference #:</span>
-        indistinguishable from prose and merging adjacent columns’ values into one field.</li>
+        indistinguishable from prose and merging adjacent columns into one field.</li>
       </ul>
-    </div>
 
-    <h3 class="col">Known limitations</h3>
-    <div class="col">
+      <h3>Known limitations</h3>
       <ul class="plain">
         <li><strong>The corpus is synthetic.</strong> Real documents have handwriting, stamps and
-        multi-page threading this generator doesn’t produce, so absolute numbers would drop on them.
-        What holds is the relative comparison: identical documents, held-out layouts, real OCR damage.</li>
+        multi-page threading this generator does not produce, so absolute numbers would drop on
+        them. What holds is the relative comparison: identical documents, held-out layouts, real OCR
+        damage.</li>
         <li><strong>No real documents in the test set.</strong> The plan included a slice of public
-        forms; I couldn’t source filled, labelable healthcare documents in the time available. This
-        is the single biggest gap in the submission.</li>
-        <li><strong>The frontier tier isn’t independently reproducible.</strong> It’s a cached
+        forms; I could not source filled, labelable healthcare documents in the time available. This
+        is the biggest gap in the submission.</li>
+        <li><strong>The frontier tier is not independently reproducible.</strong> It is a cached
         reference point and its cost is estimated, not metered.</li>
-        <li><strong>The error taxonomy is rule-assigned.</strong> Some OCR whitespace damage lands
-        in <span class="mono">FORMAT_NORMALISATION</span> when it belongs in
+        <li><strong>The error taxonomy is rule-assigned.</strong> Some OCR whitespace damage is
+        coded <span class="mono">FORMAT_NORMALISATION</span> when it belongs in
         <span class="mono">OCR_CORRUPTION</span>, so 51 is a floor on OCR’s share, not a full
         accounting.</li>
       </ul>
@@ -906,10 +859,10 @@ footer .col{max-width:var(--measure)}
 
   <footer>
     <div class="col">
-      <p>Built on Windows 11 · Python 3.12 · RTX 3050 (4 GB VRAM) · 7.4 GB RAM. The memory ceiling
-      is why the pipeline is sequenced rather than parallel: torch and Ollama cannot both hold the
-      GPU, so silver labelling finishes before training starts.</p>
-      <p class="mono" style="font-size:12px;color:var(--ink-faint)">108 tests passing · gold set 90 documents / 923 human-verified values · every figure on this page traceable to reports/</p>
+      <p>Built on Windows 11 · Python 3.12 · RTX 3050 with 4 GB VRAM · 7.4 GB RAM. That memory
+      ceiling is why the pipeline is sequenced rather than parallel: torch and Ollama cannot both
+      hold the GPU, so silver labelling finishes before training starts.</p>
+      <p class="mono" style="font-size:12px">108 tests passing · gold set 90 documents / 923 human-verified values · every figure traceable to reports/</p>
     </div>
   </footer>
 </div>

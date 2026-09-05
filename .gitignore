@@ -19,3 +19,6 @@ token.json
 
 # Agent instructions for my own tooling, not part of the submission.
 Claude.MD
+
+# Build artefacts — the with-model zip is 473 MB and must never be committed.
+*.zip
