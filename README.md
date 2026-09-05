@@ -22,6 +22,37 @@ Two columns carry most of the argument. **Rules get 86% of frontier F1 for 6 MB 
 rows on claims, which they structurally cannot do. Flat fields and structured tables are
 different problems with different right answers.
 
+## If you just cloned this
+
+```bash
+git clone https://github.com/RickyVishwakarma/assesment.git
+cd assesment
+git lfs pull                      # the 500 MB of model weights -- see note
+
+python -m venv .venv && .venv/Scripts/activate    # Linux/macOS: source .venv/bin/activate
+pip install torch --index-url https://download.pytorch.org/whl/cu128   # or plain `pip install torch` for CPU
+pip install -r requirements.txt
+python -m spacy download en_core_web_sm
+
+python -m docintel doctor         # says what's available and what isn't
+```
+
+**`git lfs pull` is not optional if you want the small model.** The two DistilBERT
+checkpoints are Git LFS objects; without Git LFS installed you get 134-byte pointer files
+and the small model fails with `SafetensorError: header too large`. `doctor` detects this
+and says so. If you'd rather skip the 500 MB download, everything else still works, and
+`python -m docintel train --what all` rebuilds the weights from the committed silver
+labels in about 13 minutes.
+
+Ollama is only needed for the `llm_local` approach. Without it, the other three run.
+
+```bash
+python -m docintel extract --file your-own-document.pdf --approach nlp
+```
+
+Any PDF works, digital or scanned. Be aware it will answer confidently on documents from
+outside the healthcare domain — see *things worth knowing* below.
+
 ## Quick start
 
 Everything is already built and trained — these run against the committed artefacts.

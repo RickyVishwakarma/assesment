@@ -102,6 +102,12 @@ def cmd_extract(args: argparse.Namespace) -> int:
             results.append(extractor.extract(doc))
         except Exception as exc:
             print(f"  [{name}] unavailable: {type(exc).__name__}: {exc}", file=sys.stderr)
+            if _lfs_pointers(Path("models/small/tokens")):
+                print(
+                    "  [{}] the weights are unfetched Git LFS pointers. "
+                    "Run: git lfs pull".format(name),
+                    file=sys.stderr,
+                )
 
     if args.json:
         print(json.dumps([json.loads(r.model_dump_json()) for r in results], indent=2))
@@ -370,6 +376,7 @@ def cmd_doctor(args: argparse.Namespace) -> int:
         print(f"  ollama models    : {list_models()}")
 
     print("\nartefacts")
+    lfs_stubs: list[str] = []
     for label, path in [
         ("corpus", Path("data/corpus/manifest.jsonl")),
         ("silver train", Path("data/silver/train.jsonl")),
@@ -379,8 +386,45 @@ def cmd_doctor(args: argparse.Namespace) -> int:
         ("frontier cache", Path("data/frontier/annotations.json")),
         ("gold verified", Path("data/gold/gold_synth.jsonl")),
     ]:
-        print(f"  {label:16s} : {'present' if path.exists() else 'absent'}")
+        if not path.exists():
+            status = "absent"
+        elif _lfs_pointers(path):
+            status = "LFS POINTER -- run: git lfs pull"
+            lfs_stubs.append(label)
+        else:
+            status = "present"
+        print(f"  {label:16s} : {status}")
+
+    if lfs_stubs:
+        # Without this the failure surfaces much later as
+        # "SafetensorError: header too large", which explains nothing.
+        print(
+            "\nThe model weights are Git LFS objects and this clone has only the\n"
+            "pointer files. Install Git LFS (https://git-lfs.com), then run:\n"
+            "    git lfs pull\n"
+            "Until then the small model is unavailable; every other approach works."
+        )
     return 0
+
+
+def _lfs_pointers(path: Path) -> bool:
+    """True if ``path`` is, or contains, an unfetched Git LFS pointer file.
+
+    A pointer is a ~130-byte text file opening with the LFS version line, so a
+    weights file that small is a clone without ``git lfs pull`` rather than a
+    corrupt download. Worth distinguishing: the errors look nothing alike.
+    """
+    candidates = sorted(path.glob("*.safetensors")) if path.is_dir() else [path]
+    for candidate in candidates:
+        try:
+            if candidate.stat().st_size > 1024:
+                continue
+            with candidate.open("rb") as handle:
+                if handle.read(42).startswith(b"version https://git-lfs.github.com"):
+                    return True
+        except OSError:
+            continue
+    return False
 
 
 def main(argv: list[str] | None = None) -> int:
