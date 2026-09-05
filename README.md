@@ -6,6 +6,13 @@ different ways, and scores them all on the same held-out test set.
 
 Read [REPORT.md](REPORT.md) for the results and the argument. This file is how to run it.
 
+| document | what it is |
+|---|---|
+| [submission.html](submission.html) | the whole submission on one page — results, error analysis, architecture, how to run it |
+| [REPORT.md](REPORT.md) | the findings and the engineering argument, in full |
+| [PLAN.md](PLAN.md) | what I intended before starting, and where the build diverged |
+| this file | setup and commands |
+
 ## Results
 
 | approach | F1 | accuracy | doc type | service lines | latency | size | cost/doc | offline | deterministic |
@@ -208,11 +215,25 @@ docintel/
   eval/               metrics, bootstrap CIs, slicing
   cli.py  api.py      the two entry points
   gen/                the document generator
-scripts/              corpus build, silver labelling, training curve, review, demos
-data/                 corpus, silver labels, gold set, frontier cache
-models/               trained checkpoints
-reports/              eval JSON, error CSV, learning curve
-tests/                108 tests
+scripts/
+  build_corpus.py       generate the 1,300-document corpus (seeded)
+  make_silver.py        label train/val with the local LLM, and score the teacher
+  review_gold.py        two-tier gold verification, the part needing a person
+  apply_adjudication.py apply reviewed decisions back into the gold file
+  revisit_excluded.py   second pass over values excluded as OCR-destroyed
+  frontier_tier.py      batch documents for frontier annotation, cache the results
+  learning_curve.py     train at 100/300/600/1000 silver documents
+  rescore_curve.py      re-score those checkpoints without retraining them
+  error_analysis.py     classify every error, write the CSV
+  measure_determinism.py  run an approach N times, report byte-identical rate
+  demo_unseen.py        10 held-out documents, scored side by side
+  build_site.py         wrap submission.html into site/index.html for static hosting
+data/                   corpus, silver labels, gold set, frontier cache
+models/                 nlp/ (6 MB, committed) and small/ (525 MB, Git LFS)
+reports/                eval JSON, error CSV, learning curve
+tests/                  109 tests
+requirements.txt        pinned to the versions the reported numbers came from
+vercel.json             static-hosting config, output directory site/
 ```
 
 ## Things worth knowing before you read the numbers
@@ -267,12 +288,17 @@ Built on Windows 11, Python 3.12, RTX 3050 (4 GB VRAM), 7.4 GB RAM.
 
 ```bash
 pip install torch --index-url https://download.pytorch.org/whl/cu128
-pip install transformers accelerate scikit-learn spacy rapidfuzz seqeval datasets \
-            fastapi "uvicorn[standard]" python-multipart reportlab pymupdf pdfplumber
+pip install -r requirements.txt
 python -m spacy download en_core_web_sm
-winget install --id Ollama.Ollama
+
+# only needed for the llm_local approach
+winget install --id Ollama.Ollama     # or https://ollama.com/download
 ollama pull qwen2.5:3b-instruct
 ```
+
+`requirements.txt` pins every package to the version the reported numbers came from.
+`torch` is deliberately left out of it — the CUDA build depends on your hardware, so it
+goes in first, on its own.
 
 `python -m docintel doctor` reports what's present. Every approach degrades
 independently, so a missing component disables only that approach.
