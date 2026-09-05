@@ -40,13 +40,16 @@ section{padding:62px 0;border-top:1px solid var(--line-2)}
 .rail a{font-family:var(--mono);font-size:11px;color:var(--ink-3);text-decoration:none;padding:4px 10px;white-space:nowrap}
 .rail a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
 .rail a:focus-visible{outline:1.5px solid var(--ink);outline-offset:1px}
-.rail .who{font-family:var(--mono);font-size:11px;color:var(--ink-3);margin-left:auto}
+.rail .repo{margin-left:auto;color:var(--ink);border:1px solid var(--line);padding:4px 12px}
+.rail .repo:hover{background:var(--ink);color:var(--paper);text-decoration:none}
 
 .mast{padding:68px 0 46px}
 .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);margin:0 0 24px}
 h1{font-family:var(--display);font-weight:200;font-size:clamp(44px,7.6vw,86px);line-height:1;letter-spacing:-.035em;margin:0 0 24px;text-wrap:balance}
 .standfirst{font-size:20px;line-height:1.5;color:var(--ink-2);margin:0;max-width:58ch}
 .standfirst strong{color:var(--ink);font-weight:600}
+.repoline{font-family:var(--mono);font-size:12.5px;color:var(--ink-3);margin:22px 0 0;line-height:1.6}
+.repoline a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:1px}
 
 h2{font-family:var(--display);font-weight:200;font-size:33px;letter-spacing:-.022em;line-height:1.14;margin:0 0 12px;text-wrap:balance}
 h3{font-family:var(--display);font-weight:400;font-size:18px;letter-spacing:-.005em;margin:40px 0 10px}
@@ -144,7 +147,7 @@ footer{padding:42px 0 76px;border-top:1px solid var(--line);color:var(--ink-3);f
     <a href="#errors">4 Errors</a>
     <a href="#answer">5 Answer</a>
     <a href="#impl">6 Implementation</a>
-    <span class="who">gold n=90 · 923 human-verified values</span>
+    <a class="repo" href="https://github.com/RickyVishwakarma/assesment" target="_blank" rel="noopener">Source on GitHub ↗</a>
   </div>
 </nav>
 
@@ -157,6 +160,8 @@ footer{padding:42px 0 76px;border-top:1px solid var(--line);color:var(--ink-3);f
     healthcare documents. All four run on the <strong>same 90-document gold set</strong>, built from
     layout templates none of them was trained on. Every figure below is measured. The one estimate —
     frontier cost per document — is marked wherever it appears.</p>
+    <p class="repoline"><a href="https://github.com/RickyVishwakarma/assesment" target="_blank" rel="noopener">github.com/RickyVishwakarma/assesment</a>
+    — full source, corpus, gold set, trained model and reports.</p>
 
     <div class="strip">
       <div class="sc">
@@ -201,7 +206,7 @@ footer{padding:42px 0 76px;border-top:1px solid var(--line);color:var(--ink-3);f
       <h2>All eight, and where each one is</h2>
     </div>
     <ol class="manifest">
-      <li><span class="no">01</span><span><span class="nm">Runnable source code.</span> 38 Python files, CLI and HTTP API, 108 passing tests.</span><span class="where">docintel/ · scripts/ · tests/</span></li>
+      <li><span class="no">01</span><span><span class="nm">Runnable source code.</span> 38 Python files, CLI and HTTP API, 108 passing tests.</span><span class="where"><a href="https://github.com/RickyVishwakarma/assesment" target="_blank" rel="noopener">github.com/RickyVishwakarma/assesment ↗</a></span></li>
       <li><span class="no">02</span><span><span class="nm">Training/validation/test dataset description.</span> 1,000 / 200 / 90, plus the verification record.</span><span class="where"><a href="#data">§1</a></span></li>
       <li><span class="no">03</span><span><span class="nm">Trained small model.</span> DistilBERT-cased 66M, 31 BIO tags, 525 MB.</span><span class="where">models/small/</span></li>
       <li><span class="no">04</span><span><span class="nm">NLP implementation and LLM baseline.</span> Four approaches behind one interface.</span><span class="where"><a href="#systems">§2</a></span></li>
@@ -863,6 +868,7 @@ footer{padding:42px 0 76px;border-top:1px solid var(--line);color:var(--ink-3);f
       ceiling is why the pipeline is sequenced rather than parallel: torch and Ollama cannot both
       hold the GPU, so silver labelling finishes before training starts.</p>
       <p class="mono" style="font-size:12px">108 tests passing · gold set 90 documents / 923 human-verified values · every figure traceable to reports/</p>
+      <p class="repoline" style="margin-top:18px"><a href="https://github.com/RickyVishwakarma/assesment" target="_blank" rel="noopener">github.com/RickyVishwakarma/assesment</a></p>
     </div>
   </footer>
 </div>
