@@ -64,6 +64,12 @@ def _print_result(result: ExtractionResult, as_json: bool) -> None:
         # blank fields is otherwise indistinguishable from a model that failed the
         # document, which is the worst way to present a non-result.
         print(f"  NOTE          : {result.meta['note']}")
+    if result.meta.get("error"):
+        # Same reasoning as the note above, for the case where the backend was
+        # reached but did not answer. Without this the caller sees fifteen empty
+        # fields and reasonably concludes the model read the page and found
+        # nothing, which is the opposite of what happened.
+        print(f"  ERROR         : {result.meta['error']}")
     print(f"  document_type : {result.doc_type.value}"
           + (f"  (conf {result.doc_type_confidence:.2f})"
              if result.doc_type_confidence is not None else ""))

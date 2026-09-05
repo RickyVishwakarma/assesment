@@ -184,11 +184,18 @@ class LocalLlmExtractor:
         )
         with urllib.request.urlopen(request, timeout=self.timeout) as response:
             body = json.loads(response.read())
+        note = None
         try:
             parsed = json.loads(body.get("response", "{}"))
         except json.JSONDecodeError:
+            # Schema-constrained decoding makes this rare, but under memory
+            # pressure Ollama can return a truncated body. Silently becoming an
+            # empty result would be indistinguishable from the model reading the
+            # page and finding nothing.
             parsed = {}
+            note = "the model returned unparseable JSON; this is a failure, not an empty document"
         meta = {
+            "note": note,
             "prompt_tokens": body.get("prompt_eval_count"),
             "completion_tokens": body.get("eval_count"),
             "total_duration_ms": (body.get("total_duration") or 0) / 1e6,
