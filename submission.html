@@ -123,6 +123,31 @@ figcaption{font-family:var(--body);font-size:14px;color:var(--ink-2);line-height
 .dgt{fill:#000000;font-family:'Archivo',sans-serif;font-size:12.5px;font-weight:500}
 .dgs{fill:#6E6E6E;font-family:'IBM Plex Mono',monospace;font-size:10px}
 
+/* run-it steps */
+.steps{list-style:none;padding:0;margin:26px 0 0;counter-reset:step}
+.steps > li{
+  counter-increment:step;position:relative;padding:0 0 26px 46px;
+  border-left:1px solid var(--line-2);margin-left:11px;
+}
+.steps > li:last-child{border-left:1px solid transparent;padding-bottom:0}
+.steps > li::before{
+  content:counter(step);position:absolute;left:-11px;top:0;width:22px;height:22px;
+  border:1px solid var(--line);border-radius:50%;background:var(--paper);
+  font-family:var(--mono);font-size:10.5px;line-height:20px;text-align:center;color:var(--ink);
+}
+.steps h4{
+  font-family:var(--display);font-weight:500;font-size:15.5px;margin:1px 0 8px;letter-spacing:0;
+}
+.steps p{font-size:15.5px;color:var(--ink-2);margin:10px 0 0;max-width:60ch}
+pre{
+  font-family:var(--mono);font-size:12.5px;line-height:1.75;margin:0;padding:14px 16px;
+  background:var(--paper);border:1px solid var(--line-2);overflow-x:auto;color:var(--ink);
+}
+pre .c{color:var(--ink-3)}
+.pathbox{
+  font-family:var(--mono);font-size:13px;border-left:2px solid var(--ink);
+  padding:8px 0 8px 16px;margin:16px 0;
+}
 ul.plain{padding-left:20px;margin:0 0 16px;max-width:var(--measure)}
 ul.plain li{margin-bottom:9px}
 footer{padding:42px 0 76px;border-top:1px solid var(--line);color:var(--ink-3);font-size:14.5px}
@@ -141,6 +166,7 @@ footer{padding:42px 0 76px;border-top:1px solid var(--line);color:var(--ink-3);f
 <nav class="rail">
   <div class="rail-in">
     <a href="#deliverables">Deliverables</a>
+    <a href="#run">Run it</a>
     <a href="#data">1 Data</a>
     <a href="#systems">2 Systems</a>
     <a href="#eval">3 Evaluation</a>
@@ -215,6 +241,109 @@ footer{padding:42px 0 76px;border-top:1px solid var(--line);color:var(--ink-3);f
       <li><span class="no">07</span><span><span class="nm">Simple architecture diagram.</span></span><span class="where"><a href="#arch">§6</a></span></li>
       <li><span class="no">08</span><span><span class="nm">Demo on previously unseen documents.</span> 10 documents, held-out templates, scored.</span><span class="where"><a href="#demo">§6</a></span></li>
     </ol>
+  </section>
+
+  <!-- ================= RUNNING IT ================= -->
+  <section id="run">
+    <div class="col">
+      <span class="req">Running it</span>
+      <h2>From clone to your own document, in five steps</h2>
+      <p class="deck">The rules approach needs nothing but Python. Each additional approach adds one
+      dependency, and any that is missing disables only itself.</p>
+    </div>
+
+    <ol class="steps">
+      <li>
+        <h4>Clone and install</h4>
+<pre><span class="c"># torch first — the CUDA build depends on your hardware</span>
+git clone https://github.com/RickyVishwakarma/assesment.git
+cd assesment
+git lfs pull
+
+pip install torch --index-url https://download.pytorch.org/whl/cu128  <span class="c"># or: pip install torch</span>
+pip install -r requirements.txt
+python -m spacy download en_core_web_sm</pre>
+        <p><code>git lfs pull</code> fetches the 500 MB of DistilBERT weights. Skip it and every
+        approach except the small model still works — or rebuild the weights locally in about 13
+        minutes with <span class="mono">python -m docintel train --what all</span>.</p>
+      </li>
+
+      <li>
+        <h4>Check what your machine can run</h4>
+<pre>python -m docintel doctor</pre>
+        <p>Reports torch, CUDA, spaCy, Ollama and every artefact. If the weights are unfetched LFS
+        pointers it says so directly rather than failing later with a deserialisation error.</p>
+      </li>
+
+      <li>
+        <h4>Run one document through all four approaches</h4>
+<pre>python -m docintel extract \
+    --file data/corpus/pdfs/demo-0000-referral_letter-t11.pdf \
+    --approach all</pre>
+        <p>The repository ships 1,300 PDFs. The ten named <span class="mono">demo-*</span> are the
+        ones to look at first — held-out templates, never trained on and not part of the gold set,
+        one per document type.</p>
+        <div class="pathbox">data/corpus/pdfs/<br>
+          &nbsp;&nbsp;demo-*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10 · never seen by any stage<br>
+          &nbsp;&nbsp;gold_synth-*&nbsp;&nbsp;90 · the human-verified test set<br>
+          &nbsp;&nbsp;train-*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1000 · silver-labelled<br>
+          &nbsp;&nbsp;val-*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;200</div>
+        <p><span class="mono">demo-0004-remittance_advice-t11.pdf</span> is the interesting one: it
+        carries a service-line table, which is where the rules engine scores 0.000 and the LLMs do
+        not.</p>
+      </li>
+
+      <li>
+        <h4>Try your own PDF</h4>
+<pre>python -m docintel extract --file /path/to/your-document.pdf --approach all</pre>
+        <p>Any PDF works, digital or scanned — scanned pages route through OCR automatically.
+        One caveat worth knowing before you see it: on a document from outside the healthcare
+        domain the rules engine answers confidently and wrongly, because its confidence scores
+        reflect which rule fired rather than whether the answer is right. Fed the assignment brief
+        itself, it returned <span class="mono">amount_paid = 4</span> and
+        <span class="mono">total_charge = 20</span> — section numbers read as currency — while the
+        LLM returned nothing at all. That gap is <a href="#answer">discussed in §5</a>.</p>
+      </li>
+
+      <li>
+        <h4>Reproduce every number on this page</h4>
+<pre>python scripts/demo_unseen.py                    <span class="c"># 10 unseen docs, scored</span>
+python -m docintel evaluate --split gold_synth --approach all
+python scripts/error_analysis.py --split gold_synth
+python -m pytest tests/ -q                       <span class="c"># 109 tests</span></pre>
+        <p>On a machine with under 8 GB of RAM, run <span class="mono">--approach nlp small_model
+        llm_frontier</span> first and then <span class="mono">--approach llm_local --merge</span> —
+        torch and Ollama cannot both be resident here.</p>
+      </li>
+    </ol>
+
+    <div class="col">
+      <h3>Or serve it over HTTP</h3>
+    </div>
+<pre style="max-width:var(--measure)">python -m uvicorn docintel.api:app --port 8000
+
+curl.exe -F "file=@data/corpus/pdfs/demo-0000-referral_letter-t11.pdf" \
+     "http://127.0.0.1:8000/extract?approach=all"</pre>
+    <div class="col">
+      <p><code>GET /health</code> lists which approaches loaded. On Windows use
+      <span class="mono">curl.exe</span>, not <span class="mono">curl</span> — PowerShell aliases the
+      latter to <span class="mono">Invoke-WebRequest</span>, which has no
+      <span class="mono">-F</span> flag.</p>
+    </div>
+
+    <div class="scroller" style="max-width:var(--measure)">
+      <table>
+        <thead><tr><th>To run</th><th>You need</th></tr></thead>
+        <tbody>
+          <tr><td>Rules / NLP</td><td class="l">Python + requirements.txt. No GPU, no Ollama, no LFS</td></tr>
+          <tr><td>Small model</td><td class="l">plus torch and <span class="mono">git lfs pull</span></td></tr>
+          <tr><td>Local LLM</td><td class="l">plus Ollama and <span class="mono">ollama pull qwen2.5:3b-instruct</span></td></tr>
+          <tr><td>Frontier</td><td class="l">nothing — replayed from the committed cache</td></tr>
+        </tbody>
+        <caption>Approaches degrade independently: a missing component disables that approach, not
+        the run.</caption>
+      </table>
+    </div>
   </section>
 
   <!-- ================= 1. DATA ================= -->
