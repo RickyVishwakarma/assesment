@@ -52,10 +52,10 @@
 
 *{box-sizing:border-box}
 html{background:var(--paper)}
-body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65;margin:0;-webkit-font-smoothing:antialiased}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.7;margin:0;-webkit-font-smoothing:antialiased}
 .wrap{max-width:var(--wide);margin:0 auto;padding:0 30px}
 .col{max-width:var(--measure)}
-section{padding:62px 0;border-top:1px solid var(--line-2)}
+section{padding:96px 0;border-top:1px solid var(--line)}
 
 .rail{position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:1px solid var(--line)}
 .rail-in{max-width:var(--wide);margin:0 auto;padding:10px 30px;display:flex;gap:2px;align-items:baseline;flex-wrap:wrap}
@@ -65,18 +65,18 @@ section{padding:62px 0;border-top:1px solid var(--line-2)}
 .rail .repo{margin-left:auto;color:var(--ink);border:1px solid var(--line);padding:4px 12px}
 .rail .repo:hover{background:var(--ink);color:var(--paper);text-decoration:none}
 
-.mast{padding:68px 0 46px}
-.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);margin:0 0 24px}
-h1{font-family:var(--display);font-weight:200;font-size:clamp(44px,7.6vw,86px);line-height:1;letter-spacing:-.035em;margin:0 0 24px;text-wrap:balance}
-.standfirst{font-size:20px;line-height:1.5;color:var(--ink-2);margin:0;max-width:58ch}
+.mast{padding:96px 0 72px}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3);margin:0 0 34px}
+h1{font-family:var(--display);font-weight:200;font-size:clamp(54px,9.2vw,108px);line-height:.94;letter-spacing:-.042em;margin:0 0 30px;text-wrap:balance}
+.standfirst{font-size:21.5px;line-height:1.55;color:var(--ink-2);margin:0;max-width:56ch}
 .standfirst strong{color:var(--ink);font-weight:600}
 .repoline{font-family:var(--mono);font-size:12.5px;color:var(--ink-3);margin:22px 0 0;line-height:1.6}
 .repoline a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:1px}
 
-h2{font-family:var(--display);font-weight:200;font-size:33px;letter-spacing:-.022em;line-height:1.14;margin:0 0 12px;text-wrap:balance}
-h3{font-family:var(--display);font-weight:400;font-size:18px;letter-spacing:-.005em;margin:40px 0 10px}
-.req{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--line)}
-.deck{color:var(--ink-2);margin:0 0 24px;max-width:var(--measure)}
+h2{font-family:var(--display);font-weight:200;font-size:clamp(34px,4.2vw,46px);letter-spacing:-.03em;line-height:1.08;margin:0 0 18px;text-wrap:balance}
+h3{font-family:var(--display);font-weight:400;font-size:19.5px;letter-spacing:-.01em;margin:58px 0 12px}
+.req{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3);margin-bottom:26px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.deck{color:var(--ink-2);font-size:18.5px;line-height:1.55;margin:0 0 30px;max-width:var(--measure)}
 p{margin:0 0 16px}
 .col p:last-child{margin-bottom:0}
 a{color:var(--ink)}
@@ -84,26 +84,26 @@ strong{font-weight:600}
 code,.mono{font-family:var(--mono);font-size:.86em;font-variant-numeric:tabular-nums}
 code{border-bottom:1px solid var(--line-2);padding-bottom:1px}
 
-.strip{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:46px 0 0}
-.sc{padding:22px 20px 20px;border-right:1px solid var(--line-3)}
+.strip{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:64px 0 0}
+.sc{padding:30px 24px 28px;border-right:1px solid var(--line-3)}
 .sc:last-child{border-right:none}
 .sc .nm{font-family:var(--display);font-weight:500;font-size:13px;margin-bottom:3px}
-.sc .sub{font-family:var(--mono);font-size:10px;color:var(--ink-3);margin-bottom:18px}
-.sc .big{font-family:var(--display);font-weight:200;font-size:46px;line-height:1;letter-spacing:-.05em;font-variant-numeric:tabular-nums}
+.sc .sub{font-family:var(--mono);font-size:10px;color:var(--ink-3);margin-bottom:26px}
+.sc .big{font-family:var(--display);font-weight:200;font-size:56px;line-height:1;letter-spacing:-.055em;font-variant-numeric:tabular-nums}
 .sc .cap{font-family:var(--mono);font-size:9.5px;color:var(--ink-3);letter-spacing:.11em;text-transform:uppercase;margin-top:6px}
 .bar{height:5px;border:1px solid var(--line);margin-top:16px}
 .bar i{display:block;height:100%;background:var(--ink)}
 .tagline{font-family:var(--mono);font-size:10px;margin-top:13px;color:var(--ink-2);line-height:1.5}
 
-.manifest{list-style:none;padding:0;border-top:1px solid var(--line);margin-top:28px}
-.manifest li{display:grid;grid-template-columns:2.1rem 1fr auto;gap:14px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--line-3);font-size:16px}
+.manifest{list-style:none;padding:0;border-top:1px solid var(--line);margin-top:36px}
+.manifest li{display:grid;grid-template-columns:2.4rem 1fr auto;gap:16px;align-items:baseline;padding:16px 0;border-bottom:1px solid var(--line-3);font-size:16px}
 .manifest .no{font-family:var(--mono);font-size:11px;color:var(--ink-3)}
 .manifest .nm{font-weight:600}
 .manifest .where{font-family:var(--mono);font-size:11.5px;color:var(--ink-3);text-align:right}
 .manifest a{text-decoration:none;border-bottom:1px solid var(--line-2)}
 .manifest a:hover{border-bottom-color:var(--ink)}
 
-.scroller{overflow-x:auto;margin:24px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.scroller{overflow-x:auto;margin:34px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 table{border-collapse:collapse;width:100%;font-family:var(--mono);font-size:12.5px;font-variant-numeric:tabular-nums}
 th,td{padding:8px 13px;text-align:right;border-bottom:1px solid var(--line-3);white-space:nowrap}
 th{font-family:var(--display);font-size:10px;font-weight:500;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-2);border-bottom:1px solid var(--line);background:var(--paper);position:sticky;top:0}
@@ -119,13 +119,13 @@ caption{caption-side:bottom;text-align:left;padding:13px 13px 0;font-family:var(
 .mark{font-weight:600;box-shadow:inset 0 -2px 0 var(--ink)}
 .dim{color:var(--ink-3)}
 
-.pull{border-left:2px solid var(--ink);padding:2px 0 2px 22px;margin:34px 0;font-family:var(--display);font-weight:300;font-size:22px;line-height:1.4;letter-spacing:-.012em;max-width:56ch}
+.pull{border-left:2px solid var(--ink);padding:4px 0 4px 26px;margin:48px 0;font-family:var(--display);font-weight:300;font-size:25px;line-height:1.36;letter-spacing:-.018em;max-width:54ch}
 .pull strong{font-weight:500}
-.note{border:1px solid var(--line);padding:20px 22px;margin:26px 0;font-size:16px;line-height:1.55;max-width:var(--measure)}
+.note{border:1px solid var(--line);padding:26px 28px;margin:36px 0;font-size:16px;line-height:1.55;max-width:var(--measure)}
 .note .lbl{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:10px;color:var(--ink-3)}
 .note p:last-child{margin-bottom:0}
 
-.kv{display:grid;grid-template-columns:auto 1fr;border-top:1px solid var(--line);max-width:var(--measure);margin:22px 0}
+.kv{display:grid;grid-template-columns:auto 1fr;border-top:1px solid var(--line);max-width:var(--measure);margin:30px 0}
 .kv dt{font-family:var(--display);font-size:12px;font-weight:500;color:var(--ink-2);padding:10px 26px 10px 0;border-bottom:1px solid var(--line-3)}
 .kv dd{margin:0;padding:10px 0;border-bottom:1px solid var(--line-3);font-family:var(--mono);font-size:13px;font-variant-numeric:tabular-nums}
 
@@ -134,7 +134,7 @@ caption{caption-side:bottom;text-align:left;padding:13px 13px 0;font-family:var(
 .fan div:last-child{border-right:none}
 .fan div b{display:block;font-family:var(--display);font-size:14px;font-weight:500;color:var(--ink);margin-bottom:6px}
 
-figure{margin:26px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0}
+figure{margin:38px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:30px 0}
 figure svg{display:block;width:100%;height:auto}
 .figscroll{overflow-x:auto}
 .figscroll svg{min-width:620px}
@@ -148,7 +148,7 @@ figcaption{font-family:var(--body);font-size:14px;color:var(--ink-2);line-height
 /* run-it steps */
 .steps{list-style:none;padding:0;margin:26px 0 0;counter-reset:step}
 .steps > li{
-  counter-increment:step;position:relative;padding:0 0 26px 46px;
+  counter-increment:step;position:relative;padding:0 0 38px 48px;
   border-left:1px solid var(--line-2);margin-left:11px;
 }
 .steps > li:last-child{border-left:1px solid transparent;padding-bottom:0}
@@ -172,9 +172,14 @@ pre .c{color:var(--ink-3)}
 }
 ul.plain{padding-left:20px;margin:0 0 16px;max-width:var(--measure)}
 ul.plain li{margin-bottom:9px}
-footer{padding:42px 0 76px;border-top:1px solid var(--line);color:var(--ink-3);font-size:14.5px}
+footer{padding:60px 0 96px;border-top:1px solid var(--line);color:var(--ink-3);font-size:14.5px}
 
 @media (max-width:820px){
+  /* the generous desktop rhythm becomes dead scrolling on a phone */
+  section{padding:56px 0}
+  .mast{padding:52px 0 40px}
+  h3{margin:38px 0 10px}
+  .pull{margin:34px 0;font-size:21px}
   .strip{grid-template-columns:repeat(2,1fr)}
   .strip .sc:nth-child(2){border-right:none}
   .fan{grid-template-columns:repeat(2,1fr)}
