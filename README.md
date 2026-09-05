@@ -118,6 +118,14 @@ Invoke-RestMethod -Uri "http://127.0.0.1:8000/extract?approach=nlp" -Method Post
 `GET /health` reports which approaches loaded. An approach that failed to load returns
 `200` with a reason rather than taking the request down.
 
+**On a machine with under ~8 GB of RAM, don't serve all four at once.** The API loads every
+approach at startup, and when Ollama then pulls the 3B model into memory for an
+`?approach=all` request the total exceeds what's available: the small model quietly drops
+out of the results, and the worker can be killed outright. Measured here with 0.7 GB free
+of 7.4 GB. Requesting a subset — `?approach=nlp small_model` or `?approach=llm_local` — is
+reliable, and the constraint disappears on a larger machine. It is the same memory ceiling
+described under *Environment* below, applied to serving rather than training.
+
 ## Rebuilding from scratch
 
 ```bash
