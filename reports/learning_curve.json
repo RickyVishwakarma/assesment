@@ -1,0 +1,46 @@
+[
+  {
+    "n": 100,
+    "f1": 0.1841,
+    "precision": 0.229,
+    "recall": 0.1538,
+    "doctype_accuracy": 0.5333,
+    "macro_f1": 0.1439,
+    "train_seconds": 35802.9,
+    "final_loss": 0.4939,
+    "scored_against": "gold_synth, final human-verified"
+  },
+  {
+    "n": 300,
+    "f1": 0.6232,
+    "precision": 0.6876,
+    "recall": 0.5699,
+    "doctype_accuracy": 0.7222,
+    "macro_f1": 0.5617,
+    "train_seconds": 232.5,
+    "final_loss": 0.1664,
+    "scored_against": "gold_synth, final human-verified"
+  },
+  {
+    "n": 600,
+    "f1": 0.7211,
+    "precision": 0.7872,
+    "recall": 0.6652,
+    "doctype_accuracy": 0.7222,
+    "macro_f1": 0.6728,
+    "train_seconds": 458.5,
+    "final_loss": 0.1114,
+    "scored_against": "gold_synth, final human-verified"
+  },
+  {
+    "n": 1000,
+    "f1": 0.7822,
+    "precision": 0.8255,
+    "recall": 0.7432,
+    "doctype_accuracy": 0.8,
+    "macro_f1": 0.7402,
+    "train_seconds": 746.9,
+    "final_loss": 0.0921,
+    "scored_against": "gold_synth, final human-verified"
+  }
+]
